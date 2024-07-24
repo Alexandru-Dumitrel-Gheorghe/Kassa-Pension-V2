@@ -19,13 +19,28 @@ const Footer = () => {
           <div className="footer-social">
             <h3>{t("follow_us")}</h3>
             <div className="social-icons">
-              <a href="#" className="social-icon">
+              <a
+                href="https://facebook.com"
+                className="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebook />
               </a>
-              <a href="#" className="social-icon">
+              <a
+                href="https://twitter.com"
+                className="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaTwitter />
               </a>
-              <a href="#" className="social-icon">
+              <a
+                href="https://instagram.com"
+                className="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </a>
             </div>
