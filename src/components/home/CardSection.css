@@ -1,0 +1,170 @@
+.kassa-card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-x: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--accent-color);
+}
+
+.facilities-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.facility-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.facility-item:hover {
+  transform: scale(1.1) rotate(5deg);
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.facility-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background: var(--text-color);
+  color: var(--background-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.facility-item:hover .facility-icon {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  transform: rotate(-5deg);
+}
+
+.kassa-cards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.kassa-card {
+  position: relative;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  flex: 0 0 auto;
+}
+
+.kassa-card:hover {
+  transform: scale(1.05);
+}
+
+.kassa-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.kassa-card-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 1.5em;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.kassa-card-hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.kassa-card:hover img {
+  opacity: 0.3;
+}
+
+.kassa-card:hover .kassa-card-hover-text {
+  opacity: 1;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .kassa-card {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .kassa-card {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kassa-card-section {
+    padding: 20px 10px;
+  }
+
+  .kassa-card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .kassa-card-section {
+    padding: 10px 5px;
+  }
+
+  .kassa-card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .kassa-cards-container {
+    flex-direction: column;
+  }
+}

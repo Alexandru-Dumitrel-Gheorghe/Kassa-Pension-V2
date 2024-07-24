@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.reviews-section {
+  position: relative;
+  padding: 80px 0; /* Increased padding for top and bottom */
+  background-image: url(https://cdn.pixabay.com/photo/2020/05/01/11/00/castle-5116436_1280.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.reviews-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.reviews-section h2,
+.reviews-section p {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.reviews-section h2 {
+  margin-bottom: 40px;
+  color: var(--accent-color); /* Changed color to accent-color */
+  animation: fadeIn 1.5s ease-in-out; /* Added fade-in animation */
+}
+
+.reviews-section p {
+  margin-bottom: 20px;
+  font-size: 1.2rem; /* Increased font size */
+  animation: fadeIn 1.5s ease-in-out; /* Added fade-in animation */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .reviews-section {
+    padding: 60px 0;
+  }
+
+  .reviews-section h2 {
+    font-size: 2rem;
+  }
+
+  .reviews-section p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .reviews-section {
+    padding: 50px 0;
+  }
+
+  .reviews-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .reviews-section p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 40px 0;
+    background-attachment: scroll; /* Make the background image static */
+  }
+
+  .reviews-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .reviews-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .reviews-section {
+    padding: 30px 0;
+    background-attachment: scroll; /* Make the background image static */
+  }
+
+  .reviews-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .reviews-section p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
