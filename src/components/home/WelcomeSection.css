@@ -1,6 +1,7 @@
 .welcome-section {
   padding: 2rem;
   background-color: var(--background-color);
+  margin-top: 24px;
 }
 
 .welcome-content {

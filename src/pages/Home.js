@@ -6,6 +6,7 @@ import CardSection from "../components/home/CardSection";
 import BenefitsSection from "../components/home/BenefitsSection";
 import Footer from "../components/Footer";
 import Testimonial from "../components/home/TestimonialSection";
+import InfoHome from "../components/home/InfoHome";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Navbar />
       <HeaderHome />
       <WelcomeSection />
+      <InfoHome />
       <Testimonial />
       <CardSection />
       <BenefitsSection />

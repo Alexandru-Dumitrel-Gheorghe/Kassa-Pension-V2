@@ -1,14 +1,19 @@
+// src/pages/Gallery.js
 import React from "react";
 import Navbar from "../components/Navbar";
+import HeaderGallery from "../components/gallery/HeaderGallery";
+import GalleryComponent from "../components/gallery/Gallery";
+import Footer from "../components/Footer";
 
-const Gallery = () => {
+const GalleryPage = () => {
   return (
     <div>
       <Navbar />
-      <h1>Gallery</h1>
-      <p>Check out our gallery.</p>
+      <HeaderGallery />
+      <GalleryComponent />
+      <Footer />
     </div>
   );
 };
 
-export default Gallery;
+export default GalleryPage;

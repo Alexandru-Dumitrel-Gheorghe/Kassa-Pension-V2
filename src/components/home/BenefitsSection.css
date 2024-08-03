@@ -1,12 +1,13 @@
 .benefits-section {
   position: relative;
   padding: 80px 0;
-  background-image: url("https://cdn.pixabay.com/photo/2017/08/07/10/07/castle-2602220_1280.jpg");
+  background-image: url("https://images.unsplash.com/photo-1506059612708-99d6c258160e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   color: var(--text-color);
   text-align: center;
+  overflow: hidden;
 }
 
 .benefits-section::before {
@@ -16,6 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -24,6 +26,9 @@
   animation: fadeIn 1.5s ease-in-out;
   position: relative;
   z-index: 2;
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .benefits-grid {
@@ -32,6 +37,8 @@
   gap: 20px;
   position: relative;
   z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .benefit-item {
@@ -40,22 +47,48 @@
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .benefit-item:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.benefit-item:hover::before {
+  opacity: 1;
 }
 
 .benefit-icon {
   font-size: 3rem;
   margin-bottom: 10px;
   transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .benefit-text {
   font-size: 1.2rem;
   animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+  z-index: 2;
+  color: #333;
 }
 
 .benefit-item:hover .benefit-icon {
@@ -71,6 +104,10 @@
   .benefit-text {
     font-size: 1rem;
   }
+
+  .benefits-grid {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -80,6 +117,10 @@
 
   .benefit-text {
     font-size: 0.9rem;
+  }
+
+  .benefits-grid {
+    padding: 0 15px;
   }
 }
 
@@ -92,6 +133,10 @@
   .benefit-text {
     font-size: 0.8rem;
   }
+
+  .benefits-grid {
+    padding: 0 10px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -102,6 +147,10 @@
 
   .benefit-text {
     font-size: 0.7rem;
+  }
+
+  .benefits-grid {
+    padding: 0 5px;
   }
 }
 

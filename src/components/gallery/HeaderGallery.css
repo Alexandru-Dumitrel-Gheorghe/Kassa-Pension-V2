@@ -1,0 +1,63 @@
+.gallery-header {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1506059612708-99d6c258160e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Înlocuiește cu un URL valid */
+  background-size: cover;
+  background-position: center;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #d4af37;
+  margin-top: 0; /* Elimină marginile de sus */
+}
+
+.gallery-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Suprapunere întunecată */
+  z-index: 1;
+}
+
+.gallery-header-content {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0; /* Inițial ascuns */
+  transform: translateY(20px); /* Poziție inițială pentru efectul de slide-in */
+  animation: fadeInUp 1s forwards; /* Proprietăți de animație */
+}
+
+.gallery-header-content h1 {
+  margin-bottom: 5px; /* Adaugă spațiu între h1 și p */
+  color: #d4af37;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .gallery-header {
+    height: 40vh; /* Ajustează înălțimea pentru ecrane mai mici */
+  }
+
+  .gallery-header-content h1 {
+    font-size: 1.5rem; /* Ajustează dimensiunea fontului pentru ecrane mai mici */
+  }
+}
+
+/* Cheile de animație */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      welcome: "Welcome to Hotel Kassa",
+      welcome: "Welcome to Pension Kassa",
       description:
         "Located in the picturesque town of Bran, Kassa offers a unique and luxurious experience for all its guests. Surrounded by beautiful landscapes and rich in history, our hotel provides a perfect getaway for relaxation and adventure.",
       location: "Bran, Romania",
@@ -12,7 +12,7 @@ const resources = {
       excellent_service: "Excellent Service",
       important_info: "Important Info",
       home: "Home",
-      prices: "Prices",
+      prices: "Rooms",
       gallery: "Gallery",
       about: "About",
       contact: "Contact",
@@ -60,11 +60,48 @@ const resources = {
       tripadvisor_review: "The staff was very helpful",
       booking_review: "The view is amazing, one of the best we've had.",
       google_review: "What luxury! :) We enjoyed our stay.",
+      whole_house_rental: "Whole House Rental",
+      whole_house_description:
+        "The entire guesthouse is rented out for your exclusive use, ensuring privacy and comfort.",
+      kassa_bran: "Kassa Bran",
+      peaceful_retreat:
+        "PEACEFUL RETREAT - A SANCTUARY IN THE CARPATHIAN MOUNTAINS",
+      kassa_bran_description1:
+        "Kassa is located in Bran, 2.1 km from Bran Castle, and offers free WiFi, a garden, and free private parking. This property with garden views offers a balcony.",
+      kassa_bran_description2:
+        "This holiday home with a terrace and river views includes 7 bedrooms, a living room, a flat-screen TV, a fully equipped kitchen with a fridge and a dishwasher, and 7 bathrooms with a shower. Towels and bed linen are provided.",
+      book_now: "Book Now",
+      our_rooms: "Our Rooms",
+      classic_room: "Classic Room",
+      classic_room_beds: "1 single bed and 1 king-size double bed",
+      classic_room_description:
+        "Spacious bedroom with modern amenities and sea view.",
+      superior_room: "Superior Room",
+      superior_room_beds: "1 king-size double bed",
+      superior_room_description:
+        "Elegant room with balcony and panoramic view.",
+      luxury_room: "Luxury Room",
+      luxury_room_beds: "1 king-size double bed",
+      luxury_room_description:
+        "Luxurious suite with premium amenities and jacuzzi.",
+      suite_room: "Suite Room",
+      suite_room_beds: "1 king-size double bed",
+      suite_room_description:
+        "Comfortable suite with relaxation area and minibar.",
+      family_room: "Family Room",
+      family_room_beds: "1 king-size double bed",
+      family_room_description: "Family room with children's facilities.",
+      deluxe_room: "Deluxe Room",
+      deluxe_room_beds: "1 king-size double bed",
+      deluxe_room_description: "Deluxe room with top services and view.",
+      living_area: "Living Area",
+      living_area_beds: "1 extensible sofa",
+      living_area_description: "Relaxation area with extensible sofa and TV.",
     },
   },
   ro: {
     translation: {
-      welcome: "Bun venit la Hotel Kassa",
+      welcome: "Bun venit la Pensiunea Kassa",
       description:
         "Situată în pitorescul oraș Bran, Kassa oferă o experiență unică și luxoasă tuturor oaspeților săi. Înconjurată de peisaje frumoase și bogată în istorie, hotelul nostru oferă o evadare perfectă pentru relaxare și aventură.",
       location: "Bran, România",
@@ -72,7 +109,7 @@ const resources = {
       excellent_service: "Servicii excelente",
       important_info: "Informații importante",
       home: "Acasă",
-      prices: "Prețuri",
+      prices: "Camere",
       gallery: "Galerie",
       about: "Despre",
       contact: "Contact",
@@ -123,6 +160,42 @@ const resources = {
       booking_review:
         "Vederea este uimitoare, una dintre cele mai bune pe care le-am avut.",
       google_review: "Ce lux! :) Ne-am bucurat de șederea noastră",
+      whole_house_rental: "Închiriere întreagă pensiune",
+      whole_house_description:
+        "Întreaga pensiune este închiriată pentru uzul dvs. exclusiv, asigurând intimitate și confort.",
+      kassa_bran: "Kassa Bran",
+      peaceful_retreat: "RELAZARE TRANQUILĂ - OAZĂ DE LINIȘTE",
+      kassa_bran_description1:
+        "Kassa se află în Bran, la 2,1 km de Castelul Bran, și oferă WiFi gratuit, o grădină și parcare privată gratuită. Această proprietate cu vedere la grădină pune la dispoziție un balcon.",
+      kassa_bran_description2:
+        "Această casă de vacanță cu terasă și vedere la râu include 7 dormitoare, un living, un televizor cu ecran plat, o bucătărie utilată, cu frigider și mașină de spălat vase, precum și 7 băi cu duș. Această casă de vacanță pune la dispoziția oaspeților prosoape și lenjerie de pat.",
+      book_now: "Rezervă acum",
+      our_rooms: "Camerele Noastre",
+      classic_room: "Cameră Clasică",
+      classic_room_beds: "1 pat de o persoană și 1 pat dublu king-size",
+      classic_room_description:
+        "Dormitor spațios cu facilități moderne și vedere la mare.",
+      superior_room: "Cameră Superioară",
+      superior_room_beds: "1 pat dublu king-size",
+      superior_room_description:
+        "Cameră elegantă cu balcon și vedere panoramică.",
+      luxury_room: "Cameră de Lux",
+      luxury_room_beds: "1 pat dublu king-size",
+      luxury_room_description:
+        "Suită luxoasă cu facilități premium și jacuzzi.",
+      suite_room: "Suită",
+      suite_room_beds: "1 pat dublu king-size",
+      suite_room_description:
+        "Suită confortabilă cu zonă de relaxare și minibar.",
+      family_room: "Cameră de Familie",
+      family_room_beds: "1 pat dublu king-size",
+      family_room_description: "Cameră de familie cu facilități pentru copii.",
+      deluxe_room: "Cameră Deluxe",
+      deluxe_room_beds: "1 pat dublu king-size",
+      deluxe_room_description: "Cameră deluxe cu servicii de top și vedere.",
+      living_area: "Zonă de Relaxare",
+      living_area_beds: "1 canapea extensibilă",
+      living_area_description: "Zonă de relaxare cu canapea extensibilă și TV.",
     },
   },
 };

@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import HeaderAbout from "../components/about/HeaderAbout";
+import AboutDetails from "../components/about/AboutDetails";
 
 const About = () => {
   return (
     <div>
       <Navbar />
-      <h1>About Us</h1>
-      <p>Learn more about our pension.</p>
+      <HeaderAbout />
+      <AboutDetails />
     </div>
   );
 };

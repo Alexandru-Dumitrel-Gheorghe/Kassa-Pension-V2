@@ -1,0 +1,25 @@
+.facility-section {
+  margin-top: 2rem;
+}
+
+.facility-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.facility-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.facility-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.facility-list li svg {
+  margin-right: 0.5rem;
+}

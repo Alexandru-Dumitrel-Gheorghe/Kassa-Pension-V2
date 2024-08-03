@@ -1,0 +1,90 @@
+.about-details {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 1000px;
+  font-family: "Arial", sans-serif;
+}
+
+.about-details h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.about-details p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.about-details p strong {
+  color: #ff6b6b; /* Culoare de accent pentru text */
+}
+
+.about-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.about-images img {
+  width: calc(33.333% - 10px);
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-now {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.book-now-button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-button:hover {
+  background-color: #ff4a4a;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .about-images img {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-images img {
+    width: 100%;
+  }
+
+  .about-details h2 {
+    font-size: 1.75rem;
+  }
+
+  .about-details p {
+    font-size: 0.95rem;
+  }
+}
