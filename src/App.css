@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #c1c7c1; /* Sea Green */
-  --secondary-color: #d4af37; /* Saddle Brown */
-  --accent-color: #d4af37; /* Light Salmon */
-  --text-color: #030303; /* Darker text color for better readability */
-  --background-color: #f5f5f5; /* Light Gray */
+  --primary-color: #c1c7c1 !important; /* Sea Green */
+  --secondary-color: #d4af37 !important; /* Saddle Brown */
+  --accent-color: #d4af37 !important; /* Light Salmon */
+  --text-color: #030303 !important; /* Darker text color for better readability */
+  --background-color: #f5f5f5 !important; /* Light Gray */
 }
 
 body {

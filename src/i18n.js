@@ -70,6 +70,10 @@ const resources = {
         "Kassa is located in Bran, 2.1 km from Bran Castle, and offers free WiFi, a garden, and free private parking. This property with garden views offers a balcony.",
       kassa_bran_description2:
         "This holiday home with a terrace and river views includes 7 bedrooms, a living room, a flat-screen TV, a fully equipped kitchen with a fridge and a dishwasher, and 7 bathrooms with a shower. Towels and bed linen are provided.",
+      kassa_bran_description3:
+        "The holiday home also provides a barbecue. There is a shared lounge at this property and guests can go skiing nearby.",
+      kassa_bran_description4:
+        "Kassa is 15 km from Dino Parc and 31 km from Piața Sfatului. The nearest airport is Brașov-Ghimbav International Airport, located 28 km from Kassa.",
       book_now: "Book Now",
       our_rooms: "Our Rooms",
       classic_room: "Classic Room",
@@ -97,6 +101,16 @@ const resources = {
       living_area: "Living Area",
       living_area_beds: "1 extensible sofa",
       living_area_description: "Relaxation area with extensible sofa and TV.",
+      nearby_attractions_title: "Nearby Attractions",
+      castelul_bran: "Bran Castle",
+      castelul_bran_description: "One of the most famous castles in Romania.",
+      parcul_aventura: "Adventure Park Cheile Grădiștei",
+      parcul_aventura_description: "Adventure park for outdoor activities.",
+      botorog_campground: "Botorog Campground",
+      botorog_campground_description: "Camping and nature activities.",
+      bucegi: "Bucegi",
+      bucegi_description: "Mountain massif in the Southern Carpathians.",
+      navigate: "Navigate",
     },
   },
   ro: {
@@ -169,6 +183,10 @@ const resources = {
         "Kassa se află în Bran, la 2,1 km de Castelul Bran, și oferă WiFi gratuit, o grădină și parcare privată gratuită. Această proprietate cu vedere la grădină pune la dispoziție un balcon.",
       kassa_bran_description2:
         "Această casă de vacanță cu terasă și vedere la râu include 7 dormitoare, un living, un televizor cu ecran plat, o bucătărie utilată, cu frigider și mașină de spălat vase, precum și 7 băi cu duș. Această casă de vacanță pune la dispoziția oaspeților prosoape și lenjerie de pat.",
+      kassa_bran_description3:
+        "Această casă de vacanță pune la dispoziție un grătar. Această proprietate are un salon de zi comun, iar în apropiere oaspeții pot desfășura activități precum schi.",
+      kassa_bran_description4:
+        "Kassa se află la 15 km de Dino Parc și la 31 km de Piața Sfatului. Cel mai apropiat aeroport este Aeroportul Internațional Brașov-Ghimbav, situat la 28 km de Kassa.",
       book_now: "Rezervă acum",
       our_rooms: "Camerele Noastre",
       classic_room: "Cameră Clasică",
@@ -196,6 +214,18 @@ const resources = {
       living_area: "Zonă de Relaxare",
       living_area_beds: "1 canapea extensibilă",
       living_area_description: "Zonă de relaxare cu canapea extensibilă și TV.",
+      nearby_attractions_title: "Atracții în Apropiere",
+      castelul_bran: "Castelul Bran",
+      castelul_bran_description:
+        "Unul dintre cele mai faimoase castele din România.",
+      parcul_aventura: "Parcul de aventură Cheile Grădiștei",
+      parcul_aventura_description:
+        "Parc de aventură pentru activități în aer liber.",
+      botorog_campground: "Camping Botorog",
+      botorog_campground_description: "Camping și activități în natură.",
+      bucegi: "Bucegi",
+      bucegi_description: "Masiv montan din Carpații Meridionali.",
+      navigate: "Navighează",
     },
   },
 };
