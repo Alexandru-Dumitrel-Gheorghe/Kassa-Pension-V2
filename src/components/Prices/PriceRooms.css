@@ -1,21 +1,22 @@
 .price-rooms {
-  padding: 2rem 10px;
+  padding: 2rem 1rem;
   padding-top: 60px;
+  background-color: #f8f9fa; /* Fundal deschis pentru contrast */
 }
 
 .room-card {
   border: none;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 1.5rem;
-  margin-top: 30px;
+  margin-bottom: 2rem;
+  background-color: #fff; /* Fundal alb pentru cartela */
 }
 
 .room-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .room-card.flex-row-reverse {
@@ -25,7 +26,6 @@
 .card-img {
   width: 50%;
   object-fit: cover;
-  height: 100%;
   transition: all 0.3s ease;
 }
 
@@ -33,51 +33,52 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  background-color: #f8f9fa;
-  border-radius: 0;
-  padding: 1.5rem;
+  background-color: #f8f9fa; /* Fundal deschis pentru corpul cardului */
+  border-radius: 0 0 15px 15px;
+  padding: 2rem;
   width: 50%;
 }
 
 .room-card .card-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #343a40; /* Text întunecat pentru titlu */
 }
 
 .room-card .card-text {
-  color: #6c757d;
+  color: #6c757d; /* Text gri pentru descriere */
   font-size: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .room-features {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center; /* Centrarea textului */
-  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .room-features li {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centrarea iconițelor și textului */
   font-size: 0.9rem;
-  color: #495057;
-  margin-bottom: 0.5rem;
+  color: #495057; /* Text gri închis pentru funcții */
+  margin: 0.5rem 1rem;
 }
 
 .room-features li svg {
   margin-right: 0.5rem;
-  color: #007bff;
+  color: #007bff; /* Albastru pentru iconițe */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .room-card {
     flex-direction: column;
+    height: auto;
   }
 
   .room-card.flex-row-reverse {
@@ -87,31 +88,23 @@
   .card-img {
     width: 100%;
     height: 200px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 15px 15px 0 0;
   }
 
   .room-card .card-body {
     width: 100%;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 15px 15px;
   }
 
   .room-card .card-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .room-card .card-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .room-features {
     text-align: center;
-  }
-
-  .room-features li {
-    justify-content: center;
-  }
-
-  .room-features li {
-    justify-content: center; /* Asigură centrare pentru iconițe și text */
   }
 }
