@@ -67,12 +67,10 @@ const AccommodationInfo = () => {
           <button className="show-prices-button" onClick={handleShowPrices}>
             {showPrices ? t("hide_prices") : t("show_prices")}
           </button>
-          {showPrices && (
-            <div className="price-details">
-              <p>{t("price_starting_from", { price: "1000 RON" })}</p>
-              <p>{t("price_variation_notice")}</p>
-            </div>
-          )}
+          <div className={`price-details ${showPrices ? "show" : ""}`}>
+            <p>{t("price_starting_from", { price: "1000 RON" })}</p>
+            <p>{t("price_variation_notice")}</p>
+          </div>
         </div>
       ))}
       <button className="book-now-button" onClick={handleReserveNow}>

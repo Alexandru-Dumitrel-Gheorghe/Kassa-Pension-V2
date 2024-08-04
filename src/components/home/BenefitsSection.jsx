@@ -1,44 +1,85 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom"; // Importă useNavigate pentru navigare
 import {
   FaParking,
   FaWifi,
-  FaBath,
-  FaEye,
-  FaUsers,
   FaUtensils,
-  FaHome,
+  FaThermometerHalf,
+  FaSwimmer,
+  FaBriefcase,
 } from "react-icons/fa";
-import { GiCook } from "react-icons/gi";
+import { useTranslation } from "react-i18next"; // Importă useTranslation pentru traduceri
 import "./BenefitsSection.css";
 
-const BenefitsSection = () => {
-  const { t } = useTranslation();
+const StyledSection = () => {
+  const navigate = useNavigate(); // Definirea navigate pentru navigare
+  const { t } = useTranslation(); // Hook pentru traduceri
 
   const benefits = [
-    { icon: <FaHome className="icon" />, text: t("whole_house") },
-    { icon: <FaParking className="icon" />, text: t("free_parking") },
-    { icon: <FaWifi className="icon" />, text: t("wifi_included") },
-    { icon: <FaBath className="icon" />, text: t("private_bathroom") },
-    { icon: <FaEye className="icon" />, text: t("view") },
-    { icon: <FaUsers className="icon" />, text: t("family_rooms") },
-    { icon: <FaUtensils className="icon" />, text: t("barbecue_facilities") },
-    { icon: <GiCook className="icon" />, text: t("kitchen") },
+    { icon: <FaSwimmer />, title: t("pool_and_spa") },
+    { icon: <FaBriefcase />, title: t("conference_rooms") },
+    { icon: <FaParking />, title: t("free_parking") },
+    { icon: <FaWifi />, title: t("free_wifi") },
+    { icon: <FaUtensils />, title: t("restaurant_and_bar") },
+    { icon: <FaThermometerHalf />, title: t("air_conditioning") },
+  ];
+
+  const attractions = [
+    {
+      category: t("restaurants_and_cafes"),
+      places: [t("bulzu_branului"), t("la_cristi"), t("burg")],
+    },
+    {
+      category: t("main_attractions"),
+      places: [
+        t("bear_sanctuary"),
+        t("rasnov_fortress"),
+        t("fun_park_kalinderu"),
+        t("cantacuzino_castle"),
+        t("foisor_castle"),
+      ],
+    },
   ];
 
   return (
-    <div className="benefits-section">
-      <h2>{t("direct_bookings_benefit")}</h2>
-      <div className="benefits-grid">
-        {benefits.map((benefit, index) => (
-          <div className="benefit-item" key={index}>
-            <div className="benefit-icon">{benefit.icon}</div>
-            <p className="benefit-text">{benefit.text}</p>
+    <div className="styled-section">
+      <div className="left-section">
+        <div className="left-content">
+          <h1>{t("pension_kassa")}</h1>
+          <h2>{t("unique_experience")}</h2>
+          <div className="benefits-list">
+            {benefits.map((benefit, index) => (
+              <div className="benefit-item" key={index}>
+                <div className="benefit-icon">{benefit.icon}</div>
+                <p>{benefit.title}</p>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+      </div>
+      <div className="right-section">
+        <div className="right-content">
+          <h3>{t("attractions_and_facilities")}</h3>
+          {attractions.map((attraction, index) => (
+            <div key={index} className="attraction-category">
+              <h4>{attraction.category}</h4>
+              <ul>
+                {attraction.places.map((place, placeIndex) => (
+                  <li key={placeIndex}>{place}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <button
+            className="wow-button"
+            onClick={() => navigate("/more-info")} // Utilizare useNavigate
+          >
+            {t("learn_more")}
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default BenefitsSection;
+export default StyledSection;

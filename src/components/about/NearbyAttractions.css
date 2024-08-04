@@ -5,13 +5,13 @@
 }
 
 :root {
-  --primary-color: #4a90e2; /* O nuanță de albastru deschis */
-  --secondary-color: #2c3e50; /* Un gri închis modern */
-  --background-color: #f9f9f9; /* Fundal deschis */
+  --primary-color: #4a90e2;
+  --secondary-color: #2c3e50;
+  --background-color: #f9f9f9;
   --card-background: #ffffff;
   --text-color: #333;
   --text-gray: #666;
-  --highlight-color: #e74c3c; /* Roșu pentru accente */
+  --highlight-color: #e74c3c;
 }
 
 .nearby-attractions {
@@ -111,20 +111,27 @@
   transform: translateY(-2px);
 }
 
+/* Media Queries */
 @media (min-width: 640px) {
   .box {
-    max-width: 48%;
+    max-width: 90%; /* Modificare la 90% pentru ecrane mici */
+  }
+}
+
+@media (min-width: 768px) {
+  .box {
+    max-width: 75%; /* Modificare la 75% pentru ecrane medii */
   }
 }
 
 @media (min-width: 1024px) {
   .box {
-    max-width: 32%;
+    max-width: 300px; /* Revine la dimensiunea inițială pentru ecrane mari */
   }
 }
 
 @media (min-width: 1100px) {
   .box {
-    max-width: 23%;
+    max-width: 23%; /* Dimensiunea inițială pentru ecrane foarte mari */
   }
 }

@@ -36,17 +36,15 @@ nav.scrolled {
   align-items: center;
 }
 
-.brand {
+.navbar-title h1 {
   font-size: 2rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  transition: all 0.3s ease;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
 }
 
-nav.scrolled .brand {
-  color: rgba(255, 255, 255, 1);
+.navbar-title h1:hover {
+  opacity: 1;
 }
 
 .navbar-links {
@@ -64,10 +62,9 @@ nav.scrolled .brand {
   text-decoration: none;
   color: inherit;
   font-size: 1rem;
-  font-weight: 500;
-  padding: 8px 12px;
+  font-weight: 400;
+  padding: 4px 8px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 .navbar-links li a:hover {
@@ -109,13 +106,12 @@ nav.scrolled .brand {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 10px 20px;
   display: block;
   width: 100%;
   text-align: center;
   color: #000;
-  transition: background-color 0.3s ease;
 }
 
 .language-menu button:hover {
@@ -137,21 +133,16 @@ nav.scrolled .brand {
   transition: all 0.3s ease-in-out;
 }
 
-.hamburger-active .line:nth-child(2) {
-  width: 0px;
-}
-
-.hamburger-active .line:nth-child(1),
-.hamburger-active .line:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
 .hamburger-active .line:nth-child(1) {
-  transform: translateY(10px);
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+  opacity: 0;
 }
 
 .hamburger-active .line:nth-child(3) {
-  transform: translateY(-5px) rotate(90deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .menubar {
@@ -168,7 +159,7 @@ nav.scrolled .brand {
   z-index: 999;
 }
 
-.active {
+.menubar.active {
   left: 0;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -203,6 +194,15 @@ nav.scrolled .brand {
   color: white;
   padding: 10px 20px;
   text-align: center;
+}
+
+.language-menu-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 790px) {

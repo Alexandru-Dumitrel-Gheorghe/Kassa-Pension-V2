@@ -1,123 +1,165 @@
-.benefits-section {
-  position: relative;
-  padding: 80px 20px;
-  background-image: url("https://images.unsplash.com/photo-1506059612708-99d6c258160e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  overflow: hidden;
-}
-
-.benefits-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.benefits-section h2 {
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 2;
-  color: #f9b233;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.styled-section {
+  display: flex;
+  flex-wrap: wrap;
+  color: #333;
+  background-color: #ffffff;
+  padding: 40px 20px;
   gap: 20px;
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.left-content,
+.right-content {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.left-content h1 {
+  color: #d4af37;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.left-content h2 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .benefit-item {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #555;
   text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
-}
-
-.benefit-item:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .benefit-icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  transition: color 0.3s ease;
+  font-size: 2.5rem;
+  color: #d4af37;
 }
 
-.benefit-text {
+.right-content h3 {
+  color: #d4af37;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.attraction-category {
+  margin-bottom: 20px;
+}
+
+.attraction-category h4 {
   font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.attraction-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.attraction-category li {
+  font-size: 1rem;
   color: #333;
+  margin: 5px 0;
 }
 
-.benefit-item:hover .benefit-icon {
-  color: #f9b233;
+.wow-button {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
-/* Media Queries */
+.wow-button:hover {
+  background-color: #c0a062;
+}
+
 @media (max-width: 992px) {
-  .benefits-section {
-    padding: 50px 10px;
+  .styled-section {
+    flex-direction: column;
+    padding: 20px;
   }
 
-  .benefits-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .left-content,
+  .right-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .benefits-list {
+    justify-content: center;
   }
 
   .benefit-item {
-    padding: 15px;
-  }
-
-  .benefit-text {
-    font-size: 1rem;
+    flex: 1 1 45%;
+    max-width: 45%;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .benefits-section {
-    padding: 40px 10px;
-    background-attachment: scroll;
-  }
-
-  .benefit-text {
-    font-size: 0.9rem;
-  }
-
-  .benefit-icon {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .benefits-section {
-    padding: 30px 5px;
-    background-attachment: scroll;
-  }
-
-  .benefit-text {
-    font-size: 0.8rem;
+  .benefit-item {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   .benefit-icon {
     font-size: 2rem;
+  }
+
+  .wow-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .styled-section {
+    padding: 10px;
+  }
+
+  .left-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .left-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .benefit-icon {
+    font-size: 1.8rem;
+  }
+
+  .wow-button {
+    font-size: 0.85rem;
+    padding: 8px 16px;
   }
 }

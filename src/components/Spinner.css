@@ -1,0 +1,25 @@
+.spinner {
+  position: fixed; /* Afișează spinner-ul pe întreaga pagină */
+  top: 50%; /* Centrează vertical */
+  left: 50%; /* Centrează orizontal */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Ajustează pentru dimensiunea spinner-ului */
+  width: 50px; /* Dimensiunea spinner-ului */
+  height: 50px; /* Dimensiunea spinner-ului */
+  border: 5px solid rgba(255, 255, 255, 0.3); /* Fundalul spinner-ului */
+  border-top: 5px solid white; /* Culoarea segmentului animat */
+  border-radius: 50%; /* Face spinner-ul rotund */
+  animation: spin 1s linear infinite; /* Animarea spinner-ului */
+  z-index: 2000; /* Se asigură că spinner-ul este deasupra altor elemente */
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); /* Rotire la început */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); /* Rotire completă */
+  }
+}

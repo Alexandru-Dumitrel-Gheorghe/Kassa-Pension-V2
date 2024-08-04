@@ -44,22 +44,25 @@ const CardSection = () => {
   ];
 
   return (
-    <Container className="kassa-card-section mt-5">
-      <h2 className="section-title">{t("facilities")}</h2>
-      <div className="facilities-list">
+    <Container className="cs-card-section mt-5">
+      <h2 className="cs-section-title">{t("facilities")}</h2>
+      <div className="cs-facilities-list">
         {facilities.map((facility, index) => (
-          <div key={index} className="facility-item">
-            <FontAwesomeIcon icon={facility.icon} className="facility-icon" />
+          <div key={index} className="cs-facility-item">
+            <FontAwesomeIcon
+              icon={facility.icon}
+              className="cs-facility-icon"
+            />
             {facility.text}
           </div>
         ))}
       </div>
-      <div className="kassa-cards-container">
+      <div className="cs-cards-container">
         {cards.map((card, index) => (
-          <div key={index} className="kassa-card">
+          <div key={index} className="cs-card">
             <img src={card.imgSrc} alt={card.title} />
-            <div className="kassa-card-title">{card.title}</div>
-            <div className="kassa-card-hover-text">{card.hoverText}</div>
+            <div className="cs-card-title">{card.title}</div>
+            <div className="cs-card-hover-text">{card.hoverText}</div>
           </div>
         ))}
       </div>

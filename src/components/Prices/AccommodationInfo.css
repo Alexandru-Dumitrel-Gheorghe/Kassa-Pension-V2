@@ -1,3 +1,4 @@
+/* CSS actualizat */
 .accommodation-info {
   padding: 2rem;
   background-color: #f1f1f1;
@@ -101,13 +102,8 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 20px 0 20px 0; /* Adăugăm un margin-bottom pentru a crea spațiu */
+  margin: 20px 0; /* Am eliminat margin-bottom */
   transition: background-color 0.3s ease;
-}
-
-.show-prices-button:hover,
-.book-now-button:hover {
-  background-color: #0056b3;
 }
 
 .show-prices-button:hover,
@@ -119,8 +115,17 @@
   margin-top: 10px;
   font-size: 1rem;
   color: #666;
-  padding: 10px;
+  padding: 0px;
   border-top: 1px solid #ddd;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.price-details.show {
+  max-height: 120px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {

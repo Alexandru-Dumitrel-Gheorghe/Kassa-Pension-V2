@@ -21,6 +21,7 @@ const Navbar = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setLanguageMenuActive(false);
+    setMenuActive(false); // Închide meniul hamburger după schimbarea limbii
   };
 
   const handleScroll = () => {
@@ -44,7 +45,9 @@ const Navbar = () => {
     <>
       <nav className={scrolled ? "scrolled" : ""}>
         <div className="navbar-title">
-          <h1 className="brand">Kassa</h1>
+          <Link to="/" className="navbar-brand">
+            <h1>Kassa</h1>
+          </Link>
         </div>
         <ul className="navbar-links">
           <li>
@@ -62,21 +65,29 @@ const Navbar = () => {
           <li>
             <Link to="/contact">{t("contact")}</Link>
           </li>
+          <li>
+            <Link to="/more-info">{t("information")}</Link>
+          </li>
         </ul>
         <div className="language-switcher">
           <button onClick={toggleLanguageMenu} className="language-button">
             <FaGlobe size={20} />
           </button>
           {languageMenuActive && (
-            <div className="language-menu">
-              <button onClick={() => changeLanguage("en")}>EN</button>
-              <button onClick={() => changeLanguage("ro")}>RO</button>
-            </div>
+            <ul className="language-menu">
+              <li>
+                <button onClick={() => changeLanguage("en")}>EN</button>
+              </li>
+              <li>
+                <button onClick={() => changeLanguage("ro")}>RO</button>
+              </li>
+            </ul>
           )}
         </div>
         <div
           className={`hamburger ${menuActive ? "hamburger-active" : ""}`}
           onClick={toggleMenu}
+          aria-label="Toggle menu"
         >
           <span className="line"></span>
           <span className="line"></span>
@@ -110,10 +121,21 @@ const Navbar = () => {
               {t("contact")}
             </Link>
           </li>
-          <div className="language-menu">
+          <li>
+            <Link to="/more-info" onClick={toggleMenu}>
+              {t("information")}
+            </Link>
+          </li>
+          <li className="language-menu-title">
+            <span>{t("change_language")}</span>{" "}
+            {/* Titlul pentru schimbarea limbii */}
+          </li>
+          <li>
             <button onClick={() => changeLanguage("en")}>EN</button>
+          </li>
+          <li>
             <button onClick={() => changeLanguage("ro")}>RO</button>
-          </div>
+          </li>
         </ul>
       </div>
     </>
