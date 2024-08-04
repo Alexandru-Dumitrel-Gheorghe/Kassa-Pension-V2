@@ -18,7 +18,7 @@ const PriceRooms = () => {
   const rooms = [
     {
       image:
-        "https://plus.unsplash.com/premium_photo-1678297269980-16f4be3a15a6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/554932830.jpg?k=11a5832a0ce276957dfb3352cd0c853d6fa87551b27d4d1cf7e3529c6697239e&o=&hp=1",
       title: "classic_room",
       beds: "classic_room_beds",
       description: "classic_room_description",
@@ -31,7 +31,7 @@ const PriceRooms = () => {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/553229650.jpg?k=6a440b9105b3e30114175bd0df4e5a17215a74f4d9f508096db70333f59e3659&o=&hp=1",
       title: "superior_room",
       beds: "superior_room_beds",
       description: "superior_room_description",
@@ -45,7 +45,7 @@ const PriceRooms = () => {
     },
     {
       image:
-        "https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/553229632.jpg?k=22c4c786d1734fff5a9fab4bb5ddd2be6c1a24f8770def966718a696a3236922&o=&hp=1",
       title: "luxury_room",
       beds: "luxury_room_beds",
       description: "luxury_room_description",
@@ -58,7 +58,7 @@ const PriceRooms = () => {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1455587734955-081b22074882?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/553229671.jpg?k=c4b9a2d118261052b446b7f84c6af15176aaf51e806fd7c9812641b3af524674&o=&hp=1",
       title: "suite_room",
       beds: "suite_room_beds",
       description: "suite_room_description",
@@ -72,7 +72,7 @@ const PriceRooms = () => {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/553229686.jpg?k=f93921cfe50dae6261ba9bada3e5be108f20154635230fea4d659e7d7a0b5f28&o=&hp=1",
       title: "family_room",
       beds: "family_room_beds",
       description: "family_room_description",
@@ -85,7 +85,7 @@ const PriceRooms = () => {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/554934498.jpg?k=df84e76d9bb2f71937a71b14bd270dd76e0e28434b66346e43f53f56f9c1b646&o=&hp=1",
       title: "deluxe_room",
       beds: "deluxe_room_beds",
       description: "deluxe_room_description",
@@ -99,7 +99,7 @@ const PriceRooms = () => {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1444201983204-c43cbd584d93?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/553229689.jpg?k=69129c1eea15d671299400bbda2da723180ff3990cb6a47c21fb44f8db980d4a&o=&hp=1",
       title: "living_area",
       beds: "living_area_beds",
       description: "living_area_description",
@@ -113,7 +113,6 @@ const PriceRooms = () => {
 
   return (
     <Container className="price-rooms">
-      <h1 className="text-center my-4">{t("our_rooms")}</h1>
       <Row>
         {rooms.map((room, index) => (
           <Col key={index} md={12} className="mb-4">

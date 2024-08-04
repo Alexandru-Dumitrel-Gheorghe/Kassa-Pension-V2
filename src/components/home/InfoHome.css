@@ -1,63 +1,101 @@
+:root {
+  --accent-color: #d4af37; /* Primary accent color */
+  --highlight-color: #c9302c; /* Highlight color for buttons and links */
+  --text-color: #fff; /* Text color */
+}
+
 .restaurant-bar-container {
   display: flex;
   flex-direction: column;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 20px;
   max-width: 1200px;
-  margin: auto;
-  margin-bottom: 36px;
-  margin-top: 24px;
+  margin: 24px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
 .bar-image img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  margin-top: 24px;
+  transition: transform 0.3s ease;
+}
+
+.bar-image img:hover {
+  transform: scale(1.05);
 }
 
 .bar-description {
   padding: 20px;
-  border-radius: 10px;
 }
 
-.bar-description h1 {
-  font-size: 2em;
-  color: #e0c080;
+.bar-title {
+  font-size: 2.5rem;
+  color: var(--accent-color);
   margin-bottom: 10px;
+  font-weight: bold;
+  animation: fadeInDown 1s ease-in-out;
 }
 
-.bar-description h2 {
-  font-size: 1.3em;
-  color: #d9534f;
+.bar-subtitle {
+  font-size: 1.5rem;
+  color: var(--highlight-color);
   margin-bottom: 20px;
+  animation: fadeInDown 1.2s ease-in-out;
 }
 
-.bar-description p {
-  font-size: 1em;
-  line-height: 1.5;
+.bar-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
   margin-bottom: 15px;
+  animation: fadeIn 1.4s ease-in-out;
 }
 
 .reservation-button {
-  padding: 10px 20px;
-  background-color: #d9534f;
-  color: #fff;
+  padding: 12px 25px;
+  background-color: #d4af37;
+  color: var(--text-color);
   border: none;
-  cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+  margin-top: 20px;
 }
 
 .reservation-button:hover {
-  background-color: #c9302c;
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Responsive Design */
 @media (min-width: 768px) {
   .restaurant-bar-container {
     flex-direction: row;
-    justify-content: space-between;
   }
 
   .bar-image,
@@ -67,5 +105,24 @@
 
   .bar-description {
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bar-title {
+    font-size: 2rem;
+  }
+
+  .bar-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .bar-text {
+    font-size: 1rem;
+  }
+
+  .reservation-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
 }

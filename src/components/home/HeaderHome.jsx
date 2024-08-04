@@ -1,15 +1,21 @@
 import React from "react";
-import "./HeaderHome.css";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import "./HeaderHome.css";
 
 const HeaderHome = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const scrollToNextSection = () => {
     const nextSection = document.querySelector("#next-section");
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleBookNowClick = () => {
+    navigate("/contact"); // Navigate to the contact page
   };
 
   return (
@@ -24,7 +30,9 @@ const HeaderHome = () => {
       <div className="header-content">
         <h1>{t("welcome")}</h1>
         <p className="tagline">{t("experience_luxury")}</p>
-        <button className="book-now-button">{t("book_your_stay")}</button>
+        <button className="book-now-button" onClick={handleBookNowClick}>
+          {t("book_your_stay")}
+        </button>
       </div>
       <button className="scroll-down-button" onClick={scrollToNextSection}>
         ↓

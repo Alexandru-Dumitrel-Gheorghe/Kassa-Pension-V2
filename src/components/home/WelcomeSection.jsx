@@ -13,15 +13,15 @@ const WelcomeSection = () => {
         <p className="welcome-description">{t("description")}</p>
         <div className="welcome-icons">
           <div className="welcome-icon">
-            <FaMapMarkerAlt size={40} color="#4A4A4A" />
+            <FaMapMarkerAlt size={40} className="icon" />
             <p>{t("location")}</p>
           </div>
           <div className="welcome-icon">
-            <FaHotel size={40} color="#4A4A4A" />
+            <FaHotel size={40} className="icon" />
             <p>{t("luxury_rooms")}</p>
           </div>
           <div className="welcome-icon">
-            <FaConciergeBell size={40} color="#4A4A4A" />
+            <FaConciergeBell size={40} className="icon" />
             <p>{t("excellent_service")}</p>
           </div>
         </div>

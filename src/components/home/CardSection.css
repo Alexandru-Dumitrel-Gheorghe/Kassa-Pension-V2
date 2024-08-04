@@ -6,12 +6,13 @@
   margin-top: 40px;
   margin-bottom: 40px;
   background-color: #f9f9f9;
+  overflow: hidden;
 }
 
 .section-title {
   text-align: center;
   margin-bottom: 40px;
-  color: #4caf50; /* Adjusted to a vibrant accent color */
+  color: var(--accent-color); /* Adjusted to a vibrant accent color */
   font-size: 2rem;
 }
 
@@ -38,7 +39,7 @@
 
 .facility-item:hover {
   transform: scale(1.1) rotate(3deg);
-  background-color: #4caf50;
+  background-color: var(--accent-color);
   color: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

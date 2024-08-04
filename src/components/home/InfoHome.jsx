@@ -1,24 +1,33 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "./InfoHome.css";
 
 const RestaurantBar = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  // Function to handle button click
+  const handleButtonClick = () => {
+    navigate("/contact"); // Redirect to the contact page
+  };
 
   return (
     <div className="restaurant-bar-container">
       <div className="bar-image">
         <img
-          src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/553229569.jpg?k=1d6feb261ec3218271b48c63dd2104ecfc0d45d75f9c6cf54a2193ea7518ff99&o=&hp=1"
           alt="Restaurant Bar"
         />
       </div>
       <div className="bar-description">
-        <h1>{t("kassa_bran")}</h1>
-        <h2>{t("peaceful_retreat")}</h2>
-        <p>{t("kassa_bran_description1")}</p>
-        <p>{t("kassa_bran_description2")}</p>
-        <button className="reservation-button">{t("book_now")}</button>
+        <h1 className="bar-title">{t("kassa_bran")}</h1>
+        <h2 className="bar-subtitle">{t("peaceful_retreat")}</h2>
+        <p className="bar-text">{t("kassa_bran_description1")}</p>
+        <p className="bar-text">{t("kassa_bran_description2")}</p>
+        <button className="reservation-button" onClick={handleButtonClick}>
+          {t("book_now")}
+        </button>
       </div>
     </div>
   );
