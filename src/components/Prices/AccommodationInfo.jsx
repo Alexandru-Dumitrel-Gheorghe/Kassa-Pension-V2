@@ -1,27 +1,28 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./AccommodationInfo.css";
 
 const AccommodationInfo = () => {
+  const { t } = useTranslation();
   const [showPrices, setShowPrices] = useState(false);
   const [selectedRoom, setSelectedRoom] = useState(null);
-  const navigate = useNavigate(); // Initializează useNavigate
+  const navigate = useNavigate();
 
   const rooms = [
     {
-      title: "Casă completă",
-      beds: "7 paturi duble extra-large, 1 pat de o persoană, 1 canapea extensibilă",
-      description:
-        "Pensiunea Kassa oferă cazare confortabilă într-o casă complet echipată, ideală pentru familii sau grupuri mari. Toate camerele sunt decorate cu bun gust și oferă facilități moderne pentru un sejur de neuitat.",
+      title: t("whole_house"),
+      beds: t("whole_house_beds"),
+      description: t("whole_house_description"),
       image:
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/554932830.jpg?k=11a5832a0ce276957dfb3352cd0c853d6fa87551b27d4d1cf7e3529c6697239e&o=&hp=1",
       features: [
-        { icon: "🛏️", text: "7 paturi duble extra-large, 1 pat de o persoană" },
-        { icon: "🛋️", text: "1 canapea extensibilă" },
-        { icon: "🚿", text: "Baie privată" },
-        { icon: "📶", text: "Wi-Fi gratuit" },
-        { icon: "🚗", text: "Parcare gratuită" },
-        { icon: "🖥️", text: "Televizor cu ecran plat" },
+        { icon: "🛏️", text: t("whole_house_beds") },
+        { icon: "🛋️", text: t("whole_house_sofa") },
+        { icon: "🚿", text: t("private_bathroom") },
+        { icon: "📶", text: t("free_wifi") },
+        { icon: "🚗", text: t("free_parking") },
+        { icon: "🖥️", text: t("flat_screen_tv") },
       ],
     },
   ];
@@ -35,15 +36,13 @@ const AccommodationInfo = () => {
   };
 
   const handleReserveNow = () => {
-    navigate("/contact"); // Navighează către pagina de contact
+    navigate("/contact");
   };
 
   return (
     <div className="accommodation-info">
-      <h2>Informații despre cazare</h2>
-      <p className="announcement">
-        Casa se închiriază complet, oferind intimitate și confort maxim.
-      </p>
+      <h2>{t("accommodation_info")}</h2>
+      <p className="announcement">{t("house_rental_announcement")}</p>
       {rooms.map((room, index) => (
         <div
           key={index}
@@ -66,18 +65,18 @@ const AccommodationInfo = () => {
             </div>
           </div>
           <button className="show-prices-button" onClick={handleShowPrices}>
-            {showPrices ? "Ascunde prețuri" : "Arată prețuri"}
+            {showPrices ? t("hide_prices") : t("show_prices")}
           </button>
           {showPrices && (
             <div className="price-details">
-              <p>Prețurile pentru întreaga casă încep de la 1000 RON/noapte.</p>
-              <p>Prețurile pot varia în funcție de sezon și disponibilitate.</p>
+              <p>{t("price_starting_from", { price: "1000 RON" })}</p>
+              <p>{t("price_variation_notice")}</p>
             </div>
           )}
         </div>
       ))}
       <button className="book-now-button" onClick={handleReserveNow}>
-        Rezervă acum
+        {t("book_now")}
       </button>
     </div>
   );

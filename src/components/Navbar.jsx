@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    setLanguageMenuActive(false); // Ascunde meniul după selectarea limbii
+    setLanguageMenuActive(false);
   };
 
   const handleScroll = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
     <>
       <nav className={scrolled ? "scrolled" : ""}>
         <div className="navbar-title">
-          <h1>Kassa</h1>
+          <h1 className="brand">Kassa</h1>
         </div>
         <ul className="navbar-links">
           <li>

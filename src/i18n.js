@@ -46,14 +46,26 @@ const resources = {
       high_rating_for_bran: "High rating for Bran",
       direct_bookings_benefit: "Direct bookings benefit from",
       whole_house: "Whole House",
+      whole_house_beds: "7 extra-large double beds, 1 single bed, 1 sofa bed",
+      whole_house_description:
+        "Pension Kassa offers comfortable accommodation in a fully equipped house, ideal for families or large groups. All rooms are tastefully decorated and offer modern amenities for an unforgettable stay.",
+      whole_house_sofa: "1 sofa bed",
+      private_bathroom: "Private Bathroom",
+      flat_screen_tv: "Flat-screen TV",
+      show_prices: "Show Prices",
+      hide_prices: "Hide Prices",
+      price_starting_from:
+        "Prices for the whole house start from {{price}}/night.",
+      price_variation_notice:
+        "Prices may vary depending on the season and availability.",
+      book_now: "Book Now",
       balcony: "Balcony",
       wifi_included: "WiFi Included",
-      private_bathroom: "Private Bathroom",
       view: "View",
       family_rooms: "Family Rooms",
       barbecue_facilities: "Barbecue Facilities",
       kitchen: "Kitchen",
-      follow_us: "Follow Us",
+      follow_us: "Follow Us", // Cheie păstrată
       all_rights_reserved: "All rights reserved",
       developed_by: "Developed by",
       guest_experiences: "Guest Experiences",
@@ -61,8 +73,6 @@ const resources = {
       booking_review: "The view is amazing, one of the best we've had.",
       google_review: "What luxury! :) We enjoyed our stay.",
       whole_house_rental: "Whole House Rental",
-      whole_house_description:
-        "The entire guesthouse is rented out for your exclusive use, ensuring privacy and comfort.",
       kassa_bran: "Kassa Bran",
       peaceful_retreat:
         "PEACEFUL RETREAT - A SANCTUARY IN THE CARPATHIAN MOUNTAINS",
@@ -74,7 +84,6 @@ const resources = {
         "The holiday home also provides a barbecue. There is a shared lounge at this property and guests can go skiing nearby.",
       kassa_bran_description4:
         "Kassa is 15 km from Dino Parc and 31 km from Piața Sfatului. The nearest airport is Brașov-Ghimbav International Airport, located 28 km from Kassa.",
-      book_now: "Book Now",
       our_rooms: "Our Rooms",
       classic_room: "Classic Room",
       classic_room_beds: "1 single bed and 1 king-size double bed",
@@ -111,6 +120,18 @@ const resources = {
       bucegi: "Bucegi",
       bucegi_description: "Mountain massif in the Southern Carpathians.",
       navigate: "Navigate",
+      accommodation_info: "Accommodation Information",
+      house_rental_announcement:
+        "The house is rented out entirely, offering maximum privacy and comfort.",
+      contact_us_for_reservations: "Contact Us for Reservations",
+      send_us_a_message: "Send Us a Message",
+      full_name: "Full Name",
+      email_address: "Email Address",
+      subject: "Subject",
+      message: "Message",
+      send_message: "Send Message",
+      additional_information: "Additional Information",
+      address: "Strada Valea Porții 213, Bran, Romania",
     },
   },
   ro: {
@@ -159,14 +180,27 @@ const resources = {
       high_rating_for_bran: "Scor ridicat pentru Bran",
       direct_bookings_benefit: "Rezervările directe beneficiază de",
       whole_house: "Casă întreagă",
+      whole_house_beds:
+        "7 paturi duble extra-large, 1 pat de o persoană, 1 canapea extensibilă",
+      whole_house_description:
+        "Pensiunea Kassa oferă cazare confortabilă într-o casă complet echipată, ideală pentru familii sau grupuri mari. Toate camerele sunt decorate cu bun gust și oferă facilități moderne pentru un sejur de neuitat.",
+      whole_house_sofa: "1 canapea extensibilă",
+      private_bathroom: "Baie privată",
+      flat_screen_tv: "Televizor cu ecran plat",
+      show_prices: "Arată prețuri",
+      hide_prices: "Ascunde prețuri",
+      price_starting_from:
+        "Prețurile pentru întreaga casă încep de la {{price}}/noapte.",
+      price_variation_notice:
+        "Prețurile pot varia în funcție de sezon și disponibilitate.",
+      book_now: "Rezervă acum",
       balcony: "Balcon",
       wifi_included: "WiFi Inclus",
-      private_bathroom: "Baie Privată",
       view: "Priveliște",
       family_rooms: "Camere de Familie",
       barbecue_facilities: "Facilități pentru Grătar",
       kitchen: "Bucătărie",
-      follow_us: "Urmărește-ne",
+      follow_us: "Urmărește-ne", // Cheie păstrată
       all_rights_reserved: "Toate drepturile rezervate",
       developed_by: "Dezvoltat de",
       guest_experiences: "Experiențele oaspeților noștri",
@@ -175,8 +209,6 @@ const resources = {
         "Vederea este uimitoare, una dintre cele mai bune pe care le-am avut.",
       google_review: "Ce lux! :) Ne-am bucurat de șederea noastră",
       whole_house_rental: "Închiriere întreagă pensiune",
-      whole_house_description:
-        "Întreaga pensiune este închiriată pentru uzul dvs. exclusiv, asigurând intimitate și confort.",
       kassa_bran: "Kassa Bran",
       peaceful_retreat: "RELAZARE TRANQUILĂ - OAZĂ DE LINIȘTE",
       kassa_bran_description1:
@@ -187,7 +219,6 @@ const resources = {
         "Această casă de vacanță pune la dispoziție un grătar. Această proprietate are un salon de zi comun, iar în apropiere oaspeții pot desfășura activități precum schi.",
       kassa_bran_description4:
         "Kassa se află la 15 km de Dino Parc și la 31 km de Piața Sfatului. Cel mai apropiat aeroport este Aeroportul Internațional Brașov-Ghimbav, situat la 28 km de Kassa.",
-      book_now: "Rezervă acum",
       our_rooms: "Camerele Noastre",
       classic_room: "Cameră Clasică",
       classic_room_beds: "1 pat de o persoană și 1 pat dublu king-size",
@@ -226,6 +257,18 @@ const resources = {
       bucegi: "Bucegi",
       bucegi_description: "Masiv montan din Carpații Meridionali.",
       navigate: "Navighează",
+      accommodation_info: "Informații despre cazare",
+      house_rental_announcement:
+        "Casa se închiriază complet, oferind intimitate și confort maxim.",
+      contact_us_for_reservations: "Pentru Rezervări, Contactați-ne",
+      send_us_a_message: "Trimite-ne un mesaj",
+      full_name: "Nume complet",
+      email_address: "Adresa de email",
+      subject: "Subiect",
+      message: "Mesaj",
+      send_message: "Trimite Mesajul",
+      additional_information: "Informații Suplimentare",
+      address: "Strada Valea Porții 213, Bran, România",
     },
   },
 };

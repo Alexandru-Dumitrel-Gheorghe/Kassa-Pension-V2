@@ -17,9 +17,12 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 import "./ContactForm.css";
 
 const ContactForm = () => {
+  const { t } = useTranslation(); // Initialize useTranslation
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,7 +56,7 @@ const ContactForm = () => {
         gutterBottom
         className="custom-title"
       >
-        Pentru Rezervări, Contactați-ne
+        {t("contact_us_for_reservations")}
       </Typography>
       <Grid container spacing={4} alignItems="stretch">
         <Grid item xs={12} md={6}>
@@ -65,11 +68,11 @@ const ContactForm = () => {
                   gutterBottom
                   className="custom-subtitle"
                 >
-                  Trimite-ne un mesaj
+                  {t("send_us_a_message")}
                 </Typography>
                 <TextField
                   fullWidth
-                  label="Nume complet"
+                  label={t("full_name")}
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -78,7 +81,7 @@ const ContactForm = () => {
                 />
                 <TextField
                   fullWidth
-                  label="Adresa de email"
+                  label={t("email_address")}
                   name="email"
                   type="email"
                   value={formData.email}
@@ -88,7 +91,7 @@ const ContactForm = () => {
                 />
                 <TextField
                   fullWidth
-                  label="Subiect"
+                  label={t("subject")}
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
@@ -97,7 +100,7 @@ const ContactForm = () => {
                 />
                 <TextField
                   fullWidth
-                  label="Mesaj"
+                  label={t("message")}
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -112,7 +115,7 @@ const ContactForm = () => {
                     type="submit"
                     className="custom-button"
                   >
-                    Trimite Mesajul
+                    {t("send_message")}
                   </Button>
                 </Box>
               </form>
@@ -130,7 +133,7 @@ const ContactForm = () => {
               textAlign="center"
             >
               <Typography variant="h6" gutterBottom className="custom-subtitle">
-                Informatii Suplimentare
+                {t("additional_information")}
               </Typography>
               <Box className="custom-info-item" mb={2}>
                 <FaPhone />
@@ -142,10 +145,10 @@ const ContactForm = () => {
               </Box>
               <Box className="custom-info-item" mb={2}>
                 <FaMapMarkerAlt />
-                <Typography>Strada Valea Porții 213, Bran, România</Typography>
+                <Typography>{t("address")}</Typography>
               </Box>
               <Typography variant="h6" gutterBottom className="custom-subtitle">
-                Urmareste-ne
+                {t("follow_us")}
               </Typography>
               <Box
                 className="social-icons"
