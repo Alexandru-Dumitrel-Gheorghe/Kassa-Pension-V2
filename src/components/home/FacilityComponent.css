@@ -1,0 +1,109 @@
+:root {
+  --primary-color: #b59e5d;
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --icon-background: #fff;
+  --icon-border: #ddd;
+  --icon-color: #b59e5d;
+}
+
+.facility-container {
+  padding: 50px 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.facility-subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.facility-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.facility-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.facility-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.facility-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--icon-background);
+  border: 1px solid var(--icon-border);
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.facility-icon {
+  color: var(--icon-color);
+  font-size: 30px;
+}
+
+.facility-item-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .facility-items {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .facility-item {
+    flex: 1 1 calc(50% - 20px); /* Adjusts items to take up half the available width minus margins */
+    margin: 10px;
+  }
+
+  .facility-title {
+    font-size: 28px;
+  }
+
+  .facility-description {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .facility-item {
+    flex: 1 1 100%; /* Adjusts items to take up full width on very small screens */
+    margin: 10px 0;
+  }
+
+  .facility-title {
+    font-size: 24px;
+  }
+
+  .facility-description {
+    font-size: 12px;
+    width: 100%;
+  }
+}

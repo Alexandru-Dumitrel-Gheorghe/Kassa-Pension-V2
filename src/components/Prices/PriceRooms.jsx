@@ -115,9 +115,9 @@ const PriceRooms = () => {
     <Container className="price-rooms">
       <Row>
         {rooms.map((room, index) => (
-          <Col key={index} md={12} className="mb-4">
+          <Col key={index} md={6} lg={4} className="mb-4">
             <Card
-              className={`room-card flex-row ${
+              className={`room-card ${
                 index % 2 === 0 ? "" : "flex-row-reverse"
               }`}
             >

@@ -1,15 +1,20 @@
 :root {
-  --primary-color: #c1c7c1 !important; /* Sea Green */
-  --secondary-color: #d4af37 !important; /* Saddle Brown */
-  --accent-color: #d4af37 !important; /* Light Salmon */
-  --text-color: #030303 !important; /* Darker text color for better readability */
-  --background-color: #f5f5f5 !important; /* Light Gray */
+  --title-color: #333333;
+  --text-color: #704214;
+  --icons-color: #c1a17f;
+  --background-color: #ffffff; /* Presupunând un fundal alb */
+  --primary-color: #c1a17f; /* Similar cu icons-color */
+  --secondary-color: #704214; /* Similar cu text-color */
+  --accent-color: #333333; /* Similar cu title-color */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+  --primary-font: "Lucida Handwriting", serif;
+  --heading-font: "Lucida Handwriting", serif;
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--primary-font);
 }
 
 h1 {

@@ -21,13 +21,12 @@ const Navbar = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setLanguageMenuActive(false);
-    setMenuActive(false); // Închide meniul hamburger după schimbarea limbii
+    setMenuActive(false); // Close the hamburger menu after changing the language
   };
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    const height = document.querySelector(".header")?.offsetHeight || 0;
-    if (offset > height * 0.8) {
+    if (offset > 50) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -43,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={scrolled ? "scrolled" : ""}>
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-title">
           <Link to="/" className="navbar-brand">
             <h1>Kassa</h1>
@@ -127,8 +126,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="language-menu-title">
-            <span>{t("change_language")}</span>{" "}
-            {/* Titlul pentru schimbarea limbii */}
+            <span>{t("change_language")}</span>
           </li>
           <li>
             <button onClick={() => changeLanguage("en")}>EN</button>

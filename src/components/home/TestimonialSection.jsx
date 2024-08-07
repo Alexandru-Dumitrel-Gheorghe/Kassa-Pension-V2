@@ -11,35 +11,49 @@ const ReviewsSection = () => {
       <Container>
         <Row className="text-center mb-4">
           <Col>
-            <h2>{t("guest_experiences")}</h2>
+            <h2 className="section-title">{t("guest_experiences")}</h2>
+            <p className="section-intro">{t("review_intro")}</p>
           </Col>
         </Row>
-        <Row className="text-center mb-4">
-          <Col md={4}>
+        <Row className="justify-content-center">
+          <Col md={5} className="mb-4">
             <div className="review-card">
-              <p>
-                <strong>TripAdvisor</strong>
-              </p>
-              <p className="rating">4.0/5.0</p>
+              <div className="review-icon">&#10077;</div>
               <p className="review-text">{t("tripadvisor_review")}</p>
+              <div className="review-details">
+                <img
+                  src="path-to-tripadvisor-image.jpg"
+                  alt="TripAdvisor Reviewer"
+                  className="reviewer-image"
+                />
+                <div className="review-author">
+                  <p className="reviewer-name">Marina Trange</p>
+                  <p className="reviewer-role">{t("manager")}</p>
+                </div>
+              </div>
+              <div className="review-stars">
+                <span>★★★★☆</span>
+              </div>
             </div>
           </Col>
-          <Col md={4}>
+          <Col md={5} className="mb-4">
             <div className="review-card">
-              <p>
-                <strong>Booking.com</strong>
-              </p>
-              <p className="rating">8.6/10</p>
+              <div className="review-icon">&#10077;</div>
               <p className="review-text">"{t("booking_review")}"</p>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div className="review-card">
-              <p>
-                <strong>Google</strong>
-              </p>
-              <p className="rating">4.5/5.0</p>
-              <p className="review-text">"{t("google_review")}"</p>
+              <div className="review-details">
+                <img
+                  src="path-to-booking-image.jpg"
+                  alt="Booking.com Reviewer"
+                  className="reviewer-image"
+                />
+                <div className="review-author">
+                  <p className="reviewer-name">John D. Alexon</p>
+                  <p className="reviewer-role">{t("manager")}</p>
+                </div>
+              </div>
+              <div className="review-stars">
+                <span>★★★★★★★☆☆</span>
+              </div>
             </div>
           </Col>
         </Row>

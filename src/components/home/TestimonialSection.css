@@ -1,136 +1,117 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap");
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
-
-.text-center {
-  text-align: center;
+:root {
+  --titel-color: #333333;
+  --text-color: #704214;
+  --icons-color: #c1a17f !important;
+  --highlight-color: #c9302c;
+  --background-color: #f8f8f8;
+  --primary-color: #333;
 }
 
 .reviews-section {
-  position: relative;
-  padding: 80px 0; /* Increased padding for top and bottom */
-  background-image: url(https://storage0.dms.mpinteractiv.ro/media/1/1481/21328/15968028/1/castelul-bran.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  color: white;
+  background-color: var(--background-color);
+  padding: 3rem 0;
   text-align: center;
 }
 
-.reviews-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+.section-title {
+  font-size: 2.5rem;
+  color: var(--titel-color);
+  margin-bottom: 1rem;
 }
 
-.reviews-section h2,
-.reviews-section p {
+.section-intro {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.review-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 2;
-  color: white;
+  overflow: hidden;
+  text-align: left;
 }
 
-.reviews-section h2 {
-  margin-bottom: 40px;
-  color: var(--accent-color); /* Changed color to accent-color */
-  animation: fadeIn 1.5s ease-in-out; /* Added fade-in animation */
+.review-icon {
+  font-size: 2rem;
+  color: var(--icons-color);
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  transform: translateY(-50%);
 }
 
-.reviews-section p {
-  margin-bottom: 20px;
-  font-size: 1.2rem; /* Increased font size */
-  animation: fadeIn 1.5s ease-in-out; /* Added fade-in animation */
+.review-text {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin: 1rem 0;
+  line-height: 1.6;
 }
 
-/* Media Queries */
-@media (max-width: 1200px) {
-  .reviews-section {
-    padding: 60px 0;
-  }
-
-  .reviews-section h2 {
-    font-size: 2rem;
-  }
-
-  .reviews-section p {
-    font-size: 1.2rem;
-  }
+.review-details {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-@media (max-width: 992px) {
-  .reviews-section {
-    padding: 50px 0;
-  }
+.reviewer-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
 
-  .reviews-section h2 {
-    font-size: 1.8rem;
-  }
+.review-author {
+  text-align: left;
+}
 
-  .reviews-section p {
-    font-size: 1.1rem;
-  }
+.reviewer-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--titel-color);
+}
+
+.reviewer-role {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.review-stars {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: var(--highlight-color);
 }
 
 @media (max-width: 768px) {
-  .reviews-section {
-    padding: 40px 0;
-    background-attachment: scroll; /* Make the background image static */
+  .review-card {
+    padding: 1.5rem;
   }
 
-  .reviews-section h2 {
-    font-size: 1.6rem;
+  .section-title {
+    font-size: 2rem;
   }
 
-  .reviews-section p {
+  .section-intro {
     font-size: 1rem;
   }
-}
 
-@media (max-width: 576px) {
-  .reviews-section {
-    padding: 30px 0;
-    background-attachment: scroll; /* Make the background image static */
+  .review-icon {
+    top: -5px;
+    left: 15px;
   }
 
-  .reviews-section h2 {
-    font-size: 1.4rem;
-  }
-
-  .reviews-section p {
+  .review-text {
     font-size: 0.9rem;
   }
-}
 
-/* Animation Keyframes */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  .review-details {
+    margin-top: 0.5rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
+  .review-stars {
+    margin-top: 0.5rem;
   }
 }

@@ -4,17 +4,17 @@ import { useTranslation } from "react-i18next";
 import "./FacilitiesSection.css";
 
 const FacilitiesSection = () => {
-  const navigate = useNavigate(); // Hook pentru navigare
-  const { t } = useTranslation(); // Hook pentru traducere
+  const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <section className="fs-facilities-section">
       <div className="fs-container">
-        <h2>{t("facilities_offered_by_kassa")}</h2>
+        <h2 className="fs-title">{t("facilities_offered_by_kassa")}</h2>
         <p className="fs-score">{t("excellent_facilities")}</p>
         <button
           className="fs-availability-button"
-          onClick={() => navigate("/contact")} // Redirecționare către pagina de contact
+          onClick={() => navigate("/contact")}
         >
           {t("check_available_dates")}
         </button>
@@ -30,17 +30,14 @@ const FacilitiesSection = () => {
               <li>{t("baby_cots")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("Parking")}</h3>
             <p>{t("private_parking_available")}</p>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("Internet")}</h3>
             <p>{t("wifi_available")}</p>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("kitchen")}</h3>
             <ul>
@@ -58,7 +55,6 @@ const FacilitiesSection = () => {
               <li>{t("refrigerator")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("Bedroom")}</h3>
             <ul>
@@ -66,7 +62,6 @@ const FacilitiesSection = () => {
               <li>{t("wardrobe")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("Bathroom")}</h3>
             <ul>
@@ -81,7 +76,6 @@ const FacilitiesSection = () => {
               <li>{t("shower")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("living_area")}</h3>
             <ul>
@@ -92,7 +86,6 @@ const FacilitiesSection = () => {
               <li>{t("desk")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("media_technology")}</h3>
             <ul>
@@ -101,7 +94,6 @@ const FacilitiesSection = () => {
               <li>{t("tv")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("room_facilities")}</h3>
             <ul>
@@ -114,12 +106,10 @@ const FacilitiesSection = () => {
               <li>{t("fan")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("Accessibility")}</h3>
             <p>{t("upper_floors_accessible_by_stairs_only")}</p>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("Outside")}</h3>
             <ul>
@@ -135,7 +125,6 @@ const FacilitiesSection = () => {
               <li>{t("garden")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("common_areas")}</h3>
             <ul>
@@ -143,7 +132,6 @@ const FacilitiesSection = () => {
               <li>{t("game_room")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("Wellness")}</h3>
             <ul>
@@ -158,7 +146,6 @@ const FacilitiesSection = () => {
               <li>{t("beach_umbrellas")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("food_drink")}</h3>
             <ul>
@@ -166,7 +153,6 @@ const FacilitiesSection = () => {
               <li>{t("tea_coffee_maker")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("activities")}</h3>
             <ul>
@@ -180,7 +166,6 @@ const FacilitiesSection = () => {
               <li>{t("skiing")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("view")}</h3>
             <ul>
@@ -190,12 +175,10 @@ const FacilitiesSection = () => {
               <li>{t("view")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("building_characteristics")}</h3>
             <p>{t("detached")}</p>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("reception_services")}</h3>
             <ul>
@@ -203,7 +186,6 @@ const FacilitiesSection = () => {
               <li>{t("private_check_in_check_out")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("entertainment_family_services")}</h3>
             <ul>
@@ -212,7 +194,6 @@ const FacilitiesSection = () => {
               <li>{t("board_games_puzzles")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("cleaning_services")}</h3>
             <ul>
@@ -221,12 +202,10 @@ const FacilitiesSection = () => {
               <li>{t("laundry")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("business_facilities")}</h3>
             <p>{t("meeting_banquet_facilities")}</p>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("Others")}</h3>
             <ul>
@@ -236,7 +215,6 @@ const FacilitiesSection = () => {
               <li>{t("family_rooms")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("safety_security")}</h3>
             <ul>
@@ -250,7 +228,6 @@ const FacilitiesSection = () => {
               <li>{t("safe")}</li>
             </ul>
           </div>
-
           <div className="fs-facility-category">
             <h3>{t("languages_spoken")}</h3>
             <ul>

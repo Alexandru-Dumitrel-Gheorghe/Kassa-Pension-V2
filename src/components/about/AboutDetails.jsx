@@ -5,10 +5,10 @@ import "./AboutDetails.css";
 
 const AboutDetails = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate(); // Initializează useNavigate
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleBookNowClick = () => {
-    navigate("/contact"); // Redirecționează către pagina de contact
+    navigate("/contact"); // Redirect to contact page
   };
 
   return (

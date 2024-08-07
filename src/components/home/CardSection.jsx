@@ -53,16 +53,18 @@ const CardSection = () => {
               icon={facility.icon}
               className="cs-facility-icon"
             />
-            {facility.text}
+            <span>{facility.text}</span>
           </div>
         ))}
       </div>
       <div className="cs-cards-container">
         {cards.map((card, index) => (
           <div key={index} className="cs-card">
-            <img src={card.imgSrc} alt={card.title} />
-            <div className="cs-card-title">{card.title}</div>
-            <div className="cs-card-hover-text">{card.hoverText}</div>
+            <img src={card.imgSrc} alt={card.title} className="cs-card-img" />
+            <div className="cs-card-content">
+              <div className="cs-card-title">{card.title}</div>
+              <div className="cs-card-hover-text">{card.hoverText}</div>
+            </div>
           </div>
         ))}
       </div>

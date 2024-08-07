@@ -1,128 +1,107 @@
-:root {
-  --accent-color: #d4af37; /* Primary accent color */
-  --highlight-color: #c9302c; /* Highlight color for buttons and links */
-  --text-color: #fff; /* Text color */
-}
-
-.restaurant-bar-container {
+.info-home-container {
   display: flex;
-  flex-direction: column;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding: 20px;
+  align-items: center;
   max-width: 1200px;
-  margin: 24px auto;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
 
-.bar-image img {
+.info-image-container {
+  flex: 1;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.info-image {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
-.bar-image img:hover {
-  transform: scale(1.05);
-}
-
-.bar-description {
+.info-content {
+  flex: 1;
   padding: 20px;
+  color: var(--text-color);
 }
 
-.bar-title {
+.info-highlight {
+  font-size: 1rem;
+  color: var(--highlight-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.info-title {
   font-size: 2.5rem;
   color: var(--accent-color);
   margin-bottom: 10px;
   font-weight: bold;
-  animation: fadeInDown 1s ease-in-out;
 }
 
-.bar-subtitle {
-  font-size: 1.5rem;
-  color: var(--highlight-color);
-  margin-bottom: 20px;
-  animation: fadeInDown 1.2s ease-in-out;
-}
-
-.bar-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  animation: fadeIn 1.4s ease-in-out;
-}
-
-.reservation-button {
-  padding: 12px 25px;
-  background-color: #d4af37;
-  color: var(--text-color);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.info-description {
   font-size: 1rem;
-  margin-top: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: var(--text-color);
 }
 
-.reservation-button:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-2px);
+.info-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-/* Keyframes */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.info-stat-item {
+  text-align: center;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.stat-number {
+  font-size: 2rem;
+  color: var(--primary-color);
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-  .restaurant-bar-container {
-    flex-direction: row;
-  }
+.stat-text {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
 
-  .bar-image,
-  .bar-description {
-    flex: 1;
-  }
+.info-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
-  .bar-description {
-    margin-left: 20px;
-  }
+.info-button:hover {
+  background-color: var(--text-color);
 }
 
 @media (max-width: 768px) {
-  .bar-title {
-    font-size: 2rem;
+  .info-home-container {
+    flex-direction: column;
   }
 
-  .bar-subtitle {
-    font-size: 1.3rem;
+  .info-image-container {
+    max-width: 100%;
   }
 
-  .bar-text {
-    font-size: 1rem;
+  .info-stats {
+    flex-direction: column;
   }
 
-  .reservation-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+  .info-stat-item {
+    margin-bottom: 10px;
   }
 }

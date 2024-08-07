@@ -1,6 +1,8 @@
 .price-rooms {
   padding: 2rem 1rem;
-  background-color: #f8f9fa; /* Fundal deschis pentru contrast */
+  background-color: var(
+    --background-color
+  ); /* Fundal deschis pentru contrast */
 }
 
 .room-card {
@@ -32,23 +34,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f8f9fa; /* Fundal deschis pentru corpul cardului */
+  background-color: var(
+    --background-color
+  ); /* Fundal deschis pentru corpul cardului */
   border-radius: 0 0 15px 15px;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 50%;
 }
 
 .room-card .card-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #343a40; /* Text întunecat pentru titlu */
+  color: var(--titel-color); /* Text întunecat pentru titlu */
 }
 
 .room-card .card-text {
-  color: #6c757d; /* Text gri pentru descriere */
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  color: var(--text-color); /* Text gri pentru descriere */
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .room-features {
@@ -63,14 +67,14 @@
 .room-features li {
   display: flex;
   align-items: center;
-  font-size: 0.9rem;
-  color: #495057; /* Text gri închis pentru funcții */
+  font-size: 0.8rem;
+  color: var(--text-color); /* Text gri închis pentru funcții */
   margin: 0.5rem 1rem;
 }
 
 .room-features li svg {
   margin-right: 0.5rem;
-  color: #007bff; /* Albastru pentru iconițe */
+  color: var(--icons-color); /* Albastru pentru iconițe */
 }
 
 /* Responsive Design */
@@ -96,11 +100,11 @@
   }
 
   .room-card .card-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .room-card .card-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .room-features {

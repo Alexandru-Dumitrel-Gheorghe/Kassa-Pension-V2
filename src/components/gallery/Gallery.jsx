@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./Gallery.css";
 
 const Gallery = () => {
@@ -45,21 +45,43 @@ const Gallery = () => {
     setLoading(true);
   };
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     setCurrentIndex(null);
-  };
+  }, []);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     setLoading(true);
-  };
+  }, [images.length]);
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
     setLoading(true);
-  };
+  }, [images.length]);
+
+  const handleKeyDown = useCallback(
+    (e) => {
+      if (currentIndex !== null) {
+        if (e.key === "ArrowRight") {
+          goToNext();
+        } else if (e.key === "ArrowLeft") {
+          goToPrevious();
+        } else if (e.key === "Escape") {
+          closeLightbox();
+        }
+      }
+    },
+    [currentIndex, goToNext, goToPrevious, closeLightbox]
+  );
+
+  React.useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   return (
     <div className="gallery-container">

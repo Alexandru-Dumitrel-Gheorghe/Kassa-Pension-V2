@@ -588,7 +588,7 @@ const resources = {
       cleaning_services: "Servicii de curățenie",
       business_facilities: "Facilități de afaceri",
       safety_security: "Siguranță și securitate",
-      more_info: "Mai multe informații",
+      more_info: "Informații",
       check_in: "Check-in",
       check_out: "Check-out",
       cancellation_prepayment: "Anulare/Preplată",

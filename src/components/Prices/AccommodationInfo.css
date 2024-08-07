@@ -1,17 +1,26 @@
-/* CSS actualizat */
+:root {
+  --primary-color: #d4af37;
+  --secondary-color: #007bff;
+  --background-color: #f1f1f1;
+  --text-color: #333;
+  --light-text-color: #666;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-box-shadow-color: rgba(0, 0, 0, 0.2);
+}
+
 .accommodation-info {
   padding: 2rem;
-  background-color: #f1f1f1;
+  background-color: var(--background-color);
   border-radius: 10px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px var(--box-shadow-color);
   max-width: 900px;
   margin: 2rem auto;
   text-align: center;
 }
 
 .accommodation-info h2 {
-  font-size: 2rem;
-  color: #d4af37;
+  font-size: 2.5rem;
+  color: var(--primary-color);
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -20,16 +29,16 @@
   background-color: #ffeb3b;
   padding: 10px;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 
 .room-info {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  box-shadow: 0 5px 10px var(--box-shadow-color);
+  margin-bottom: 1.5rem;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
@@ -37,18 +46,17 @@
 
 .room-info:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px var(--hover-box-shadow-color);
 }
 
 .room-info.selected {
-  border: 2px solid #d4af37;
+  border: 2px solid var(--primary-color);
 }
 
 .room-details {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 20px;
+  flex-wrap: wrap;
 }
 
 .room-image {
@@ -56,54 +64,58 @@
   max-height: 400px;
   object-fit: cover;
   border-bottom: 1px solid #eee;
+  transition: opacity 0.3s ease;
 }
 
 .room-content {
-  padding: 20px;
+  padding: 1.5rem;
+  text-align: left;
 }
 
 .room-content h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
 }
 
 .room-content p {
   font-size: 1rem;
-  color: #666;
-  margin-bottom: 10px;
+  color: var(--light-text-color);
+  margin-bottom: 0.5rem;
 }
 
 .room-features {
   list-style: none;
   padding: 0;
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 .room-features li {
   display: flex;
   align-items: center;
   font-size: 1rem;
-  color: #444;
-  margin-bottom: 5px;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
 }
 
 .room-features li span {
-  margin-right: 5px;
+  margin-right: 0.5rem;
   font-size: 1.2rem;
-  color: #007bff;
+  color: var(--secondary-color);
 }
 
 .show-prices-button,
 .book-now-button {
-  padding: 10px 20px;
-  background-color: #007bff;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--secondary-color);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 20px 0; /* Am eliminat margin-bottom */
   transition: background-color 0.3s ease;
+  margin: 1rem 0;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .show-prices-button:hover,
@@ -112,23 +124,27 @@
 }
 
 .price-details {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #666;
-  padding: 0px;
-  border-top: 1px solid #ddd;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  transition: max-height 0.5s ease, padding 0.5s ease;
 }
 
 .price-details.show {
-  max-height: 120px;
-  padding: 20px;
-  margin-bottom: 20px;
+  max-height: 100px;
+  padding: 1rem 0;
+}
+
+.price-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--light-text-color);
 }
 
 @media (max-width: 768px) {
+  .accommodation-info {
+    padding: 1.5rem;
+  }
+
   .room-details {
     flex-direction: column;
   }
@@ -138,11 +154,11 @@
   }
 
   .room-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .room-content p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .room-features li {
@@ -160,7 +176,7 @@
   }
 
   .room-content h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .room-content p {
@@ -168,7 +184,7 @@
   }
 
   .room-features li {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .room-features li span {

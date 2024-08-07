@@ -1,58 +1,63 @@
-:root {
-  --background-color: #f8f8f8;
-  --accent-color: #d4af37;
-  --text-color: #4a4a4a;
-  --highlight-color: #333;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .welcome-section {
   padding: 3rem 1.5rem;
-  background-color: var(--background-color);
   margin-top: 24px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 6px 16px var(--shadow-color);
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+  background-color: var(--background-color);
 }
 
 .welcome-content {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
-  animation: fadeInUp 1s ease-in-out;
+  font-family: var(--primary-font);
 }
 
 .welcome-title {
   margin-bottom: 1.5rem;
-  color: var(--accent-color);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
+  font-family: var(--heading-font);
+  color: var(--title-color);
 }
 
 .welcome-description {
   font-size: 1.25rem;
-  color: var(--text-color);
   margin-bottom: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
 .welcome-icons {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .welcome-icon {
   text-align: center;
-  flex: 1;
   transition: transform 0.3s ease, color 0.3s ease;
+  padding: 1rem;
+  color: var(--icons-color);
 }
 
 .welcome-icon:hover {
   transform: scale(1.1);
-  color: var(--highlight-color);
+  color: var(--text-color);
 }
 
-.welcome-icon .icon {
-  color: var(--accent-color);
+.icon {
+  color: var(--icons-color);
   transition: color 0.3s ease;
 }
 
@@ -81,8 +86,7 @@
   }
 
   .welcome-icons {
-    flex-direction: column;
-    align-items: center;
+    gap: 2rem;
   }
 
   .welcome-icon {
@@ -100,12 +104,11 @@
   }
 
   .welcome-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .welcome-description {
     font-size: 1rem;
-    margin-bottom: 2rem;
   }
 
   .welcome-icon p {
