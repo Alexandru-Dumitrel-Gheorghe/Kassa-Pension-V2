@@ -1,82 +1,46 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Importă useNavigate pentru navigare
-import {
-  FaParking,
-  FaWifi,
-  FaUtensils,
-  FaThermometerHalf,
-  FaSwimmer,
-  FaBriefcase,
-} from "react-icons/fa";
-import { useTranslation } from "react-i18next"; // Importă useTranslation pentru traduceri
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./BenefitsSection.css";
 
 const StyledSection = () => {
-  const navigate = useNavigate(); // Definirea navigate pentru navigare
-  const { t } = useTranslation(); // Hook pentru traduceri
-
-  const benefits = [
-    { icon: <FaSwimmer />, title: t("pool_and_spa") },
-    { icon: <FaBriefcase />, title: t("conference_rooms") },
-    { icon: <FaParking />, title: t("free_parking") },
-    { icon: <FaWifi />, title: t("free_wifi") },
-    { icon: <FaUtensils />, title: t("restaurant_and_bar") },
-    { icon: <FaThermometerHalf />, title: t("air_conditioning") },
-  ];
+  const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const attractions = [
     {
-      category: t("restaurants_and_cafes"),
-      places: [t("bulzu_branului"), t("la_cristi"), t("burg")],
+      category: "Restaurante și cafenele",
+      places: ["Bulzu Branului (650 m)", "La Cristi (1,5 km)", "Burg (1,6 km)"],
     },
     {
-      category: t("main_attractions"),
+      category: "Principalele atracții",
       places: [
-        t("bear_sanctuary"),
-        t("rasnov_fortress"),
-        t("fun_park_kalinderu"),
-        t("cantacuzino_castle"),
-        t("foisor_castle"),
+        "Rezervaţia de urși de la Zărnești (10 km)",
+        "Cetatea Râșnov (11 km)",
+        "Fun Park Kalinderu (14 km)",
+        "Castelul Cantacuzino (16 km)",
+        "Foișor Castle (20 km)",
       ],
     },
   ];
 
   return (
-    <div className="styled-section">
-      <div className="left-section">
-        <div className="left-content">
-          <h1>{t("pension_kassa")}</h1>
-          <h2>{t("unique_experience")}</h2>
-          <div className="benefits-list">
-            {benefits.map((benefit, index) => (
-              <div className="benefit-item" key={index}>
-                <div className="benefit-icon">{benefit.icon}</div>
-                <p>{benefit.title}</p>
-              </div>
-            ))}
+    <div className="atf-section">
+      <div className="atf-content">
+        <h3>Atracții și Facilități</h3>
+        {attractions.map((attraction, index) => (
+          <div key={index} className="atf-category">
+            <h4>{attraction.category}</h4>
+            <ul>
+              {attraction.places.map((place, placeIndex) => (
+                <li key={placeIndex}>{place}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-      </div>
-      <div className="right-section">
-        <div className="right-content">
-          <h3>{t("attractions_and_facilities")}</h3>
-          {attractions.map((attraction, index) => (
-            <div key={index} className="attraction-category">
-              <h4>{attraction.category}</h4>
-              <ul>
-                {attraction.places.map((place, placeIndex) => (
-                  <li key={placeIndex}>{place}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <button
-            className="wow-button"
-            onClick={() => navigate("/more-info")} // Utilizare useNavigate
-          >
-            {t("learn_more")}
-          </button>
-        </div>
+        ))}
+        <button className="atf-button" onClick={() => navigate("/more-info")}>
+          Află Mai Multe
+        </button>
       </div>
     </div>
   );

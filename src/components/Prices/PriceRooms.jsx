@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import Slider from "react-slick";
+import { Container, Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBed,
@@ -11,6 +12,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import "./PriceRooms.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const PriceRooms = () => {
   const { t } = useTranslation();
@@ -111,23 +114,47 @@ const PriceRooms = () => {
     },
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <Container className="price-rooms">
-      <Row>
+      <h2 className="rooms-title text-center">{t("our_rooms")}</h2>
+      <p className="rooms-subtitle text-center">{t("rooms_subtitle")}</p>
+      <Slider {...settings}>
         {rooms.map((room, index) => (
-          <Col key={index} md={6} lg={4} className="mb-4">
-            <Card
-              className={`room-card ${
-                index % 2 === 0 ? "" : "flex-row-reverse"
-              }`}
-            >
-              <Card.Img className="card-img" src={room.image} />
-              <Card.Body className="d-flex flex-column justify-content-center text-center">
-                <Card.Title>{t(room.title)}</Card.Title>
-                <Card.Text>
+          <div key={index} className="room-slide">
+            <Card className="room-card">
+              <Card.Img variant="top" src={room.image} className="room-img" />
+              <Card.Body className="d-flex flex-column align-items-center text-center">
+                <Card.Title className="room-title">{t(room.title)}</Card.Title>
+                <Card.Text className="room-beds">
                   <FontAwesomeIcon icon={faBed} /> {t(room.beds)}
                 </Card.Text>
-                <Card.Text>{t(room.description)}</Card.Text>
+                <Card.Text className="room-description">
+                  {t(room.description)}
+                </Card.Text>
                 <ul className="room-features">
                   {room.features.map((feature, i) => (
                     <li key={i}>
@@ -137,9 +164,9 @@ const PriceRooms = () => {
                 </ul>
               </Card.Body>
             </Card>
-          </Col>
+          </div>
         ))}
-      </Row>
+      </Slider>
     </Container>
   );
 };

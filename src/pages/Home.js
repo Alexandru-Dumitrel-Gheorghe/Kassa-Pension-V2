@@ -4,11 +4,11 @@ import HeaderHome from "../components/home/HeaderHome";
 import WelcomeSection from "../components/home/WelcomeSection";
 import BenefitsSection from "../components/home/BenefitsSection";
 import Footer from "../components/Footer";
-import Testimonial from "../components/home/TestimonialSection";
 import InfoHome from "../components/home/InfoHome";
 import Facilitties from "../components/home/FacilityComponent";
 import VideoHeader from "../components/home/VideoHeader";
 import RoomsSection from "../components/home/RoomsSection";
+import TestimonialSection from "../components/home/TestimonialSection";
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
       <VideoHeader />
       <RoomsSection />
       <Facilitties />
-      <Testimonial />
+      <TestimonialSection />
       <BenefitsSection />
       <Footer />
     </div>

@@ -1,175 +1,145 @@
-.styled-section {
-  display: flex;
-  flex-wrap: wrap;
-  color: var(--text-color);
+:root {
+  --title-color: #333333;
+  --text-color: #704214;
+  --icons-color: #c1a17f;
+  --background-color: #ffffff;
+  --primary-color: #c1a17f;
+  --secondary-color: #704214;
+  --accent-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --primary-font: "Lucida Handwriting", serif;
+  --heading-font: "Lucida Handwriting", serif;
+}
+
+body {
   background-color: var(--background-color);
-  padding: 40px 20px;
-  gap: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.left-section,
-.right-section {
-  flex: 1;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background-color: var(--background-color);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.left-section:hover,
-.right-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.left-content,
-.right-content {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-
-.left-content h1 {
-  color: var(--titel-color);
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.left-content h2 {
   color: var(--text-color);
-  font-size: 1.75rem;
-  font-weight: bold;
-  margin-bottom: 40px;
+  font-family: var(--primary-font);
 }
 
-.benefits-list {
+.atf-section {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.benefit-item {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  color: var(--text-color);
+  padding: 40px 20px;
+  background-color: var(--background-color);
   text-align: center;
 }
 
-.benefit-icon {
-  font-size: 2.5rem;
+.atf-content {
+  max-width: 800px;
+  width: 100%;
+  background: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  padding: 20px;
+}
+
+.atf-content h3 {
   color: var(--primary-color);
-}
-
-.right-content h3 {
-  color: var(--titel-color);
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.attraction-category {
+.atf-category {
   margin-bottom: 20px;
 }
 
-.attraction-category h4 {
-  font-size: 1.2rem;
-  color: var(--titel-color);
+.atf-category h4 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
   margin-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-.attraction-category ul {
+.atf-category ul {
   list-style-type: none;
   padding: 0;
 }
 
-.attraction-category li {
+.atf-category li {
   font-size: 1rem;
   color: var(--text-color);
   margin: 5px 0;
+  padding: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.wow-button {
+.atf-category li:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.atf-button {
   background-color: var(--primary-color);
   color: white;
   border: none;
   padding: 12px 24px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s;
   border-radius: 5px;
   margin-top: 20px;
 }
 
-.wow-button:hover {
-  background-color: var(--text-color);
-  transform: scale(1.05);
+.atf-button:hover {
+  background-color: var(--accent-color);
 }
 
 @media (max-width: 992px) {
-  .styled-section {
-    flex-direction: column;
-    padding: 20px;
+  .atf-content h3 {
+    font-size: 1.8rem;
   }
 
-  .left-content,
-  .right-content {
-    max-width: 100%;
-    text-align: center;
+  .atf-category h4 {
+    font-size: 1.3rem;
   }
 
-  .benefits-list {
-    justify-content: center;
+  .atf-category li {
+    font-size: 0.9rem;
   }
 
-  .benefit-item {
-    flex: 1 1 45%;
-    max-width: 45%;
-    margin-bottom: 20px;
+  .atf-button {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
-  .benefit-item {
-    flex: 1 1 100%;
-    max-width: 100%;
+  .atf-content h3 {
+    font-size: 1.6rem;
   }
 
-  .benefit-icon {
-    font-size: 2rem;
+  .atf-category h4 {
+    font-size: 1.2rem;
   }
 
-  .wow-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+  .atf-category li {
+    font-size: 0.85rem;
+  }
+
+  .atf-button {
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 576px) {
-  .styled-section {
-    padding: 10px;
+  .atf-content h3 {
+    font-size: 1.4rem;
   }
 
-  .left-content h1 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
+  .atf-category h4 {
+    font-size: 1.1rem;
   }
 
-  .left-content h2 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
+  .atf-category li {
+    font-size: 0.8rem;
   }
 
-  .benefit-icon {
-    font-size: 1.8rem;
-  }
-
-  .wow-button {
-    font-size: 0.85rem;
-    padding: 8px 16px;
+  .atf-button {
+    font-size: 0.8rem;
+    padding: 10px 20px;
   }
 }

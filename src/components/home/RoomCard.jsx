@@ -1,4 +1,3 @@
-// src/components/home/RoomCard.jsx
 import React from "react";
 import "./RoomCard.css";
 
