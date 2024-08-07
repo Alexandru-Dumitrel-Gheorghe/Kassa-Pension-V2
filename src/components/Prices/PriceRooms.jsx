@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { Container, Card, Button } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBed,

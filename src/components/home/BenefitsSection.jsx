@@ -9,17 +9,17 @@ const StyledSection = () => {
 
   const attractions = [
     {
-      category: "Restaurante și cafenele",
-      places: ["Bulzu Branului (650 m)", "La Cristi (1,5 km)", "Burg (1,6 km)"],
+      category: t("restaurants_and_cafes"),
+      places: [t("bulzu_branului"), t("la_cristi"), t("burg")],
     },
     {
-      category: "Principalele atracții",
+      category: t("main_attractions"),
       places: [
-        "Rezervaţia de urși de la Zărnești (10 km)",
-        "Cetatea Râșnov (11 km)",
-        "Fun Park Kalinderu (14 km)",
-        "Castelul Cantacuzino (16 km)",
-        "Foișor Castle (20 km)",
+        t("bear_sanctuary"),
+        t("rasnov_fortress"),
+        t("fun_park_kalinderu"),
+        t("cantacuzino_castle"),
+        t("foisor_castle"),
       ],
     },
   ];
@@ -27,7 +27,7 @@ const StyledSection = () => {
   return (
     <div className="atf-section">
       <div className="atf-content">
-        <h3>Atracții și Facilități</h3>
+        <h3>{t("attractions_and_facilities")}</h3>
         {attractions.map((attraction, index) => (
           <div key={index} className="atf-category">
             <h4>{attraction.category}</h4>
@@ -39,7 +39,7 @@ const StyledSection = () => {
           </div>
         ))}
         <button className="atf-button" onClick={() => navigate("/more-info")}>
-          Află Mai Multe
+          {t("learn_more")}
         </button>
       </div>
     </div>
