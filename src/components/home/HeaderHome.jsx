@@ -1,27 +1,45 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Importă stilurile AOS
+import "aos/dist/aos.css";
 import "./HeaderHome.css";
 
 const HeaderHome = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const videoRef = useRef(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Inițializează AOS
     AOS.init({ duration: 1000 });
 
-    // Resetează timpul videoclipului și începe redarea
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play().catch((error) => {
+    // Definește funcția care va fi folosită pentru a curăța efectul
+    const handleCanPlay = () => {
+      setLoading(false);
+    };
+
+    // Copiază valoarea videoRef.current într-o variabilă
+    const videoElement = videoRef.current;
+
+    // Verifică dacă videoElement este definit
+    if (videoElement) {
+      // Adaugă evenimentul pentru "canplay"
+      videoElement.addEventListener("canplay", handleCanPlay);
+      videoElement.currentTime = 0;
+      videoElement.play().catch((error) => {
         console.error("Video playback failed:", error);
       });
     }
-  }, []);
+
+    // Funcția de curățare a efectului
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener("canplay", handleCanPlay);
+      }
+    };
+  }, []); // Nu ai nevoie de niciun alt dependency în array
 
   const scrollToNextSection = () => {
     const nextSection = document.querySelector("#next-section");
@@ -35,7 +53,9 @@ const HeaderHome = () => {
   };
 
   return (
-    <div className="header" data-aos="fade-in">
+    <div className="header">
+      {loading && <div className="header-loader">Loading...</div>}
+      <div className="header-overlay"></div>
       <video
         className="header-video"
         ref={videoRef}
@@ -43,8 +63,7 @@ const HeaderHome = () => {
         muted
         loop
         playsInline
-        preload="auto"
-        data-aos="fade-in"
+        preload="metadata"
       >
         <source
           src={`${process.env.PUBLIC_URL}/assets/video/review1.mp4`}
