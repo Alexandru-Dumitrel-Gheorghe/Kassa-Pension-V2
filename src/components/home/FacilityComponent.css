@@ -1,12 +1,3 @@
-:root {
-  --primary-color: #b59e5d;
-  --text-color: #333;
-  --background-color: #f9f9f9;
-  --icon-background: #fff;
-  --icon-border: #ddd;
-  --icon-color: #b59e5d;
-}
-
 .facility-container {
   padding: 50px 0;
   background-color: var(--background-color);
@@ -16,7 +7,7 @@
 .facility-subtitle {
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--title-color);
   margin-bottom: 10px;
   letter-spacing: 1px;
   text-align: center;
@@ -61,7 +52,7 @@
 }
 
 .facility-icon {
-  color: var(--icon-color);
+  color: var(--title-color);
   font-size: 30px;
 }
 

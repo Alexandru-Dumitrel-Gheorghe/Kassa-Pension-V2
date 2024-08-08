@@ -1,150 +1,132 @@
 .price-rooms {
-  padding: 3rem 1rem;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  text-align: center; /* Centrare text pentru titlu și descriere */
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .rooms-title {
   font-size: 2.5rem;
+  font-weight: bold;
   color: var(--title-color);
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.rooms-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3498db;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
 }
 
 .rooms-subtitle {
-  font-size: 1rem;
-  color: var(--text-color);
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
 }
 
 .room-slide {
-  padding: 0 10px;
   display: flex;
   justify-content: center;
+  align-items: stretch; /* Asigură înălțimi egale pentru carduri */
+  padding: 10px;
 }
 
 .room-card {
-  border: none;
-  overflow: hidden;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 2rem;
-  background-color: #fff;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  max-width: 350px; /* Dimensiune maximă pentru carduri pe desktop */
+  max-width: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .room-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .room-img {
-  height: 250px;
-  object-fit: cover;
   width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.room-card .card-body {
-  padding: 1.5rem; /* Reducerea padding-ului */
+.room-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  height: 100%;
 }
 
 .room-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-  color: var(--title-color);
+  margin-bottom: 15px;
 }
 
-.room-beds {
-  color: var(--text-color);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
+.room-beds,
 .room-description {
-  color: var(--text-color);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #34495e;
 }
 
 .room-features {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin: 0;
 }
 
 .room-features li {
   display: flex;
   align-items: center;
-  font-size: 0.8rem;
-  color: var(--text-color);
-  margin: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  margin-top: 8px;
 }
 
 .room-features li svg {
-  margin-right: 0.5rem;
-  color: var(--icons-color);
+  margin-right: 8px;
 }
 
 @media (max-width: 768px) {
+  .room-slide {
+    display: flex;
+    justify-content: center;
+  }
+
   .room-card {
-    height: auto;
     max-width: 100%;
   }
 
-  .room-img {
-    height: 200px; /* Înălțime mărită pentru imagine pe mobil */
+  .rooms-title {
+    font-size: 1.5rem;
+  }
+
+  .rooms-subtitle {
+    font-size: 0.9rem;
   }
 
   .room-title {
-    font-size: 1.5rem; /* Dimensiune mărită pentru titlu pe mobil */
+    font-size: 1.4rem;
   }
 
-  .room-description,
-  .room-beds {
-    font-size: 0.9rem; /* Dimensiune mărită pentru text pe mobil */
-  }
-
-  .room-features {
-    text-align: center;
-  }
-}
-
-/* Ajustări pentru a face cardurile mai lungi pe desktop */
-@media (min-width: 769px) {
-  .room-slide {
-    justify-content: center; /* Centrează cardurile pe desktop */
-  }
-
-  .room-card {
-    height: auto;
-    max-width: 400px; /* Dimensiune maximă mărită pentru carduri pe desktop */
-  }
-
-  .room-img {
-    height: 300px; /* Înălțime mărită pentru imagine pe desktop */
-  }
-
-  .room-card .card-body {
-    padding: 1.5rem; /* Spațiu redus pentru card-body pe desktop */
-  }
-
-  .room-title {
-    font-size: 1.8rem; /* Dimensiune mărită pentru titlu pe desktop */
-  }
-
-  .room-description,
-  .room-beds {
-    font-size: 1rem; /* Dimensiune mărită pentru text pe desktop */
-  }
-
-  .room-features li {
-    font-size: 0.9rem; /* Dimensiune mărită pentru caracteristici pe desktop */
+  .room-beds,
+  .room-description {
+    font-size: 0.9rem;
   }
 }

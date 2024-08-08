@@ -147,7 +147,7 @@ const PriceRooms = () => {
           <div key={index} className="room-slide">
             <Card className="room-card">
               <Card.Img variant="top" src={room.image} className="room-img" />
-              <Card.Body className="d-flex flex-column align-items-center text-center">
+              <Card.Body className="room-body">
                 <Card.Title className="room-title">{t(room.title)}</Card.Title>
                 <Card.Text className="room-beds">
                   <FontAwesomeIcon icon={faBed} /> {t(room.beds)}

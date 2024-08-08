@@ -39,7 +39,7 @@
 
 .info-title {
   font-size: 2.5rem;
-  color: var(--accent-color);
+  color: var(--title-color);
   margin-bottom: 10px;
   font-weight: bold;
 }
@@ -63,7 +63,7 @@
 
 .stat-number {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var(--title-color);
 }
 
 .stat-text {

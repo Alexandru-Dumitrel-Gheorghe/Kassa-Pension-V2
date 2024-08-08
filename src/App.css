@@ -1,9 +1,9 @@
 :root {
-  --title-color: #333333;
-  --text-color: #704214;
+  --title-color: #704214;
+  --text-color: #34495e;
   --icons-color: #c1a17f;
   --background-color: #ffffff; /* Presupunând un fundal alb */
-  --primary-color: #c1a17f; /* Similar cu icons-color */
+  --primary-color: #34495e; /* Similar cu icons-color */
   --secondary-color: #704214; /* Similar cu text-color */
   --accent-color: #333333; /* Similar cu title-color */
   --shadow-color: rgba(0, 0, 0, 0.1); /* Umbră subtilă */
