@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import HeaderHome from "../components/home/HeaderHome";
 import WelcomeSection from "../components/home/WelcomeSection";
-import BenefitsSection from "../components/home/BenefitsSection";
 import Footer from "../components/Footer";
 import InfoHome from "../components/home/InfoHome";
 import Facilitties from "../components/home/FacilityComponent";
@@ -21,7 +20,6 @@ const Home = () => {
       <RoomsSection />
       <Facilitties />
       <TestimonialSection />
-      <BenefitsSection />
       <Footer />
     </div>
   );

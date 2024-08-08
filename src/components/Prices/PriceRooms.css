@@ -3,6 +3,7 @@
   background-color: var(--background-color);
   color: var(--text-color);
   text-align: center; /* Centrare text pentru titlu și descriere */
+  overflow: hidden;
 }
 
 .rooms-title {

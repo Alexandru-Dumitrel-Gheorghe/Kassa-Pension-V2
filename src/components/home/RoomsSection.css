@@ -82,7 +82,7 @@
   }
 
   .view-all-rooms-button {
-    width: 100%;
+    width: 40%;
     padding: 12px;
     font-size: 16px;
   }
@@ -98,7 +98,7 @@
   }
 
   .view-all-rooms-button {
-    width: 100%;
+    width: 30%;
     padding: 10px;
     font-size: 14px;
   }

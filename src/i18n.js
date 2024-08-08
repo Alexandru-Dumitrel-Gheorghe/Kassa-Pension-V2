@@ -308,6 +308,7 @@ const resources = {
       living_area_beds: " sofa bed ",
       flat_screen_tv_with_cable: "Flat-screen TV with cable",
       Parking: "Parking",
+      rooms_subtitle: "Choose the room that suits you best",
     },
   },
   ro: {
@@ -628,6 +629,7 @@ const resources = {
       living_area_beds: " canapea extensibilă",
       change_language: "Schimbă Limba",
       Parking: "Parcare",
+      rooms_subtitle: "Alegeți camera care vi se potrivește cel mai bine",
     },
   },
 };
