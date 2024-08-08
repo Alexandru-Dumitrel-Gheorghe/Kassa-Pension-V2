@@ -1,4 +1,6 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Importă stilurile AOS
 import "./Gallery.css";
 
 const Gallery = () => {
@@ -40,6 +42,10 @@ const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS
+  }, []);
+
   const openLightbox = (index) => {
     setCurrentIndex(index);
     setLoading(true);
@@ -76,7 +82,7 @@ const Gallery = () => {
     [currentIndex, goToNext, goToPrevious, closeLightbox]
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
@@ -90,6 +96,8 @@ const Gallery = () => {
           key={index}
           className="gallery-item"
           onClick={() => openLightbox(index)}
+          data-aos="fade-up"
+          data-aos-delay={`${index * 100}`}
         >
           <img src={image.src} alt={image.caption} />
         </div>

@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Importă stilurile AOS
 import "./NearbyAttractions.css";
 
 const NearbyAttractions = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Inițializează AOS
+  }, []);
 
   const attractions = [
     {
@@ -42,16 +48,24 @@ const NearbyAttractions = () => {
   ];
 
   return (
-    <div className="nearby-attractions">
-      <h2 className="title">{t("nearby_attractions_title")}</h2>
+    <div className="nearby-attractions" data-aos="fade-up">
+      <h2 className="title" data-aos="fade-down">
+        {t("nearby_attractions_title")}
+      </h2>
       <div className="wrap">
         {attractions.map((attraction, index) => (
-          <div className="box" key={index}>
+          <div
+            className="box"
+            key={index}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
             <div className="box-top">
               <img
                 className="box-image"
                 src={attraction.imageUrl}
                 alt={attraction.name}
+                data-aos="zoom-in"
               />
               <div className="title-flex">
                 <h3 className="box-title">{attraction.name}</h3>
@@ -64,6 +78,7 @@ const NearbyAttractions = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="button"
+              data-aos="fade-up"
             >
               {t("navigate")}
             </a>

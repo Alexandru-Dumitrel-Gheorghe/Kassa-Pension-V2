@@ -8,10 +8,18 @@ const WelcomeSection = () => {
 
   return (
     <section className="welcome-section">
-      <div className="welcome-content">
-        <h2 className="welcome-title">{t("welcome")}</h2>
-        <p className="welcome-description">{t("description")}</p>
-        <div className="welcome-icons">
+      <div className="welcome-content" data-aos="fade-up">
+        <h2 className="welcome-title" data-aos="fade-up">
+          {t("welcome")}
+        </h2>
+        <p
+          className="welcome-description"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          {t("description")}
+        </p>
+        <div className="welcome-icons" data-aos="fade-up" data-aos-delay="400">
           <div className="welcome-icon">
             <FaMapMarkerAlt size={40} className="icon" />
             <p>{t("location")}</p>

@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Importă stilurile AOS
 import "./VideoHeader.css";
 
 const HomeSection = () => {
@@ -11,10 +13,11 @@ const HomeSection = () => {
         console.error("Video playback failed:", error);
       });
     }
+    AOS.init({ duration: 1000 }); // Inițializează AOS cu durata de animație dorită
   }, []);
 
   return (
-    <div className="home-section">
+    <div className="home-section" data-aos="fade-in">
       <video
         autoPlay
         muted
@@ -32,7 +35,7 @@ const HomeSection = () => {
         Your browser does not support the video tag.
       </video>
       <div className="overlay"></div>
-      <div className="content">
+      <div className="content" data-aos="fade-up">
         <h4 className="subtitle">Luxury Hotel Experience</h4>
         <h1 className="title">Enjoy in a very Immersive Relax</h1>
       </div>

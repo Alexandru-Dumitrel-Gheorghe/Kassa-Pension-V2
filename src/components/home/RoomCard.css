@@ -8,6 +8,14 @@
   margin-bottom: 20px;
   position: relative;
   background-color: var(--background-color);
+  /* Opțional: pentru a controla cum apare elementul în timpul animației */
+  opacity: 0;
+  transform: translateY(20px); /* Poziția inițială pentru efectul de fade-up */
+}
+
+.home-room-card[data-aos="fade-up"] {
+  opacity: 1; /* Face elementul vizibil după animație */
+  transform: translateY(0); /* Poziția finală după animație */
 }
 
 .home-room-card:hover {

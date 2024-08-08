@@ -1,4 +1,5 @@
-import React from "react";
+// src/components/PriceRooms/PriceRooms.jsx
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import { Container, Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,12 +12,18 @@ import {
   faTv,
 } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import "./PriceRooms.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const PriceRooms = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS
+  }, []);
 
   const rooms = [
     {
@@ -144,8 +151,13 @@ const PriceRooms = () => {
       <p className="rooms-subtitle text-center">{t("rooms_subtitle")}</p>
       <Slider {...settings}>
         {rooms.map((room, index) => (
-          <div key={index} className="room-slide">
-            <Card className="room-card">
+          <div
+            key={index}
+            className="room-slide"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
+            <Card className="room-card" data-aos="fade-up">
               <Card.Img variant="top" src={room.image} className="room-img" />
               <Card.Body className="room-body">
                 <Card.Title className="room-title">{t(room.title)}</Card.Title>

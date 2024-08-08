@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Importă stilurile AOS
 import "./HeaderHome.css";
 
 const HeaderHome = () => {
@@ -9,8 +11,12 @@ const HeaderHome = () => {
   const videoRef = useRef(null);
 
   useEffect(() => {
+    // Inițializează AOS
+    AOS.init({ duration: 1000 });
+
+    // Resetează timpul videoclipului și începe redarea
     if (videoRef.current) {
-      videoRef.current.currentTime = 0; // Resetează timpul videoclipului
+      videoRef.current.currentTime = 0;
       videoRef.current.play().catch((error) => {
         console.error("Video playback failed:", error);
       });
@@ -29,7 +35,7 @@ const HeaderHome = () => {
   };
 
   return (
-    <div className="header">
+    <div className="header" data-aos="fade-in">
       <video
         className="header-video"
         ref={videoRef}
@@ -38,6 +44,7 @@ const HeaderHome = () => {
         loop
         playsInline
         preload="auto"
+        data-aos="fade-in"
       >
         <source
           src={`${process.env.PUBLIC_URL}/assets/video/review1.mp4`}
@@ -45,14 +52,22 @@ const HeaderHome = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="header-content">
+      <div className="header-content" data-aos="fade-up">
         <h1>{t("welcome")}</h1>
         <p className="tagline">{t("experience_luxury")}</p>
-        <button className="book-now-button" onClick={handleBookNowClick}>
+        <button
+          className="book-now-button"
+          onClick={handleBookNowClick}
+          data-aos="fade-up"
+        >
           {t("book_your_stay")}
         </button>
       </div>
-      <button className="scroll-down-button" onClick={scrollToNextSection}>
+      <button
+        className="scroll-down-button"
+        onClick={scrollToNextSection}
+        data-aos="fade-down"
+      >
         ↓
       </button>
     </div>

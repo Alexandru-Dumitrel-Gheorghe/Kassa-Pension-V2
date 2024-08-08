@@ -46,19 +46,11 @@
   .section-title {
     font-size: 32px;
   }
-
-  .room-card {
-    width: 45%;
-  }
 }
 
 @media (max-width: 992px) {
   .section-title {
     font-size: 28px;
-  }
-
-  .room-card {
-    width: 48%;
   }
 
   .view-all-rooms-button {
@@ -77,10 +69,6 @@
     align-items: center;
   }
 
-  .room-card {
-    width: 90%;
-  }
-
   .view-all-rooms-button {
     width: 100%;
     padding: 12px;
@@ -91,10 +79,6 @@
 @media (max-width: 576px) {
   .section-title {
     font-size: 20px;
-  }
-
-  .room-card {
-    width: 100%;
   }
 
   .view-all-rooms-button {

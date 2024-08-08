@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Box,
@@ -17,11 +17,13 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
-import { useTranslation } from "react-i18next"; // Import useTranslation
+import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Importă stilurile AOS
 import "./ContactForm.css";
 
 const ContactForm = () => {
-  const { t } = useTranslation(); // Initialize useTranslation
+  const { t } = useTranslation();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -48,6 +50,10 @@ const ContactForm = () => {
     });
   };
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Inițializează AOS
+  }, []);
+
   return (
     <Container maxWidth="md">
       <Typography
@@ -55,18 +61,20 @@ const ContactForm = () => {
         align="center"
         gutterBottom
         className="custom-title"
+        data-aos="fade-up" // Adaugă animație pentru titlu
       >
         {t("contact_us_for_reservations")}
       </Typography>
       <Grid container spacing={4} alignItems="stretch">
         <Grid item xs={12} md={6}>
-          <Paper elevation={3} className="form-container">
+          <Paper elevation={3} className="form-container" data-aos="fade-right">
             <Box p={3}>
               <form onSubmit={handleSubmit}>
                 <Typography
                   variant="h6"
                   gutterBottom
                   className="custom-subtitle"
+                  data-aos="fade-up"
                 >
                   {t("send_us_a_message")}
                 </Typography>
@@ -114,6 +122,7 @@ const ContactForm = () => {
                     variant="contained"
                     type="submit"
                     className="custom-button"
+                    data-aos="fade-up" // Adaugă animație pentru buton
                   >
                     {t("send_message")}
                   </Button>
@@ -123,7 +132,11 @@ const ContactForm = () => {
           </Paper>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Paper elevation={3} className="info-container">
+          <Paper
+            elevation={3}
+            className="info-container"
+            data-aos="fade-left" // Adaugă animație pentru informații de contact
+          >
             <Box
               p={3}
               height="100%"
@@ -132,22 +145,32 @@ const ContactForm = () => {
               justifyContent="center"
               textAlign="center"
             >
-              <Typography variant="h6" gutterBottom className="custom-subtitle">
+              <Typography
+                variant="h6"
+                gutterBottom
+                className="custom-subtitle"
+                data-aos="fade-up"
+              >
                 {t("additional_information")}
               </Typography>
-              <Box className="custom-info-item" mb={2}>
+              <Box className="custom-info-item" mb={2} data-aos="fade-up">
                 <FaPhone />
                 <Typography>+40 123 456 789</Typography>
               </Box>
-              <Box className="custom-info-item" mb={2}>
+              <Box className="custom-info-item" mb={2} data-aos="fade-up">
                 <FaEnvelope />
                 <Typography> contact@kassa.com</Typography>
               </Box>
-              <Box className="custom-info-item" mb={2}>
+              <Box className="custom-info-item" mb={2} data-aos="fade-up">
                 <FaMapMarkerAlt />
                 <Typography>{t("address")}</Typography>
               </Box>
-              <Typography variant="h6" gutterBottom className="custom-subtitle">
+              <Typography
+                variant="h6"
+                gutterBottom
+                className="custom-subtitle"
+                data-aos="fade-up"
+              >
                 {t("follow_us")}
               </Typography>
               <Box
@@ -156,10 +179,10 @@ const ContactForm = () => {
                 justifyContent="center"
                 mt={2}
               >
-                <FaFacebook className="social-icon" />
-                <FaTwitter className="social-icon" />
-                <FaInstagram className="social-icon" />
-                <FaLinkedin className="social-icon" />
+                <FaFacebook className="social-icon" data-aos="fade-up" />
+                <FaTwitter className="social-icon" data-aos="fade-up" />
+                <FaInstagram className="social-icon" data-aos="fade-up" />
+                <FaLinkedin className="social-icon" data-aos="fade-up" />
               </Box>
             </Box>
           </Paper>

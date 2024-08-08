@@ -2,17 +2,17 @@
   padding: 40px 0;
   margin-top: 20px;
   margin-bottom: 40px;
-  color: #d4af37;
+  color: var(--title-color);
 }
 
 .custom-subtitle {
-  color: #d4af37;
+  color: var(--title-color);
   padding: 20px 0;
 }
 
 .form-container,
 .info-container {
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .info-container {
-  background-color: #d4af37;
+  background-color: var(--secondary-color);
   color: white;
   height: 62.9vh;
 }
@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #7a7c7c;
+  color: var(--text-color);
 }
 
 .social-icons {
@@ -43,16 +43,16 @@
 
 .social-icon {
   font-size: 2rem;
-  color: #226b5f;
+  color: var(--title-color);
   transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #d4af37;
+  color: var(--text-color);
 }
 
 .custom-button {
-  background-color: var(--accent-color) !important;
+  background-color: var(--text-color) !important;
   color: white !important;
   padding: 8px 16px !important;
   font-size: 0.875rem !important;

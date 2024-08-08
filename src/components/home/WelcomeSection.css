@@ -10,7 +10,6 @@
   border-radius: 15px;
   box-shadow: 0 6px 16px var(--shadow-color);
   text-align: center;
-  animation: fadeInUp 1s ease-in-out;
   background-color: var(--background-color);
 }
 
@@ -18,6 +17,18 @@
   max-width: 1200px;
   margin: 0 auto;
   font-family: var(--primary-font);
+}
+
+/* Efect de animație la intrarea în pagină */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .welcome-title {
@@ -65,18 +76,6 @@
   margin-top: 0.5rem;
   font-size: 1rem;
   color: var(--text-color);
-}
-
-/* Keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Media Queries */

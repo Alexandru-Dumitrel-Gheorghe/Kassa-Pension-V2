@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,6 +16,26 @@ const FacilityComponent = () => {
     { icon: faWifi, title: "WiFi Gratuit Inclus" },
     { icon: faAirFreshener, title: "Grătar" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".facility-item");
+
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          el.classList.add("visible");
+        } else {
+          el.classList.remove("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Verifică elementele la încărcare
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Container className="facility-container">

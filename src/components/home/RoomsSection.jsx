@@ -26,8 +26,16 @@ const rooms = [
 const RoomsSection = () => {
   return (
     <div className="rooms-section">
-      <h4 className="section-subtitle">Luxury Experience</h4>
-      <h2 className="section-title">Rooms & Suites</h2>
+      <h4
+        className="section-subtitle"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+        Luxury Experience
+      </h4>
+      <h2 className="section-title" data-aos="fade-up" data-aos-duration="800">
+        Rooms & Suites
+      </h2>
       <div className="rooms-container">
         {rooms.map((room, index) => (
           <RoomCard
@@ -38,7 +46,13 @@ const RoomsSection = () => {
           />
         ))}
       </div>
-      <button className="view-all-rooms-button">View all Rooms</button>
+      <button
+        className="view-all-rooms-button"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+        View all Rooms
+      </button>
     </div>
   );
 };

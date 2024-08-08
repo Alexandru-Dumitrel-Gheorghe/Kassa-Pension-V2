@@ -1,3 +1,4 @@
+/* src/components/PriceRooms/PriceRooms.css */
 .price-rooms {
   padding: 40px 20px;
   max-width: 1200px;
@@ -35,8 +36,16 @@
 .room-slide {
   display: flex;
   justify-content: center;
-  align-items: stretch; /* Asigură înălțimi egale pentru carduri */
+  align-items: stretch;
   padding: 10px;
+  opacity: 0; /* Hidden initially for fade-in effect */
+  transform: translateY(20px); /* Initial position for slide-in effect */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+.room-slide[data-aos="fade-up"] {
+  opacity: 1; /* Ensure the opacity is set when animated */
+  transform: translateY(0); /* Reset transform for slide-in effect */
 }
 
 .room-card {

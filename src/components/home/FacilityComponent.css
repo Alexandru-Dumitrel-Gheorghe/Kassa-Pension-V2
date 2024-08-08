@@ -1,3 +1,11 @@
+:root {
+  --title-color: #704214;
+  --text-color: #34495e;
+  --icon-background: #f7f7f7; /* Background pentru iconițe */
+  --icon-border: #dddddd; /* Border pentru iconițe */
+  --background-color: #ffffff; /* Fundalul general */
+}
+
 .facility-container {
   padding: 50px 0;
   background-color: var(--background-color);
@@ -17,7 +25,7 @@
 .facility-title {
   font-size: 36px;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--title-color);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -37,6 +45,14 @@
   padding: 20px;
   margin: 10px;
   border-radius: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.facility-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .facility-icon-wrapper {
@@ -69,32 +85,22 @@
   }
 
   .facility-item {
-    flex: 1 1 calc(50% - 20px); /* Adjusts items to take up half the available width minus margins */
+    flex: 1 1 calc(50% - 20px); /* Ajustează elementele pentru a ocupa jumătate din lățimea disponibilă minus margini */
     margin: 10px;
   }
 
   .facility-title {
     font-size: 28px;
   }
-
-  .facility-description {
-    font-size: 14px;
-    width: 100%;
-  }
 }
 
 @media (max-width: 576px) {
   .facility-item {
-    flex: 1 1 100%; /* Adjusts items to take up full width on very small screens */
+    flex: 1 1 100%; /* Ajustează elementele pentru a ocupa întreaga lățime pe ecrane foarte mici */
     margin: 10px 0;
   }
 
   .facility-title {
     font-size: 24px;
-  }
-
-  .facility-description {
-    font-size: 12px;
-    width: 100%;
   }
 }
