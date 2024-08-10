@@ -1,4 +1,3 @@
-// src/components/PriceRooms/PriceRooms.jsx
 import React, { useEffect } from "react";
 import Slider from "react-slick";
 import { Container, Card } from "react-bootstrap";
@@ -14,7 +13,7 @@ import {
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-import "./PriceRooms.css";
+import styles from "./PriceRooms.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -146,28 +145,36 @@ const PriceRooms = () => {
   };
 
   return (
-    <Container className="price-rooms">
-      <h2 className="rooms-title text-center">{t("our_rooms")}</h2>
-      <p className="rooms-subtitle text-center">{t("rooms_subtitle")}</p>
+    <Container className={styles.priceRooms}>
+      <h2 className={`${styles.roomsTitle} text-center`}>{t("our_rooms")}</h2>
+      <p className={`${styles.roomsSubtitle} text-center`}>
+        {t("rooms_subtitle")}
+      </p>
       <Slider {...settings}>
         {rooms.map((room, index) => (
           <div
             key={index}
-            className="room-slide"
+            className={styles.roomSlide}
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            <Card className="room-card" data-aos="fade-up">
-              <Card.Img variant="top" src={room.image} className="room-img" />
-              <Card.Body className="room-body">
-                <Card.Title className="room-title">{t(room.title)}</Card.Title>
-                <Card.Text className="room-beds">
+            <Card className={styles.roomCard} data-aos="fade-up">
+              <Card.Img
+                variant="top"
+                src={room.image}
+                className={styles.roomImg}
+              />
+              <Card.Body className={styles.roomBody}>
+                <Card.Title className={styles.roomTitle}>
+                  {t(room.title)}
+                </Card.Title>
+                <Card.Text className={styles.roomBeds}>
                   <FontAwesomeIcon icon={faBed} /> {t(room.beds)}
                 </Card.Text>
-                <Card.Text className="room-description">
+                <Card.Text className={styles.roomDescription}>
                   {t(room.description)}
                 </Card.Text>
-                <ul className="room-features">
+                <ul className={styles.roomFeatures}>
                   {room.features.map((feature, i) => (
                     <li key={i}>
                       <FontAwesomeIcon icon={feature.icon} /> {t(feature.text)}

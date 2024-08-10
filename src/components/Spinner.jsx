@@ -1,8 +1,8 @@
 import React from "react";
-import "./Spinner.css"; // Asigură-te că ai creat acest fișier CSS
+import styles from "./Spinner.module.css"; // Importă stilurile folosind CSS Modules
 
 const Spinner = () => {
-  return <div className="spinner"></div>;
+  return <div className={styles.spinner}></div>;
 };
 
 export default Spinner;

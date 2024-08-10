@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import "./InfoHome.css";
+import styles from "./InfoHome.module.css"; // Importă stilurile CSS Modules
 
 const RestaurantBar = () => {
   const { t } = useTranslation();
@@ -14,15 +14,15 @@ const RestaurantBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll(
-        ".info-home-container, .info-image-container, .info-content, .info-stats, .info-stat-item, .info-button"
+        `.${styles.infoHomeContainer}, .${styles.infoImageContainer}, .${styles.infoContent}, .${styles.infoStats}, .${styles.infoStatItem}, .${styles.infoButton}`
       );
 
       elements.forEach((el) => {
         const rect = el.getBoundingClientRect();
         if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          el.classList.add("visible");
+          el.classList.add(styles.visible);
         } else {
-          el.classList.remove("visible");
+          el.classList.remove(styles.visible);
         }
       });
     };
@@ -34,28 +34,28 @@ const RestaurantBar = () => {
   }, []);
 
   return (
-    <div className="info-home-container">
-      <div className="info-image-container">
+    <div className={styles.infoHomeContainer}>
+      <div className={styles.infoImageContainer}>
         <img
           src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/553229569.jpg?k=1d6feb261ec3218271b48c63dd2104ecfc0d45d75f9c6cf54a2193ea7518ff99&o=&hp=1"
           alt="Restaurant Bar"
-          className="info-image"
+          className={styles.infoImage}
         />
       </div>
-      <div className="info-content">
-        <h1 className="info-title">{t("kassa_bran")}</h1>
-        <p className="info-description">{t("kassa_bran_description1")}</p>
-        <div className="info-stats">
-          <div className="info-stat-item">
-            <h2 className="stat-number">250+</h2>
-            <p className="stat-text">{t("luxury_rooms")}</p>
+      <div className={styles.infoContent}>
+        <h1 className={styles.infoTitle}>{t("kassa_bran")}</h1>
+        <p className={styles.infoDescription}>{t("kassa_bran_description1")}</p>
+        <div className={styles.infoStats}>
+          <div className={styles.infoStatItem}>
+            <h2 className={styles.statNumber}>250+</h2>
+            <p className={styles.statText}>{t("luxury_rooms")}</p>
           </div>
-          <div className="info-stat-item">
-            <h2 className="stat-number">4.9</h2>
-            <p className="stat-text">{t("customer_ratings")}</p>
+          <div className={styles.infoStatItem}>
+            <h2 className={styles.statNumber}>4.9</h2>
+            <p className={styles.statText}>{t("customer_ratings")}</p>
           </div>
         </div>
-        <button className="info-button" onClick={handleButtonClick}>
+        <button className={styles.infoButton} onClick={handleButtonClick}>
           {t("book_now")}
         </button>
       </div>

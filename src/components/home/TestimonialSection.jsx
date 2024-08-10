@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./TestimonialSection.css";
+import styles from "./TestimonialSection.module.css"; // Importă stilurile CSS Modules
 
 const testimonials = [
   {
@@ -48,17 +48,25 @@ const TestimonialSection = () => {
   };
 
   return (
-    <div className="testimonial-container">
-      <h2 className="section-title">Ce spun oaspeții Kassa</h2>
-      <div className={`testimonial-content ${fade ? "fade-in" : "fade-out"}`}>
-        <h1 id="testimonial">{testimonials[currentTestimonial].text}</h1>
-        <p id="author">— {testimonials[currentTestimonial].author}</p>
+    <div className={styles.testimonialContainer}>
+      <h2 className={styles.sectionTitle}>Ce spun oaspeții Kassa</h2>
+      <div
+        className={`${styles.testimonialContent} ${
+          fade ? styles.fadeIn : styles.fadeOut
+        }`}
+      >
+        <h1 className={styles.testimonialText}>
+          {testimonials[currentTestimonial].text}
+        </h1>
+        <p className={styles.authorText}>
+          — {testimonials[currentTestimonial].author}
+        </p>
       </div>
-      <div className="testimonial-buttons">
-        <button id="prev-btn" onClick={prevTestimonial}>
+      <div className={styles.testimonialButtons}>
+        <button className={styles.prevBtn} onClick={prevTestimonial}>
           ‹
         </button>
-        <button id="next-btn" onClick={nextTestimonial}>
+        <button className={styles.nextBtn} onClick={nextTestimonial}>
           ›
         </button>
       </div>

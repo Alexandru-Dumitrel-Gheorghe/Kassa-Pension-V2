@@ -1,5 +1,4 @@
-/* src/components/Prices/PricesHeader.css */
-.prices-header {
+.pricesHeader {
   position: relative;
   background-image: url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Replace with a valid URL */
   background-size: cover;
@@ -12,7 +11,7 @@
   color: #d4af37;
 }
 
-.prices-header::before {
+.pricesHeader::before {
   content: "";
   position: absolute;
   top: 0;
@@ -23,7 +22,7 @@
   z-index: 1;
 }
 
-.prices-header-content {
+.pricesHeaderContent {
   position: relative;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
@@ -34,18 +33,18 @@
   transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
 }
 
-.prices-header-content h1 {
+.pricesHeaderContent h1 {
   margin-bottom: 5px; /* Add space between h1 and p */
   color: #d4af37;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .prices-header {
+  .pricesHeader {
     height: 40vh; /* Adjust height for smaller screens */
   }
 
-  .prices-header-content h1 {
+  .pricesHeaderContent h1 {
     font-size: 1.5rem; /* Adjust font size for smaller screens */
   }
 }

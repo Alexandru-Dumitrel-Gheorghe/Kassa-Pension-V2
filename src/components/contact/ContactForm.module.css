@@ -1,4 +1,3 @@
-/* Element fixat în partea de sus a paginii */
 .fixed-header {
   position: fixed;
   top: 0;
@@ -6,10 +5,9 @@
   width: 100%;
   background-color: var(--background-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Asigură-te că este deasupra altor elemente */
+  z-index: 1000;
 }
 
-/* Element fixat în partea de jos a paginii */
 .fixed-footer {
   position: fixed;
   bottom: 0;
@@ -17,10 +15,9 @@
   width: 100%;
   background-color: var(--background-color);
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Asigură-te că este deasupra altor elemente */
+  z-index: 1000;
 }
 
-/* Element cu poziționare absolută în interiorul unui container cu poziționare relativă */
 .container {
   position: relative;
   padding: 20px;
@@ -35,22 +32,22 @@
   background-color: var(--primary-color);
 }
 
-.custom-title {
+.customTitle {
   padding: 40px 0;
   margin-top: 20px;
   margin-bottom: 40px;
   color: var(--title-color);
-  text-align: center; /* Adăugare pentru a centra textul */
+  text-align: center;
 }
 
-.custom-subtitle {
+.customSubtitle {
   color: var(--title-color);
   padding: 20px 0;
-  text-align: center; /* Adăugare pentru a centra textul */
+  text-align: center;
 }
 
-.form-container,
-.info-container {
+.formContainer,
+.infoContainer {
   background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,45 +55,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; /* Centrare orizontală */
-  width: 100%; /* Asigură-te că ocupă întreaga lățime disponibilă */
-  max-width: 1200px; /* Opțional: pentru a limita lățimea maximă */
-  padding: 20px; /* Adăugați padding pentru spațiu interior */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
   height: 63vh;
 }
 
-.info-container {
+.infoContainer {
   background-color: var(--secondary-color);
   color: white;
-  height: 62.9vh; /* Asigură-te că înălțimea nu depășește ecranul */
-  overflow: hidden; /* Ascunde orice conținut care depășește */
+  height: 62.9vh;
+  overflow: hidden;
 }
 
-.custom-info-item {
+.customInfoItem {
   display: flex;
   align-items: center;
   gap: 10px;
   color: var(--text-color);
-  margin: 10px 0; /* Adăugați margini pentru separarea elementelor */
+  margin: 10px 0;
 }
 
-.social-icons {
+.socialIcons {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
 
-.social-icon {
+.socialIcon {
   font-size: 2rem;
   color: var(--title-color);
   transition: color 0.3s ease;
 }
 
-.social-icon:hover {
+.socialIcon:hover {
   color: var(--text-color);
 }
 
-.custom-button {
+.customButton {
   background-color: var(--text-color) !important;
   color: white !important;
   padding: 8px 16px !important;
@@ -107,22 +104,22 @@
   transition: background-color 0.3s ease;
 }
 
-.custom-button:hover {
+.customButton:hover {
   background-color: #d4af37 !important;
 }
 
 @media (max-width: 600px) {
-  .custom-info-item {
+  .customInfoItem {
     flex-direction: column;
-    align-items: flex-start; /* Asigură-te că elementele sunt aliniate la stânga pe ecrane mici */
+    align-items: flex-start;
   }
 
-  .form-container,
-  .info-container {
-    padding: 10px; /* Reduce padding-ul pe ecrane mici */
+  .formContainer,
+  .infoContainer {
+    padding: 10px;
   }
 
-  .custom-button {
-    width: 50%; /* Butonul ocupă întreaga lățime pe ecrane mici */
+  .customButton {
+    width: 50%;
   }
 }

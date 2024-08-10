@@ -1,19 +1,11 @@
-:root {
-  --title-color: #704214;
-  --text-color: #34495e;
-  --icon-background: #f7f7f7; /* Background pentru iconițe */
-  --icon-border: #dddddd; /* Border pentru iconițe */
-  --background-color: #ffffff; /* Fundalul general */
-}
-
-.facility-container {
+.facilityContainer {
   padding: 50px 0;
   background-color: var(--background-color);
   color: var(--text-color);
   border-top: 1px solid var(--title-color);
 }
 
-.facility-subtitle {
+.facilitySubtitle {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--title-color);
@@ -23,7 +15,7 @@
   margin-top: 20px;
 }
 
-.facility-title {
+.facilityTitle {
   font-size: 36px;
   font-weight: bold;
   color: var(--title-color);
@@ -31,14 +23,14 @@
   text-align: center;
 }
 
-.facility-items {
+.facilityItems {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 40px;
 }
 
-.facility-item {
+.facilityItem {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,12 +43,12 @@
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.facility-item.visible {
+.facilityItem.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.facility-icon-wrapper {
+.facilityIconWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,40 +60,40 @@
   margin-bottom: 15px;
 }
 
-.facility-icon {
+.facilityIcon {
   color: var(--title-color);
   font-size: 30px;
 }
 
-.facility-item-title {
+.facilityItemTitle {
   font-size: 18px;
   font-weight: bold;
   color: var(--text-color);
 }
 
 @media (max-width: 768px) {
-  .facility-items {
+  .facilityItems {
     flex-direction: row;
     justify-content: center;
   }
 
-  .facility-item {
-    flex: 1 1 calc(50% - 20px); /* Ajustează elementele pentru a ocupa jumătate din lățimea disponibilă minus margini */
+  .facilityItem {
+    flex: 1 1 calc(50% - 20px);
     margin: 10px;
   }
 
-  .facility-title {
+  .facilityTitle {
     font-size: 28px;
   }
 }
 
 @media (max-width: 576px) {
-  .facility-item {
-    flex: 1 1 100%; /* Ajustează elementele pentru a ocupa întreaga lățime pe ecrane foarte mici */
+  .facilityItem {
+    flex: 1 1 100%;
     margin: 10px 0;
   }
 
-  .facility-title {
+  .facilityTitle {
     font-size: 24px;
   }
 }

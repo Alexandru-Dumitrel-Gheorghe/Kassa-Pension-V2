@@ -26,39 +26,39 @@ body {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.navbar.scrolled {
+.navbarScrolled {
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
 }
 
-.navbar-title {
+.navbarTitle {
   display: flex;
   align-items: center;
 }
 
-.navbar-title h1 {
+.navbarTitle h1 {
   font-size: 1.5rem;
   color: #fff;
   opacity: 0.9;
   transition: opacity 0.3s ease-in-out;
 }
 
-.navbar-title h1:hover {
+.navbarTitle h1:hover {
   opacity: 1;
 }
 
-.navbar-links {
+.navbarLinks {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.navbar-links li {
+.navbarLinks li {
   margin-left: 1rem;
 }
 
-.navbar-links li a {
+.navbarLinks li a {
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
@@ -68,18 +68,18 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-links li a:hover {
+.navbarLinks li a:hover {
   background-color: rgba(255, 255, 255, 0.3);
   color: #fff;
 }
 
-.language-switcher {
+.languageSwitcher {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.language-button {
+.languageButton {
   background: none;
   border: none;
   cursor: pointer;
@@ -87,7 +87,7 @@ body {
   color: #fff;
 }
 
-.language-menu {
+.languageMenu {
   position: absolute;
   top: 100%;
   right: 0;
@@ -101,7 +101,7 @@ body {
   align-items: center;
 }
 
-.language-menu button {
+.languageMenu button {
   background: none;
   border: none;
   cursor: pointer;
@@ -112,7 +112,7 @@ body {
   color: #333;
 }
 
-.language-menu button:hover {
+.languageMenu button:hover {
   background-color: #f5f5f5;
 }
 
@@ -131,15 +131,15 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.hamburger-active .line:nth-child(1) {
+.hamburgerActive .line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.hamburger-active .line:nth-child(2) {
+.hamburgerActive .line:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger-active .line:nth-child(3) {
+.hamburgerActive .line:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
@@ -157,7 +157,7 @@ body {
   z-index: 999;
 }
 
-.menubar.active {
+.menubarActive {
   left: 0;
 }
 
@@ -180,20 +180,20 @@ body {
   padding: 10px;
 }
 
-.menubar .language-menu {
+.menubar .languageMenu {
   position: relative;
   width: auto;
   background: transparent;
   box-shadow: none;
 }
 
-.menubar .language-menu button {
+.menubar .languageMenu button {
   color: #fff;
   padding: 10px 20px;
   text-align: center;
 }
 
-.language-menu-title {
+.languageMenuTitle {
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
@@ -207,11 +207,11 @@ body {
     display: block;
   }
 
-  .navbar-links {
+  .navbarLinks {
     display: none;
   }
 
-  .language-switcher {
+  .languageSwitcher {
     display: none;
   }
 
@@ -228,13 +228,13 @@ body {
     font-size: 1.2rem;
   }
 
-  .menubar .language-menu {
+  .menubar .languageMenu {
     position: relative;
     width: 100%;
     text-align: center;
   }
 
-  .menubar .language-menu button {
+  .menubar .languageMenu button {
     width: 100%;
     padding: 15px 0;
     color: #fff;

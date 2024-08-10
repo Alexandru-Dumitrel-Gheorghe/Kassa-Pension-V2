@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Importă stilurile AOS
-import "./FacilitiesSection.css";
+import styles from "./FacilitiesSection.module.css";
 
 const FacilitiesSection = () => {
   const navigate = useNavigate();
@@ -14,23 +14,23 @@ const FacilitiesSection = () => {
   }, []);
 
   return (
-    <section className="fs-facilities-section">
-      <div className="fs-container">
-        <h2 className="fs-title" data-aos="fade-up">
+    <section className={styles.fsFacilitiesSection}>
+      <div className={styles.fsContainer}>
+        <h2 className={styles.fsTitle} data-aos="fade-up">
           {t("facilities_offered_by_kassa")}
         </h2>
-        <p className="fs-score" data-aos="fade-up">
+        <p className={styles.fsScore} data-aos="fade-up">
           {t("excellent_facilities")}
         </p>
         <button
-          className="fs-availability-button"
+          className={styles.fsAvailabilityButton}
           onClick={() => navigate("/contact")}
           data-aos="fade-up"
         >
           {t("check_available_dates")}
         </button>
 
-        <div className="fs-facilities-grid">
+        <div className={styles.fsFacilitiesGrid}>
           {[
             {
               title: "most_appreciated_facilities",
@@ -209,7 +209,7 @@ const FacilitiesSection = () => {
             },
           ].map((category, index) => (
             <div
-              className="fs-facility-category"
+              className={styles.fsFacilityCategory}
               key={index}
               data-aos="fade-up"
             >
@@ -227,25 +227,25 @@ const FacilitiesSection = () => {
           ))}
         </div>
 
-        <div className="fs-important-info">
+        <div className={styles.fsImportantInfo}>
           <h3 data-aos="fade-up">{t("important_info")}</h3>
           <p data-aos="fade-up">
             {t("special_requests_info")} {t("check_available_dates")}
           </p>
-          <div className="fs-check-info" data-aos="fade-up">
+          <div className={styles.fsCheckInfo} data-aos="fade-up">
             <h4>{t("check_in")}</h4>
             <p>{t("from_3pm_to_midnight")}</p>
             <p>{t("please_inform_property")}</p>
           </div>
-          <div className="fs-check-info" data-aos="fade-up">
+          <div className={styles.fsCheckInfo} data-aos="fade-up">
             <h4>{t("check_out")}</h4>
             <p>{t("from_7am_to_11am")}</p>
           </div>
-          <div className="fs-policy-info" data-aos="fade-up">
+          <div className={styles.fsPolicyInfo} data-aos="fade-up">
             <h4>{t("cancellation_prepayment")}</h4>
             <p>{t("cancellation_policy")}</p>
           </div>
-          <div className="fs-policy-info" data-aos="fade-up">
+          <div className={styles.fsPolicyInfo} data-aos="fade-up">
             <h4>{t("children_beds")}</h4>
             <p>{t("children_policy")}</p>
             <h4>{t("cribs_extra_beds")}</h4>
@@ -258,7 +258,7 @@ const FacilitiesSection = () => {
               <li>{t("cribs_availability")}</li>
             </ul>
           </div>
-          <div className="fs-policy-info" data-aos="fade-up">
+          <div className={styles.fsPolicyInfo} data-aos="fade-up">
             <h4>{t("additional_information")}</h4>
             <p>{t("no_age_restriction")}</p>
             <p>{t("smoking_policy")}</p>

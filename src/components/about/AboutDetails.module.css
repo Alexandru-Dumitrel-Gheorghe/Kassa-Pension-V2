@@ -1,13 +1,4 @@
-:root {
-  --primary-color: #e74c3c;
-  --secondary-color: #2c3e50;
-  --background-color: #f0f0f0;
-  --text-color: #333;
-  --text-secondary: #555;
-  --button-hover: #c0392b;
-}
-
-.about-details {
+.aboutDetails {
   padding: 40px 20px;
   background-color: var(--background-color);
   border-radius: 20px;
@@ -19,7 +10,7 @@
   text-align: center;
 }
 
-.about-details h2 {
+.aboutDetails h2 {
   color: var(--secondary-color);
   margin-bottom: 20px;
   font-size: 2.5rem;
@@ -27,7 +18,7 @@
   font-family: "Georgia", serif;
 }
 
-.about-details p {
+.aboutDetails p {
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 20px;
@@ -36,13 +27,13 @@
   margin: 0 auto 20px;
 }
 
-.about-image {
+.aboutImage {
   margin: 30px 0;
   display: flex;
   justify-content: center;
 }
 
-.about-image img {
+.aboutImage img {
   max-width: 100%;
   height: auto;
   border-radius: 15px;
@@ -51,16 +42,16 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-image img:hover {
+.aboutImage img:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.book-now {
+.bookNow {
   margin-top: 30px;
 }
 
-.book-now-button {
+.bookNowButton {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -73,22 +64,22 @@
   margin-bottom: 10px;
 }
 
-.book-now-button:hover {
+.bookNowButton:hover {
   background-color: var(--button-hover);
   transform: translateY(-2px);
 }
 
 /* Media Queries */
 @media (max-width: 600px) {
-  .about-details h2 {
+  .aboutDetails h2 {
     font-size: 2rem;
   }
 
-  .about-details p {
+  .aboutDetails p {
     font-size: 0.95rem;
   }
 
-  .book-now-button {
+  .bookNowButton {
     padding: 10px 20px;
     font-size: 1rem;
   }

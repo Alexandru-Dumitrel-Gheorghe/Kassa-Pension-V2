@@ -20,7 +20,7 @@ import {
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Importă stilurile AOS
-import "./ContactForm.css";
+import styles from "./ContactForm.module.css"; // Importă stilurile folosind CSS Modules
 
 const ContactForm = () => {
   const { t } = useTranslation();
@@ -60,20 +60,24 @@ const ContactForm = () => {
         variant="h4"
         align="center"
         gutterBottom
-        className="custom-title"
+        className={styles.customTitle}
         data-aos="fade-up" // Adaugă animație pentru titlu
       >
         {t("contact_us_for_reservations")}
       </Typography>
       <Grid container spacing={4} alignItems="stretch">
         <Grid item xs={12} md={6}>
-          <Paper elevation={3} className="form-container" data-aos="fade-right">
+          <Paper
+            elevation={3}
+            className={styles.formContainer}
+            data-aos="fade-right"
+          >
             <Box p={3}>
               <form onSubmit={handleSubmit}>
                 <Typography
                   variant="h6"
                   gutterBottom
-                  className="custom-subtitle"
+                  className={styles.customSubtitle}
                   data-aos="fade-up"
                 >
                   {t("send_us_a_message")}
@@ -121,7 +125,7 @@ const ContactForm = () => {
                   <Button
                     variant="contained"
                     type="submit"
-                    className="custom-button"
+                    className={styles.customButton}
                     data-aos="fade-up" // Adaugă animație pentru buton
                   >
                     {t("send_message")}
@@ -134,7 +138,7 @@ const ContactForm = () => {
         <Grid item xs={12} md={6}>
           <Paper
             elevation={3}
-            className="info-container"
+            className={styles.infoContainer}
             data-aos="fade-left" // Adaugă animație pentru informații de contact
           >
             <Box
@@ -148,41 +152,41 @@ const ContactForm = () => {
               <Typography
                 variant="h6"
                 gutterBottom
-                className="custom-subtitle"
+                className={styles.customSubtitle}
                 data-aos="fade-up"
               >
                 {t("additional_information")}
               </Typography>
-              <Box className="custom-info-item" mb={2} data-aos="fade-up">
+              <Box className={styles.customInfoItem} mb={2} data-aos="fade-up">
                 <FaPhone />
                 <Typography>+40 123 456 789</Typography>
               </Box>
-              <Box className="custom-info-item" mb={2} data-aos="fade-up">
+              <Box className={styles.customInfoItem} mb={2} data-aos="fade-up">
                 <FaEnvelope />
-                <Typography> contact@kassa.com</Typography>
+                <Typography>contact@kassa.com</Typography>
               </Box>
-              <Box className="custom-info-item" mb={2} data-aos="fade-up">
+              <Box className={styles.customInfoItem} mb={2} data-aos="fade-up">
                 <FaMapMarkerAlt />
                 <Typography>{t("address")}</Typography>
               </Box>
               <Typography
                 variant="h6"
                 gutterBottom
-                className="custom-subtitle"
+                className={styles.customSubtitle}
                 data-aos="fade-up"
               >
                 {t("follow_us")}
               </Typography>
               <Box
-                className="social-icons"
+                className={styles.socialIcons}
                 display="flex"
                 justifyContent="center"
                 mt={2}
               >
-                <FaFacebook className="social-icon" data-aos="fade-up" />
-                <FaTwitter className="social-icon" data-aos="fade-up" />
-                <FaInstagram className="social-icon" data-aos="fade-up" />
-                <FaLinkedin className="social-icon" data-aos="fade-up" />
+                <FaFacebook className={styles.socialIcon} data-aos="fade-up" />
+                <FaTwitter className={styles.socialIcon} data-aos="fade-up" />
+                <FaInstagram className={styles.socialIcon} data-aos="fade-up" />
+                <FaLinkedin className={styles.socialIcon} data-aos="fade-up" />
               </Box>
             </Box>
           </Paper>

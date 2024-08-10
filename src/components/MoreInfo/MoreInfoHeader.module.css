@@ -1,5 +1,4 @@
-/* components/MoreInfo/MoreInfoHeader.css */
-.more-info-header {
+.moreInfoHeader {
   position: relative;
   background-image: url("https://images.unsplash.com/photo-1525905708812-b271b5e3b2f3?q=80&w=2129&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
@@ -13,7 +12,7 @@
   overflow: hidden;
 }
 
-.more-info-header::before {
+.moreInfoHeader::before {
   content: "";
   position: absolute;
   top: 0;
@@ -24,7 +23,7 @@
   z-index: 1;
 }
 
-.more-info-header-content {
+.moreInfoHeaderContent {
   position: relative;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
@@ -35,7 +34,7 @@
   animation: fadeInUp 1s forwards; /* Animation properties */
 }
 
-.more-info-header-content h1 {
+.moreInfoHeaderContent h1 {
   margin-bottom: 0; /* Adjust space between h1 and content */
   font-size: 2.5rem; /* Adjust font size if necessary */
   color: #d4af37; /* Gold color for consistency */
@@ -55,11 +54,11 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .more-info-header {
+  .moreInfoHeader {
     height: 40vh; /* Adjust height for smaller screens */
   }
 
-  .more-info-header-content h1 {
+  .moreInfoHeaderContent h1 {
     font-size: 1.5rem; /* Adjust font size for smaller screens */
   }
 }

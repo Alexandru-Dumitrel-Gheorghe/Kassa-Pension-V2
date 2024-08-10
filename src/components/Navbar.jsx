@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaGlobe } from "react-icons/fa";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -42,13 +42,15 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-        <div className="navbar-title">
-          <Link to="/" className="navbar-brand">
+      <nav
+        className={`${styles.navbar} ${scrolled ? styles.navbarScrolled : ""}`}
+      >
+        <div className={styles.navbarTitle}>
+          <Link to="/" className={styles.navbarBrand}>
             <h1>Kassa</h1>
           </Link>
         </div>
-        <ul className="navbar-links">
+        <ul className={styles.navbarLinks}>
           <li>
             <Link to="/">{t("home")}</Link>
           </li>
@@ -68,12 +70,15 @@ const Navbar = () => {
             <Link to="/more-info">{t("information")}</Link>
           </li>
         </ul>
-        <div className="language-switcher">
-          <button onClick={toggleLanguageMenu} className="language-button">
+        <div className={styles.languageSwitcher}>
+          <button
+            onClick={toggleLanguageMenu}
+            className={styles.languageButton}
+          >
             <FaGlobe size={20} />
           </button>
           {languageMenuActive && (
-            <ul className="language-menu">
+            <ul className={styles.languageMenu}>
               <li>
                 <button onClick={() => changeLanguage("en")}>EN</button>
               </li>
@@ -84,16 +89,22 @@ const Navbar = () => {
           )}
         </div>
         <div
-          className={`hamburger ${menuActive ? "hamburger-active" : ""}`}
+          className={`${styles.hamburger} ${
+            menuActive ? styles.hamburgerActive : ""
+          }`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <span className="line"></span>
-          <span className="line"></span>
-          <span className="line"></span>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
         </div>
       </nav>
-      <div className={`menubar ${menuActive ? "active" : ""}`}>
+      <div
+        className={`${styles.menubar} ${
+          menuActive ? styles.menubarActive : ""
+        }`}
+      >
         <ul>
           <li>
             <Link to="/" onClick={toggleMenu}>
@@ -125,7 +136,7 @@ const Navbar = () => {
               {t("information")}
             </Link>
           </li>
-          <li className="language-menu-title">
+          <li className={styles.languageMenuTitle}>
             <span>{t("change_language")}</span>
           </li>
           <li>

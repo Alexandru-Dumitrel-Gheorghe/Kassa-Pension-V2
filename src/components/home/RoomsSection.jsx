@@ -1,6 +1,6 @@
 import React from "react";
 import RoomCard from "./RoomCard";
-import "./RoomsSection.css";
+import styles from "./RoomsSection.module.css"; // Importă stilurile CSS Modules
 
 const rooms = [
   {
@@ -25,18 +25,22 @@ const rooms = [
 
 const RoomsSection = () => {
   return (
-    <div className="rooms-section">
+    <div className={styles.roomsSection}>
       <h4
-        className="section-subtitle"
+        className={styles.sectionSubtitle}
         data-aos="fade-up"
         data-aos-duration="800"
       >
         Experiență de Lux
       </h4>
-      <h2 className="section-title" data-aos="fade-up" data-aos-duration="800">
+      <h2
+        className={styles.sectionTitle}
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
         Camere & Suită
       </h2>
-      <div className="rooms-container">
+      <div className={styles.roomsContainer}>
         {rooms.map((room, index) => (
           <RoomCard
             key={index}
@@ -47,7 +51,7 @@ const RoomsSection = () => {
         ))}
       </div>
       <button
-        className="view-all-rooms-button"
+        className={styles.viewAllRoomsButton}
         data-aos="fade-up"
         data-aos-duration="800"
       >

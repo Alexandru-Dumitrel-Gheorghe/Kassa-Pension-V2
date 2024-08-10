@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Importă stilurile AOS
-import "./Gallery.css";
+import styles from "./Gallery.module.css"; // Importă stilurile folosind CSS Modules
 
 const Gallery = () => {
   const images = [
@@ -90,11 +90,11 @@ const Gallery = () => {
   }, [handleKeyDown]);
 
   return (
-    <div className="gallery-container">
+    <div className={styles.galleryContainer}>
       {images.map((image, index) => (
         <div
           key={index}
-          className="gallery-item"
+          className={styles.galleryItem}
           onClick={() => openLightbox(index)}
           data-aos="fade-up"
           data-aos-delay={`${index * 100}`}
@@ -104,28 +104,28 @@ const Gallery = () => {
       ))}
 
       {currentIndex !== null && (
-        <div className="lightbox">
-          <button className="close" onClick={closeLightbox}>
+        <div className={styles.lightbox}>
+          <button className={styles.close} onClick={closeLightbox}>
             &times;
           </button>
-          <button className="prev" onClick={goToPrevious}>
+          <button className={styles.prev} onClick={goToPrevious}>
             &lsaquo;
           </button>
-          <div className="lightbox-content">
-            {loading && <div className="loading">Loading...</div>}
+          <div className={styles.lightboxContent}>
+            {loading && <div className={styles.loading}>Loading...</div>}
             <img
-              className="lightbox-image"
+              className={styles.lightboxImage}
               src={images[currentIndex].src}
               alt={images[currentIndex].caption}
               onLoad={() => setLoading(false)}
             />
-            <p className="caption">{images[currentIndex].caption}</p>
-            <div className="thumbnails">
+            <p className={styles.caption}>{images[currentIndex].caption}</p>
+            <div className={styles.thumbnails}>
               {images.map((image, thumbIndex) => (
                 <img
                   key={thumbIndex}
-                  className={`thumbnail ${
-                    thumbIndex === currentIndex ? "active" : ""
+                  className={`${styles.thumbnail} ${
+                    thumbIndex === currentIndex ? styles.active : ""
                   }`}
                   src={image.src}
                   alt={image.caption}
@@ -134,7 +134,7 @@ const Gallery = () => {
               ))}
             </div>
           </div>
-          <button className="next" onClick={goToNext}>
+          <button className={styles.next} onClick={goToNext}>
             &rsaquo;
           </button>
         </div>

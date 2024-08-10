@@ -1,14 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "./PricesHeader.css";
+import styles from "./PricesHeader.module.css";
 
 const PricesHeader = () => {
   const { t } = useTranslation();
 
   return (
-    <header className="prices-header" data-aos="fade-up">
+    <header className={styles.pricesHeader} data-aos="fade-up">
       <div
-        className="prices-header-content"
+        className={styles.pricesHeaderContent}
         data-aos="fade-up"
         data-aos-delay="200"
       >

@@ -1,14 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "./MoreInfoHeader.css";
+import styles from "./MoreInfoHeader.module.css";
 
 const MoreInfoHeader = () => {
   const { t } = useTranslation();
 
   return (
-    <header className="more-info-header" data-aos="fade-in">
+    <header className={styles.moreInfoHeader} data-aos="fade-in">
       <div
-        className="more-info-header-content"
+        className={styles.moreInfoHeaderContent}
         data-aos="zoom-in"
         data-aos-delay="300"
       >

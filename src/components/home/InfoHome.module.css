@@ -1,24 +1,4 @@
-:root {
-  --title-color: #704214;
-  --text-color: #34495e;
-  --icons-color: #c1a17f;
-  --background-color: #ffffff; /* Presupunând un fundal alb */
-  --primary-color: #34495e; /* Similar cu icons-color */
-  --secondary-color: #704214; /* Similar cu text-color */
-  --accent-color: #333333; /* Similar cu title-color */
-  --shadow-color: rgba(0, 0, 0, 0.1); /* Umbră subtilă */
-  --primary-font: "Lucida Handwriting", serif;
-  --heading-font: "Lucida Handwriting", serif;
-  --highlight-color: #f39c12; /* Adăugat pentru evidențiere */
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--primary-font);
-}
-
-.info-home-container {
+.infoHomeContainer {
   display: flex;
   align-items: center;
   max-width: 1200px;
@@ -33,12 +13,12 @@ body {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.info-home-container.visible {
+.infoHomeContainer.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.info-image-container {
+.infoImageContainer {
   flex: 1;
   max-width: 600px;
   overflow: hidden;
@@ -47,19 +27,19 @@ body {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.info-image-container.visible {
+.infoImageContainer.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.info-image {
+.infoImage {
   width: 100%;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.info-content {
+.infoContent {
   flex: 1;
   padding: 20px;
   color: var(--text-color);
@@ -68,26 +48,26 @@ body {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.info-content.visible {
+.infoContent.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.info-title {
+.infoTitle {
   font-size: 2.5rem;
   color: var(--title-color);
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-.info-description {
+.infoDescription {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 20px;
   color: var(--text-color);
 }
 
-.info-stats {
+.infoStats {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -96,26 +76,26 @@ body {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.info-stats.visible {
+.infoStats.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.info-stat-item {
+.infoStatItem {
   text-align: center;
 }
 
-.stat-number {
+.statNumber {
   font-size: 2rem;
   color: var(--title-color);
 }
 
-.stat-text {
+.statText {
   font-size: 0.9rem;
   color: var(--text-color);
 }
 
-.info-button {
+.infoButton {
   display: inline-block;
   background-color: var(--primary-color);
   color: white;
@@ -131,30 +111,30 @@ body {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.info-button.visible {
+.infoButton.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.info-button:hover {
+.infoButton:hover {
   background-color: var(--text-color);
   transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-  .info-home-container {
+  .infoHomeContainer {
     flex-direction: column;
   }
 
-  .info-image-container {
+  .infoImageContainer {
     max-width: 100%;
   }
 
-  .info-stats {
+  .infoStats {
     flex-direction: column;
   }
 
-  .info-stat-item {
+  .infoStatItem {
     margin-bottom: 10px;
   }
 }

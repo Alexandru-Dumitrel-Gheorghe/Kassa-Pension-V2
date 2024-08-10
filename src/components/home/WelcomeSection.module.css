@@ -1,19 +1,12 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.welcome-section {
+.welcomeSection {
   padding: 3rem 1.5rem;
   margin-top: 24px;
-
   text-align: center;
   background-color: var(--background-color);
   border-bottom: 1px solid var(--title-color);
 }
 
-.welcome-content {
+.welcomeContent {
   max-width: 1200px;
   margin: 0 auto;
   font-family: var(--primary-font);
@@ -26,12 +19,12 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-[data-aos="fade-up"].aos-animate {
+[data-aos="fade-up"].aosAnimate {
   opacity: 1;
   transform: translateY(0);
 }
 
-.welcome-title {
+.welcomeTitle {
   margin-bottom: 1.5rem;
   font-size: 2.5rem;
   font-weight: bold;
@@ -39,7 +32,7 @@
   color: var(--title-color);
 }
 
-.welcome-description {
+.welcomeDescription {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
   max-width: 900px;
@@ -48,21 +41,21 @@
   color: var(--text-color);
 }
 
-.welcome-icons {
+.welcomeIcons {
   display: flex;
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
 }
 
-.welcome-icon {
+.welcomeIcon {
   text-align: center;
   transition: transform 0.3s ease, color 0.3s ease;
   padding: 1rem;
   color: var(--icons-color);
 }
 
-.welcome-icon:hover {
+.welcomeIcon:hover {
   transform: scale(1.1);
   color: var(--text-color);
 }
@@ -72,7 +65,7 @@
   transition: color 0.3s ease;
 }
 
-.welcome-icon p {
+.welcomeIcon p {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: var(--text-color);
@@ -80,56 +73,56 @@
 
 /* Media Queries */
 @media (max-width: 992px) {
-  .welcome-description {
+  .welcomeDescription {
     font-size: 1.15rem;
   }
 
-  .welcome-icons {
+  .welcomeIcons {
     gap: 2rem;
   }
 
-  .welcome-icon {
+  .welcomeIcon {
     padding: 0.5rem;
   }
 
-  .welcome-icon p {
+  .welcomeIcon p {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
-  .welcome-section {
+  .welcomeSection {
     padding: 2rem 1rem;
   }
 
-  .welcome-title {
+  .welcomeTitle {
     font-size: 2rem;
   }
 
-  .welcome-description {
+  .welcomeDescription {
     font-size: 1rem;
   }
 
-  .welcome-icon p {
+  .welcomeIcon p {
     font-size: 0.85rem;
   }
 }
 
 @media (max-width: 576px) {
-  .welcome-section {
+  .welcomeSection {
     padding: 1.5rem 0.75rem;
   }
 
-  .welcome-title {
+  .welcomeTitle {
     font-size: 1.8rem;
   }
 
-  .welcome-description {
+  .welcomeDescription {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
   }
 
-  .welcome-icon p {
+  .welcomeIcon p {
     font-size: 0.75rem;
   }
 }

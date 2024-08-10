@@ -1,10 +1,10 @@
-.rooms-section {
+.roomsSection {
   padding: 40px 20px;
   text-align: center;
   background-color: var(--background-color);
 }
 
-.section-subtitle {
+.sectionSubtitle {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--text-color);
@@ -12,65 +12,65 @@
   letter-spacing: 1px;
 }
 
-.section-title {
-  font-size: 32px; /* Font redus pentru titlu */
+.sectionTitle {
+  font-size: 32px;
   font-weight: bold;
   color: var(--title-color);
   margin-bottom: 30px;
 }
 
-.rooms-container {
+.roomsContainer {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.view-all-rooms-button {
-  margin-top: 20px; /* Marja redusă pentru buton */
-  padding: 10px 20px; /* Padding redus pentru buton */
+.viewAllRoomsButton {
+  margin-top: 20px;
+  padding: 10px 20px;
   background-color: var(--primary-color);
   color: var(--background-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 14px; /* Font mai mic pentru buton */
+  font-size: 14px;
 }
 
-.view-all-rooms-button:hover {
+.viewAllRoomsButton:hover {
   background-color: var(--accent-color);
 }
 
 /* Media Queries */
 @media (max-width: 1200px) {
-  .section-title {
+  .sectionTitle {
     font-size: 28px;
   }
 }
 
 @media (max-width: 992px) {
-  .section-title {
+  .sectionTitle {
     font-size: 24px;
   }
 
-  .view-all-rooms-button {
+  .viewAllRoomsButton {
     padding: 8px 16px;
     font-size: 13px;
   }
 }
 
 @media (max-width: 768px) {
-  .section-title {
+  .sectionTitle {
     font-size: 20px;
   }
 
-  .rooms-container {
+  .roomsContainer {
     flex-direction: column;
     align-items: center;
   }
 
-  .view-all-rooms-button {
+  .viewAllRoomsButton {
     width: 40%;
     padding: 10px;
     font-size: 14px;
@@ -78,11 +78,11 @@
 }
 
 @media (max-width: 576px) {
-  .section-title {
+  .sectionTitle {
     font-size: 18px;
   }
 
-  .view-all-rooms-button {
+  .viewAllRoomsButton {
     width: 40%;
     padding: 8px;
     font-size: 12px;

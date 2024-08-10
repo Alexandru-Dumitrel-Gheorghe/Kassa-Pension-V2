@@ -1,26 +1,15 @@
-:root {
-  --primary-color: #4a90e2;
-  --secondary-color: #2c3e50;
-  --background-color: #f9f9f9;
-  --card-background: #ffffff;
-  --text-color: #333;
-  --text-gray: #666;
-  --highlight-color: #e74c3c;
-  --button-hover-color: #d42e3c;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-.nearby-attractions {
+.nearbyAttractions {
   padding: 60px 20px;
   background-color: var(--background-color);
 }
 
-.nearby-attractions .title {
+.title {
   text-align: center;
   font-size: 2.5rem;
   color: var(--secondary-color);
@@ -53,14 +42,14 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.box-top {
+.boxTop {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-bottom: 16px;
 }
 
-.box-image {
+.boxImage {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -68,23 +57,23 @@
   transition: transform 0.3s ease;
 }
 
-.box-image:hover {
+.boxImage:hover {
   transform: scale(1.05);
 }
 
-.title-flex {
+.titleFlex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.box-title {
+.boxTitle {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--secondary-color);
 }
 
-.user-follow-info {
+.userFollowInfo {
   color: var(--highlight-color);
   font-weight: bold;
 }
@@ -123,11 +112,11 @@
     max-width: 100%;
   }
 
-  .nearby-attractions .title {
+  .title {
     font-size: 2rem;
   }
 
-  .box-title {
+  .boxTitle {
     font-size: 1.3rem;
   }
 }
@@ -137,7 +126,7 @@
     padding: 15px;
   }
 
-  .box-title {
+  .boxTitle {
     font-size: 1.2rem;
   }
 

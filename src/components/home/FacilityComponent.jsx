@@ -7,7 +7,7 @@ import {
   faBed,
   faAirFreshener,
 } from "@fortawesome/free-solid-svg-icons";
-import "./FacilityComponent.css";
+import styles from "./FacilityComponent.module.css"; // Importă stilurile CSS Modules
 
 const FacilityComponent = () => {
   const facilities = [
@@ -19,14 +19,14 @@ const FacilityComponent = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const elements = document.querySelectorAll(".facility-item");
+      const elements = document.querySelectorAll(`.${styles.facilityItem}`);
 
       elements.forEach((el) => {
         const rect = el.getBoundingClientRect();
         if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          el.classList.add("visible");
+          el.classList.add(styles.visible);
         } else {
-          el.classList.remove("visible");
+          el.classList.remove(styles.visible);
         }
       });
     };
@@ -38,20 +38,27 @@ const FacilityComponent = () => {
   }, []);
 
   return (
-    <Container className="facility-container">
+    <Container className={styles.facilityContainer}>
       <Row className="justify-content-center text-center mb-5">
         <Col md={8}>
-          <h4 className="facility-subtitle">Facilități oferite de Kassa</h4>
-          <h2 className="facility-title">Cele mai apreciate facilități</h2>
+          <h4 className={styles.facilitySubtitle}>
+            Facilități oferite de Kassa
+          </h4>
+          <h2 className={styles.facilityTitle}>
+            Cele mai apreciate facilități
+          </h2>
         </Col>
       </Row>
-      <Row className="facility-items">
+      <Row className={styles.facilityItems}>
         {facilities.map((facility, index) => (
-          <Col key={index} md={6} className="facility-item">
-            <div className="facility-icon-wrapper">
-              <FontAwesomeIcon icon={facility.icon} className="facility-icon" />
+          <Col key={index} md={6} className={styles.facilityItem}>
+            <div className={styles.facilityIconWrapper}>
+              <FontAwesomeIcon
+                icon={facility.icon}
+                className={styles.facilityIcon}
+              />
             </div>
-            <h5 className="facility-item-title">{facility.title}</h5>
+            <h5 className={styles.facilityItemTitle}>{facility.title}</h5>
           </Col>
         ))}
       </Row>

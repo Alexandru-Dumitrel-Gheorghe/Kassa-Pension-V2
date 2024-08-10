@@ -1,12 +1,11 @@
-/* src/components/PriceRooms/PriceRooms.css */
-.price-rooms {
+.priceRooms {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.rooms-title {
+.roomsTitle {
   font-size: 2.5rem;
   font-weight: bold;
   color: var(--title-color);
@@ -15,7 +14,7 @@
   position: relative;
 }
 
-.rooms-title::after {
+.roomsTitle::after {
   content: "";
   display: block;
   width: 60px;
@@ -27,13 +26,13 @@
   transform: translateX(-50%);
 }
 
-.rooms-subtitle {
+.roomsSubtitle {
   font-size: 1.2rem;
   color: #7f8c8d;
   margin-bottom: 30px;
 }
 
-.room-slide {
+.roomSlide {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -43,12 +42,12 @@
   transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
 }
 
-.room-slide[data-aos="fade-up"] {
+.roomSlide[data-aos="fade-up"] {
   opacity: 1; /* Ensure the opacity is set when animated */
   transform: translateY(0); /* Reset transform for slide-in effect */
 }
 
-.room-card {
+.roomCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,18 +60,18 @@
   height: 55vh;
 }
 
-.room-card:hover {
+.roomCard:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.room-img {
+.roomImg {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.room-body {
+.roomBody {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,26 +81,26 @@
   height: 100%;
 }
 
-.room-title {
+.roomTitle {
   font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-.room-beds,
-.room-description {
+.roomBeds,
+.roomDescription {
   font-size: 1rem;
   margin-bottom: 10px;
   color: #34495e;
 }
 
-.room-features {
+.roomFeatures {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.room-features li {
+.roomFeatures li {
   display: flex;
   align-items: center;
   font-size: 0.95rem;
@@ -109,34 +108,34 @@
   margin-top: 8px;
 }
 
-.room-features li svg {
+.roomFeatures li svg {
   margin-right: 8px;
 }
 
 @media (max-width: 768px) {
-  .room-slide {
+  .roomSlide {
     display: flex;
     justify-content: center;
   }
 
-  .room-card {
+  .roomCard {
     max-width: 100%;
   }
 
-  .rooms-title {
+  .roomsTitle {
     font-size: 1.5rem;
   }
 
-  .rooms-subtitle {
+  .roomsSubtitle {
     font-size: 0.9rem;
   }
 
-  .room-title {
+  .roomTitle {
     font-size: 1.4rem;
   }
 
-  .room-beds,
-  .room-description {
+  .roomBeds,
+  .roomDescription {
     font-size: 0.9rem;
   }
 }

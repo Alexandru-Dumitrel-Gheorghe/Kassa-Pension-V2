@@ -1,4 +1,3 @@
-// Facility.jsx
 import React from "react";
 import { Accordion, Card, Button } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
@@ -10,17 +9,17 @@ import {
   FaTv,
   FaBed,
 } from "react-icons/fa";
-import "./Facility.css";
+import styles from "./Facility.module.css"; // Import CSS Module
 
 const Facility = () => {
   const { t } = useTranslation();
 
   return (
-    <Accordion className="facility-section">
+    <Accordion className={styles.facilitySection}>
       <Card>
         <Card.Header>
           <Accordion.Toggle as={Button} variant="link" eventKey="0">
-            <h2 className="facility-title">
+            <h2 className={styles.facilityTitle}>
               {t("Facilități oferite de Kassa")}
             </h2>
           </Accordion.Toggle>
@@ -29,7 +28,7 @@ const Facility = () => {
           <Card.Body>
             <h5>{t("Facilităţi excelente! Scor din comentarii: 10")}</h5>
             <p>{t("Vedeți disponibilitățile")}</p>
-            <ul className="facility-list">
+            <ul className={styles.facilityList}>
               <li>
                 <FaParking /> {t("parcare gratuită")}
               </li>

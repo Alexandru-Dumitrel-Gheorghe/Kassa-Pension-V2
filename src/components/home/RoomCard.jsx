@@ -1,13 +1,17 @@
 import React from "react";
-import "./RoomCard.css";
+import styles from "./RoomCard.module.css"; // Importă stilurile CSS Modules
 
 const RoomCard = ({ image, price, title }) => {
   return (
-    <div className="home-room-card" data-aos="fade-up" data-aos-duration="800">
-      <img src={image} alt={title} className="home-room-card-image" />
-      <div className="home-room-card-info">
-        <p className="home-room-card-price">De la ${price}/noapte</p>
-        <h3 className="home-room-card-title">{title}</h3>
+    <div
+      className={styles.homeRoomCard}
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      <img src={image} alt={title} className={styles.homeRoomCardImage} />
+      <div className={styles.homeRoomCardInfo}>
+        <p className={styles.homeRoomCardPrice}>De la ${price}/noapte</p>
+        <h3 className={styles.homeRoomCardTitle}>{title}</h3>
       </div>
     </div>
   );

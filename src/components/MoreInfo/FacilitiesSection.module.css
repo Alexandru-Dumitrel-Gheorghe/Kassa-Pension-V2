@@ -2,17 +2,17 @@
   --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
-.fs-facilities-section {
+.fsFacilitiesSection {
   padding: 60px 20px;
   background-color: var(--background-color);
 }
 
-.fs-container {
+.fsContainer {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.fs-title {
+.fsTitle {
   text-align: center;
   color: var(--secondary-color);
   font-size: 2.5rem;
@@ -20,7 +20,7 @@
   font-family: "Georgia", serif;
 }
 
-.fs-score {
+.fsScore {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -28,7 +28,7 @@
   font-weight: bold;
 }
 
-.fs-availability-button {
+.fsAvailabilityButton {
   display: block;
   margin: 0 auto 40px;
   padding: 15px 30px;
@@ -42,18 +42,18 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.fs-availability-button:hover {
+.fsAvailabilityButton:hover {
   background-color: #c09730;
 }
 
-.fs-facilities-grid {
+.fsFacilitiesGrid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
 }
 
-.fs-facility-category {
+.fsFacilityCategory {
   flex: 1 1 calc(33.333% - 40px);
   background-color: var(--card-background);
   border-radius: 15px;
@@ -62,12 +62,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.fs-facility-category:hover {
+.fsFacilityCategory:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px var(--card-shadow);
 }
 
-.fs-facility-category h3 {
+.fsFacilityCategory h3 {
   color: var(--secondary-color);
   margin-bottom: 15px;
   font-size: 1.5rem;
@@ -75,20 +75,20 @@
   padding-bottom: 10px;
 }
 
-.fs-facility-category p,
-.fs-facility-category ul {
+.fsFacilityCategory p,
+.fsFacilityCategory ul {
   font-size: 1rem;
   color: var(--secondary-color);
   margin: 0;
   line-height: 1.5;
 }
 
-.fs-facility-category ul {
+.fsFacilityCategory ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-.fs-facility-category ul li::before {
+.fsFacilityCategory ul li::before {
   content: "•";
   color: var(--primary-color);
   font-weight: bold;
@@ -97,45 +97,45 @@
   margin-left: -1em;
 }
 
-.fs-important-info {
+.fsImportantInfo {
   margin-top: 60px;
 }
 
-.fs-important-info h3 {
+.fsImportantInfo h3 {
   text-align: center;
   color: var(--secondary-color);
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.fs-check-info,
-.fs-policy-info {
+.fsCheckInfo,
+.fsPolicyInfo {
   margin-bottom: 30px;
 }
 
-.fs-check-info h4,
-.fs-policy-info h4 {
+.fsCheckInfo h4,
+.fsPolicyInfo h4 {
   font-size: 1.3rem;
   color: var(--secondary-color);
   margin-bottom: 10px;
 }
 
-.fs-check-info p,
-.fs-policy-info p {
+.fsCheckInfo p,
+.fsPolicyInfo p {
   font-size: 1rem;
   color: var(--secondary-color);
   margin: 0;
   line-height: 1.5;
 }
 
-.fs-policy-info ul {
+.fsPolicyInfo ul {
   list-style-type: none;
   padding-left: 0;
   color: var(--secondary-color);
   font-size: 1rem;
 }
 
-.fs-policy-info ul li::before {
+.fsPolicyInfo ul li::before {
   content: "•";
   color: var(--primary-color);
   font-weight: bold;
@@ -146,23 +146,23 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .fs-facilities-grid {
+  .fsFacilitiesGrid {
     flex-direction: column;
   }
 
-  .fs-facility-category {
+  .fsFacilityCategory {
     flex: 1 1 100%;
   }
 
-  .fs-facility-category h3 {
+  .fsFacilityCategory h3 {
     font-size: 1.3rem;
   }
 
-  .fs-container {
+  .fsContainer {
     padding: 0 15px;
   }
 
-  .fs-availability-button {
+  .fsAvailabilityButton {
     margin: 20px auto 20px;
     padding: 12px 25px;
     font-size: 0.9rem;
@@ -170,11 +170,11 @@
 }
 
 @media (max-width: 480px) {
-  .fs-title {
+  .fsTitle {
     font-size: 2rem;
   }
 
-  .fs-facility-category h3 {
+  .fsFacilityCategory h3 {
     font-size: 1.2rem;
   }
 }

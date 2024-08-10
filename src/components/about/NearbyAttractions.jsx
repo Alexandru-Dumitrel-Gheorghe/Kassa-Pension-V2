@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Importă stilurile AOS
-import "./NearbyAttractions.css";
+import styles from "./NearbyAttractions.module.css"; // Importă stilurile folosind CSS Modules
 
 const NearbyAttractions = () => {
   const { t } = useTranslation();
@@ -48,36 +48,36 @@ const NearbyAttractions = () => {
   ];
 
   return (
-    <div className="nearby-attractions" data-aos="fade-up">
-      <h2 className="title" data-aos="fade-down">
+    <div className={styles.nearbyAttractions} data-aos="fade-up">
+      <h2 className={styles.title} data-aos="fade-down">
         {t("nearby_attractions_title")}
       </h2>
-      <div className="wrap">
+      <div className={styles.wrap}>
         {attractions.map((attraction, index) => (
           <div
-            className="box"
+            className={styles.box}
             key={index}
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            <div className="box-top">
+            <div className={styles.boxTop}>
               <img
-                className="box-image"
+                className={styles.boxImage}
                 src={attraction.imageUrl}
                 alt={attraction.name}
                 data-aos="zoom-in"
               />
-              <div className="title-flex">
-                <h3 className="box-title">{attraction.name}</h3>
-                <p className="user-follow-info">{attraction.distance}</p>
+              <div className={styles.titleFlex}>
+                <h3 className={styles.boxTitle}>{attraction.name}</h3>
+                <p className={styles.userFollowInfo}>{attraction.distance}</p>
               </div>
-              <p className="description">{attraction.description}</p>
+              <p className={styles.description}>{attraction.description}</p>
             </div>
             <a
               href={attraction.mapLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="button"
+              className={styles.button}
               data-aos="fade-up"
             >
               {t("navigate")}

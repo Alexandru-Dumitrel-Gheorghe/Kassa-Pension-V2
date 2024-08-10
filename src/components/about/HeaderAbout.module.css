@@ -1,4 +1,4 @@
-.about-header {
+.aboutHeader {
   position: relative;
   background-image: url("https://images.unsplash.com/photo-1466499855940-3d95a5277898?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Înlocuiește cu un URL valid */
   background-size: cover;
@@ -11,7 +11,7 @@
   color: #d4af37;
 }
 
-.about-header::before {
+.aboutHeader::before {
   content: "";
   position: absolute;
   top: 0;
@@ -22,7 +22,7 @@
   z-index: 1;
 }
 
-.about-header-content {
+.aboutHeaderContent {
   position: relative;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
@@ -33,18 +33,18 @@
   animation: fadeInUp 1s forwards; /* Proprietăți de animație */
 }
 
-.about-header-content h1 {
+.aboutHeaderContent h1 {
   margin-bottom: 5px;
   color: #d4af37;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .about-header {
+  .aboutHeader {
     height: 40vh; /* Ajustează înălțimea pentru ecrane mai mici */
   }
 
-  .about-header-content h1 {
+  .aboutHeaderContent h1 {
     font-size: 1.5rem; /* Ajustează dimensiunea fontului pentru ecrane mai mici */
   }
 }
