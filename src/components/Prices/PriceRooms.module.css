@@ -6,7 +6,7 @@
 }
 
 .roomsTitle {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: var(--title-color);
   margin-bottom: 10px;
@@ -17,7 +17,7 @@
 .roomsTitle::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 80px;
   height: 4px;
   background-color: #3498db;
   position: absolute;
@@ -27,9 +27,9 @@
 }
 
 .roomsSubtitle {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #7f8c8d;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .roomSlide {
@@ -37,14 +37,14 @@
   justify-content: center;
   align-items: stretch;
   padding: 10px;
-  opacity: 0; /* Hidden initially for fade-in effect */
-  transform: translateY(20px); /* Initial position for slide-in effect */
-  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .roomSlide[data-aos="fade-up"] {
-  opacity: 1; /* Ensure the opacity is set when animated */
-  transform: translateY(0); /* Reset transform for slide-in effect */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .roomCard {
@@ -52,23 +52,29 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
+  max-width: 350px;
+  min-height: 450px; /* Înălțime minimă fixată pentru toate cardurile */
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 55vh;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background-color: #fff;
 }
 
 .roomCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-12px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .roomImg {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.roomCard:hover .roomImg {
+  transform: scale(1.05);
 }
 
 .roomBody {
@@ -77,19 +83,19 @@
   justify-content: space-between;
   padding: 20px;
   text-align: center;
-  background: #fff;
-  height: 100%;
+  flex-grow: 1; /* Asigură-te că body-ul ocupă toată înălțimea disponibilă */
 }
 
 .roomTitle {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 15px;
+  color: var(--title-color);
 }
 
 .roomBeds,
 .roomDescription {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
   color: #34495e;
 }
@@ -103,31 +109,54 @@
 .roomFeatures li {
   display: flex;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #2c3e50;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .roomFeatures li svg {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
+  .roomsTitle {
+    font-size: 2rem;
+  }
+
+  .roomsSubtitle {
+    font-size: 1.1rem;
+  }
+
   .roomSlide {
-    display: flex;
     justify-content: center;
+    padding: 15px;
   }
 
   .roomCard {
     max-width: 100%;
+    min-height: 500px; /* Ajustează înălțimea minimă pentru ecranele mici */
   }
 
-  .roomsTitle {
-    font-size: 1.5rem;
+  .roomTitle {
+    font-size: 1.6rem;
   }
 
-  .roomsSubtitle {
-    font-size: 0.9rem;
+  .roomBeds,
+  .roomDescription {
+    font-size: 1rem;
+  }
+
+  .viewAllRoomsButton {
+    width: 80%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .roomSlide {
+    padding: 10px;
   }
 
   .roomTitle {
@@ -137,5 +166,9 @@
   .roomBeds,
   .roomDescription {
     font-size: 0.9rem;
+  }
+
+  .roomCard {
+    min-height: 350px; /* Ajustează înălțimea minimă pentru ecranele foarte mici */
   }
 }

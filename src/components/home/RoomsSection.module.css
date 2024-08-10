@@ -22,6 +22,7 @@
 .roomsContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -68,10 +69,11 @@
   .roomsContainer {
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Asigură centrare pe ecrane mici */
   }
 
   .viewAllRoomsButton {
-    width: 40%;
+    width: 60%; /* Poate crește puțin lățimea butonului pe ecrane mici */
     padding: 10px;
     font-size: 14px;
   }
@@ -83,7 +85,7 @@
   }
 
   .viewAllRoomsButton {
-    width: 40%;
+    width: 100%;
     padding: 8px;
     font-size: 12px;
   }
