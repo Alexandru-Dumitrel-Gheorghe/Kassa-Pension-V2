@@ -1,10 +1,5 @@
 :root {
-  --primary-color: #d4af37;
-  --secondary-color: #333;
-  --background-color: #f9f9f9;
-  --card-background: #fff;
   --card-shadow: rgba(0, 0, 0, 0.1);
-  --highlight-color: #ffdf00;
 }
 
 .fs-facilities-section {
@@ -76,7 +71,7 @@
   color: var(--secondary-color);
   margin-bottom: 15px;
   font-size: 1.5rem;
-  border-bottom: 2px solid var(--highlight-color);
+  border-bottom: 2px solid var(--text-color);
   padding-bottom: 10px;
 }
 

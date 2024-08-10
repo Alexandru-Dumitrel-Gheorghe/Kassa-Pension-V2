@@ -31,10 +31,10 @@ const RoomsSection = () => {
         data-aos="fade-up"
         data-aos-duration="800"
       >
-        Luxury Experience
+        Experiență de Lux
       </h4>
       <h2 className="section-title" data-aos="fade-up" data-aos-duration="800">
-        Rooms & Suites
+        Camere & Suită
       </h2>
       <div className="rooms-container">
         {rooms.map((room, index) => (
@@ -51,7 +51,7 @@ const RoomsSection = () => {
         data-aos="fade-up"
         data-aos-duration="800"
       >
-        View all Rooms
+        Vezi toate Camerele
       </button>
     </div>
   );

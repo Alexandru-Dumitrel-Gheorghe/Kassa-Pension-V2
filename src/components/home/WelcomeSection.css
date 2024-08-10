@@ -7,10 +7,10 @@
 .welcome-section {
   padding: 3rem 1.5rem;
   margin-top: 24px;
-  border-radius: 15px;
-  box-shadow: 0 6px 16px var(--shadow-color);
+
   text-align: center;
   background-color: var(--background-color);
+  border-bottom: 1px solid var(--title-color);
 }
 
 .welcome-content {

@@ -1,5 +1,5 @@
 .rooms-section {
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
   background-color: var(--background-color);
 }
@@ -13,10 +13,10 @@
 }
 
 .section-title {
-  font-size: 36px;
+  font-size: 32px; /* Font redus pentru titlu */
   font-weight: bold;
   color: var(--title-color);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .rooms-container {
@@ -27,14 +27,15 @@
 }
 
 .view-all-rooms-button {
-  margin-top: 30px;
-  padding: 12px 24px;
+  margin-top: 20px; /* Marja redusă pentru buton */
+  padding: 10px 20px; /* Padding redus pentru buton */
   background-color: var(--primary-color);
   color: var(--background-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 14px; /* Font mai mic pentru buton */
 }
 
 .view-all-rooms-button:hover {
@@ -44,24 +45,24 @@
 /* Media Queries */
 @media (max-width: 1200px) {
   .section-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 992px) {
   .section-title {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .view-all-rooms-button {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 8px 16px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 768px) {
   .section-title {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .rooms-container {
@@ -70,20 +71,20 @@
   }
 
   .view-all-rooms-button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
+    width: 40%;
+    padding: 10px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 576px) {
   .section-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .view-all-rooms-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
+    width: 40%;
+    padding: 8px;
+    font-size: 12px;
   }
 }

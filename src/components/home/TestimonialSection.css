@@ -17,7 +17,7 @@
 .section-title {
   font-size: 2.2rem;
   color: var(--title-color);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   font-family: var(--heading-font) !important;
   font-weight: 700;
   text-transform: uppercase;

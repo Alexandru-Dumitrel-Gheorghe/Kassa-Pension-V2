@@ -9,7 +9,7 @@
   justify-content: center;
   text-align: center;
   color: #fff;
-  overflow: hidden;
+  overflow: hidden; /* Hide overflow content */
 }
 
 .contact-header::before {
@@ -29,8 +29,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 10px;
-  opacity: 0; /* Hidden initially */
-  transform: translateY(20px); /* Initial position for slide-in effect */
+  opacity: 1; /* Make sure content is visible */
+  transform: translateY(0); /* Reset initial position for slide-in effect */
   animation: fadeInUp 1s forwards; /* Animation properties */
 }
 
