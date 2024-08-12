@@ -3,14 +3,15 @@
   max-width: 350px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 15px;
   position: relative;
   background-color: var(--background-color);
   opacity: 0;
   transform: translateY(20px);
-  border-top: 2px solid var(--title-color);
+  border-top: 2px solid var(--secondary-color);
+  font-family: var(--primary-font);
 }
 
 .homeRoomCard[data-aos="fade-up"] {
@@ -20,7 +21,7 @@
 
 .homeRoomCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px var(--shadow-color);
 }
 
 .homeRoomCardImage {
@@ -46,18 +47,27 @@
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.7) 100%
   );
-  color: white !important;
+  color: var(--background-color);
   box-sizing: border-box;
 }
 
 .homeRoomCardPrice {
-  font-size: 14px;
+  font-size: 1rem;
   margin-bottom: 5px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 3px var(--shadow-color);
+  color: var(--text-color);
 }
 
 .homeRoomCardTitle {
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 3px var(--shadow-color);
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .homeRoomCard {
+    max-width: 100%;
+    margin: 10px auto;
+  }
 }

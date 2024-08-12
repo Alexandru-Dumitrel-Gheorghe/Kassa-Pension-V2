@@ -1,9 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./InfoRooms.module.css"; // Importă CSS Modules
 
 const InfoRooms = () => {
   const { t } = useTranslation(); // Hook pentru traduceri
+  const [showAll, setShowAll] = useState(false);
+
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,41 +61,48 @@ const InfoRooms = () => {
               1 {t("extra-large double bed")}
             </p>
           </div>
-          <div className={styles.accommodationStatItem}>
-            <h2 className={styles.statTitle}>{t("Bedroom")} 3</h2>
-            <p className={styles.statDetails}>
-              1 {t("extra-large double bed")}
-            </p>
-          </div>
-          <div className={styles.accommodationStatItem}>
-            <h2 className={styles.statTitle}>{t("Bedroom")} 4</h2>
-            <p className={styles.statDetails}>
-              1 {t("extra-large double bed")}
-            </p>
-          </div>
-          <div className={styles.accommodationStatItem}>
-            <h2 className={styles.statTitle}>{t("Bedroom")} 5</h2>
-            <p className={styles.statDetails}>
-              1 {t("extra-large double bed")}
-            </p>
-          </div>
-          <div className={styles.accommodationStatItem}>
-            <h2 className={styles.statTitle}>{t("Bedroom")} 6</h2>
-            <p className={styles.statDetails}>
-              1 {t("extra-large double bed")}
-            </p>
-          </div>
-          <div className={styles.accommodationStatItem}>
-            <h2 className={styles.statTitle}>{t("Bedroom")} 7</h2>
-            <p className={styles.statDetails}>
-              1 {t("extra-large double bed")}
-            </p>
-          </div>
-          <div className={styles.accommodationStatItem}>
-            <h2 className={styles.statTitle}>{t("living_area")}</h2>
-            <p className={styles.statDetails}>{t("living_area_beds")}</p>
-          </div>
+          {showAll && (
+            <>
+              <div className={styles.accommodationStatItem}>
+                <h2 className={styles.statTitle}>{t("Bedroom")} 3</h2>
+                <p className={styles.statDetails}>
+                  1 {t("extra-large double bed")}
+                </p>
+              </div>
+              <div className={styles.accommodationStatItem}>
+                <h2 className={styles.statTitle}>{t("Bedroom")} 4</h2>
+                <p className={styles.statDetails}>
+                  1 {t("extra-large double bed")}
+                </p>
+              </div>
+              <div className={styles.accommodationStatItem}>
+                <h2 className={styles.statTitle}>{t("Bedroom")} 5</h2>
+                <p className={styles.statDetails}>
+                  1 {t("extra-large double bed")}
+                </p>
+              </div>
+              <div className={styles.accommodationStatItem}>
+                <h2 className={styles.statTitle}>{t("Bedroom")} 6</h2>
+                <p className={styles.statDetails}>
+                  1 {t("extra-large double bed")}
+                </p>
+              </div>
+              <div className={styles.accommodationStatItem}>
+                <h2 className={styles.statTitle}>{t("Bedroom")} 7</h2>
+                <p className={styles.statDetails}>
+                  1 {t("extra-large double bed")}
+                </p>
+              </div>
+              <div className={styles.accommodationStatItem}>
+                <h2 className={styles.statTitle}>{t("living_area")}</h2>
+                <p className={styles.statDetails}>{t("living_area_beds")}</p>
+              </div>
+            </>
+          )}
         </div>
+        <button className={styles.toggleButton} onClick={toggleShowAll}>
+          {showAll ? t("show_less") : t("show_more")}
+        </button>
       </div>
     </div>
   );

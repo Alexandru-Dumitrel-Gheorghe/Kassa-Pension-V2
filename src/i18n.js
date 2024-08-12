@@ -309,6 +309,8 @@ const resources = {
       flat_screen_tv_with_cable: "Flat-screen TV with cable",
       Parking: "Parking",
       rooms_subtitle: "Choose the room that suits you best",
+      show_more: "Show More",
+      show_less: "Show Less",
     },
   },
   ro: {
@@ -630,6 +632,8 @@ const resources = {
       change_language: "Schimbă Limba",
       Parking: "Parcare",
       rooms_subtitle: "Alegeți camera care vi se potrivește cel mai bine",
+      show_more: "Arată mai mult",
+      show_less: "Arată mai puțin",
     },
   },
 };

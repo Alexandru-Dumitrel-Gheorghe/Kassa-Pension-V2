@@ -1,32 +1,17 @@
-:root {
-  --background-color: #f9f9f9;
-  --text-color: #333;
-  --primary-color: #4a90e2;
-  --title-color: #2c3e50;
-  --primary-font: "Poppins", sans-serif;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--primary-font);
-}
-
 .accommodationContainer {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
-  max-width: 1150px;
-  margin: 20px auto;
-  padding: 20px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
   background-color: var(--background-color);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: 0 8px 24px var(--shadow-color);
+  border-radius: 15px;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
 
 .accommodationContainer.visible {
@@ -36,85 +21,72 @@ body {
 
 .accommodationImageContainer {
   flex: 1;
-  max-width: 350px;
+  max-width: 480px;
   overflow: hidden;
-  margin-right: 20px;
-  transition: transform 0.4s ease;
-}
-
-.accommodationImageContainer.visible {
-  transform: scale(1.05);
+  margin-right: 25px;
+  border-radius: 15px;
+  transition: transform 0.6s ease;
+  box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .accommodationImage {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
   object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.accommodationImageContainer:hover .accommodationImage {
-  transform: scale(1.1);
+  transition: transform 0.6s ease;
 }
 
 .accommodationContent {
   flex: 2;
-  padding: 10px;
+  padding: 20px;
   color: var(--text-color);
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateX(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .accommodationContent.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .accommodationTitle {
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--title-color);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: bold;
   text-align: left;
   position: relative;
+  letter-spacing: 1.5px;
+  font-family: var(--heading-font);
 }
 
 .accommodationTitle::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: -5px;
-  width: 50px;
+  left: 0;
+  width: 60px;
   height: 4px;
   background-color: var(--primary-color);
-  transition: width 0.4s ease;
-}
-
-.accommodationTitle:hover::after {
-  width: 100%;
 }
 
 .accommodationDescription {
-  font-size: 1rem;
-  line-height: 1.4;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
   color: var(--text-color);
-  text-align: left;
-  transition: color 0.4s ease;
-}
-
-.accommodationDescription:hover {
-  color: var(--primary-color);
+  text-align: justify;
+  font-family: var(--primary-font);
 }
 
 .accommodationStats {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
@@ -125,45 +97,68 @@ body {
 
 .accommodationStatItem {
   background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px var(--shadow-color);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
 }
 
 .accommodationStatItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px var(--shadow-color);
 }
 
 .statTitle {
-  font-size: 1rem;
-  color: var(--title-color);
-  margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: var(--heading-font);
 }
 
 .statDetails {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   color: var(--text-color);
+  font-family: var(--primary-font);
+}
+
+/* Stiluri pentru butonul de 'Vezi mai mult' */
+.toggleButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  font-family: var(--primary-font);
+}
+
+.toggleButton:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
   .accommodationContainer {
     flex-direction: column;
-    max-width: 100%;
+    margin: 30px auto;
+    padding: 20px;
   }
 
   .accommodationImageContainer {
     max-width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .accommodationContent {
-    padding: 0;
+    margin-bottom: 20px;
   }
 
   .accommodationStats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

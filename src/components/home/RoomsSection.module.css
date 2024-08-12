@@ -1,20 +1,18 @@
 .roomsSection {
-  padding: 40px 20px;
   text-align: center;
+  padding: 40px 20px;
   background-color: var(--background-color);
+  font-family: var(--primary-font);
 }
 
 .sectionSubtitle {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: var(--text-color);
+  font-size: 1.2rem;
+  color: var(--title-color);
   margin-bottom: 10px;
-  letter-spacing: 1px;
 }
 
 .sectionTitle {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 2.5rem;
   color: var(--title-color);
   margin-bottom: 30px;
 }
@@ -22,71 +20,40 @@
 .roomsContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
   flex-wrap: wrap;
+  margin-bottom: 30px;
+  gap: 20px;
 }
 
 .viewAllRoomsButton {
-  margin-top: 20px;
-  padding: 10px 20px;
+  display: inline-block;
   background-color: var(--primary-color);
-  color: var(--background-color);
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
+  padding: 12px 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.1rem;
+  font-family: var(--primary-font);
 }
 
 .viewAllRoomsButton:hover {
   background-color: var(--accent-color);
-}
-
-/* Media Queries */
-@media (max-width: 1200px) {
-  .sectionTitle {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 992px) {
-  .sectionTitle {
-    font-size: 24px;
-  }
-
-  .viewAllRoomsButton {
-    padding: 8px 16px;
-    font-size: 13px;
-  }
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-  .sectionTitle {
-    font-size: 20px;
-  }
-
   .roomsContainer {
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Asigură centrare pe ecrane mici */
+    gap: 10px;
   }
 
-  .viewAllRoomsButton {
-    width: 60%; /* Poate crește puțin lățimea butonului pe ecrane mici */
-    padding: 10px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 576px) {
-  .sectionTitle {
-    font-size: 18px;
-  }
-
-  .viewAllRoomsButton {
-    width: 100%;
-    padding: 8px;
-    font-size: 12px;
+  .homeRoomCard {
+    max-width: 100%;
+    margin: 10px auto;
   }
 }

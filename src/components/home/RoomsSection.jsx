@@ -1,6 +1,6 @@
 import React from "react";
 import RoomCard from "./RoomCard";
-import styles from "./RoomsSection.module.css"; // Importă stilurile CSS Modules
+import styles from "./RoomsSection.module.css";
 
 const rooms = [
   {

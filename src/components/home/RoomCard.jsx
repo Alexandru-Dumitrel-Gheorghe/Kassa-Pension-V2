@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./RoomCard.module.css"; // Importă stilurile CSS Modules
+import styles from "./RoomCard.module.css";
 
 const RoomCard = ({ image, price, title }) => {
   return (
