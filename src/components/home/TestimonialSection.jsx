@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styles from "./TestimonialSection.module.css"; // Importă stilurile CSS Modules
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import styles from "./TestimonialSection.module.css";
 
 const testimonials = [
   {
@@ -18,57 +18,109 @@ const testimonials = [
 
 const TestimonialSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [fade, setFade] = useState(true);
+  const [startX, setStartX] = useState(null);
+  const testimonialRef = useRef(null);
 
-  const toggleFade = () => {
-    setFade(false);
-    setTimeout(() => setFade(true), 500);
-  };
-
-  const prevTestimonial = () => {
-    toggleFade();
-    setTimeout(() => {
-      setCurrentTestimonial(
-        currentTestimonial === 0
-          ? testimonials.length - 1
-          : currentTestimonial - 1
+  const handleSwipe = useCallback((direction) => {
+    if (direction === "left") {
+      setCurrentTestimonial((prev) =>
+        prev === testimonials.length - 1 ? 0 : prev + 1
       );
-    }, 500);
-  };
-
-  const nextTestimonial = () => {
-    toggleFade();
-    setTimeout(() => {
-      setCurrentTestimonial(
-        currentTestimonial === testimonials.length - 1
-          ? 0
-          : currentTestimonial + 1
+    } else if (direction === "right") {
+      setCurrentTestimonial((prev) =>
+        prev === 0 ? testimonials.length - 1 : prev - 1
       );
-    }, 500);
-  };
+    }
+  }, []); // Removed `testimonials.length` from the dependency array
+
+  useEffect(() => {
+    const testimonialContainer = testimonialRef.current;
+
+    let isDown = false;
+    let startXPosition = 0;
+
+    const handleTouchStart = (e) => {
+      setStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+      if (startX === null) return;
+
+      const currentX = e.touches[0].clientX;
+      const diffX = startX - currentX;
+
+      if (diffX > 50) {
+        handleSwipe("left");
+        setStartX(null);
+      } else if (diffX < -50) {
+        handleSwipe("right");
+        setStartX(null);
+      }
+    };
+
+    const handleMouseDown = (e) => {
+      isDown = true;
+      startXPosition = e.clientX;
+      testimonialContainer.style.cursor = "grabbing";
+    };
+
+    const handleMouseUp = () => {
+      isDown = false;
+      testimonialContainer.style.cursor = "grab";
+    };
+
+    const handleMouseMove = (e) => {
+      if (!isDown) return;
+
+      const diffX = startXPosition - e.clientX;
+
+      if (diffX > 50) {
+        handleSwipe("left");
+        isDown = false;
+      } else if (diffX < -50) {
+        handleSwipe("right");
+        isDown = false;
+      }
+    };
+
+    testimonialContainer.addEventListener("touchstart", handleTouchStart);
+    testimonialContainer.addEventListener("touchmove", handleTouchMove);
+    testimonialContainer.addEventListener("mousedown", handleMouseDown);
+    testimonialContainer.addEventListener("mouseup", handleMouseUp);
+    testimonialContainer.addEventListener("mouseleave", handleMouseUp);
+    testimonialContainer.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      testimonialContainer.removeEventListener("touchstart", handleTouchStart);
+      testimonialContainer.removeEventListener("touchmove", handleTouchMove);
+      testimonialContainer.removeEventListener("mousedown", handleMouseDown);
+      testimonialContainer.removeEventListener("mouseup", handleMouseUp);
+      testimonialContainer.removeEventListener("mouseleave", handleMouseUp);
+      testimonialContainer.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [startX, handleSwipe]);
 
   return (
-    <div className={styles.testimonialContainer}>
+    <div className={styles.testimonialContainer} ref={testimonialRef}>
       <h2 className={styles.sectionTitle}>Ce spun oaspeții Kassa</h2>
-      <div
-        className={`${styles.testimonialContent} ${
-          fade ? styles.fadeIn : styles.fadeOut
-        }`}
-      >
-        <h1 className={styles.testimonialText}>
+      <div className={styles.testimonialContent}>
+        <p className={styles.testimonialText}>
           {testimonials[currentTestimonial].text}
-        </h1>
+        </p>
         <p className={styles.authorText}>
           — {testimonials[currentTestimonial].author}
         </p>
       </div>
-      <div className={styles.testimonialButtons}>
-        <button className={styles.prevBtn} onClick={prevTestimonial}>
-          ‹
-        </button>
-        <button className={styles.nextBtn} onClick={nextTestimonial}>
-          ›
-        </button>
+      <div className={styles.indicators}>
+        {testimonials.map((_, index) => (
+          <span
+            key={index}
+            className={`${styles.indicator} ${
+              index === currentTestimonial ? styles.active : ""
+            }`}
+            onClick={() => setCurrentTestimonial(index)}
+          ></span>
+        ))}
       </div>
     </div>
   );

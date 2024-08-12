@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import styles from "./InfoRooms.module.css"; // Importă CSS Modules
+import styles from "./InfoRooms.module.css";
 
 const InfoRooms = () => {
-  const { t } = useTranslation(); // Hook pentru traduceri
+  const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
 
   const toggleShowAll = () => {
@@ -31,7 +31,7 @@ const InfoRooms = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Verifică elementele la încărcare
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -52,50 +52,44 @@ const InfoRooms = () => {
         </p>
         <div className={styles.accommodationStats}>
           <div className={styles.accommodationStatItem}>
-            <h2 className={styles.statTitle}>{t("Bedroom")} 1</h2>
-            <p className={styles.statDetails}>{t("whole_house_beds")}</p>
+            <h2 className={styles.statTitle}>
+              {t("private_bathroom_with_jacuzzi")}
+            </h2>
+            <p className={styles.statDetails}>
+              {t("bath_or_shower")}, {t("free_toiletries")}
+            </p>
           </div>
           <div className={styles.accommodationStatItem}>
-            <h2 className={styles.statTitle}>{t("Bedroom")} 2</h2>
+            <h2 className={styles.statTitle}>{t("balcony")}</h2>
             <p className={styles.statDetails}>
-              1 {t("extra-large double bed")}
+              {t("garden_view")}, {t("courtyard_view")}
             </p>
           </div>
           {showAll && (
             <>
               <div className={styles.accommodationStatItem}>
-                <h2 className={styles.statTitle}>{t("Bedroom")} 3</h2>
+                <h2 className={styles.statTitle}>{t("family_room")}</h2>
                 <p className={styles.statDetails}>
-                  1 {t("extra-large double bed")}
+                  {t("family_room_beds")}, {t("free_wifi")}
                 </p>
               </div>
               <div className={styles.accommodationStatItem}>
-                <h2 className={styles.statTitle}>{t("Bedroom")} 4</h2>
+                <h2 className={styles.statTitle}>{t("luxury_room")}</h2>
                 <p className={styles.statDetails}>
-                  1 {t("extra-large double bed")}
+                  {t("luxury_room_beds")}, {t("private_bathroom")}
                 </p>
               </div>
               <div className={styles.accommodationStatItem}>
-                <h2 className={styles.statTitle}>{t("Bedroom")} 5</h2>
+                <h2 className={styles.statTitle}>{t("suite_room")}</h2>
                 <p className={styles.statDetails}>
-                  1 {t("extra-large double bed")}
+                  {t("suite_room_beds")}, {t("living_area")}
                 </p>
               </div>
               <div className={styles.accommodationStatItem}>
-                <h2 className={styles.statTitle}>{t("Bedroom")} 6</h2>
+                <h2 className={styles.statTitle}>{t("superior_room")}</h2>
                 <p className={styles.statDetails}>
-                  1 {t("extra-large double bed")}
+                  {t("superior_room_beds")}, {t("balcony")}
                 </p>
-              </div>
-              <div className={styles.accommodationStatItem}>
-                <h2 className={styles.statTitle}>{t("Bedroom")} 7</h2>
-                <p className={styles.statDetails}>
-                  1 {t("extra-large double bed")}
-                </p>
-              </div>
-              <div className={styles.accommodationStatItem}>
-                <h2 className={styles.statTitle}>{t("living_area")}</h2>
-                <p className={styles.statDetails}>{t("living_area_beds")}</p>
               </div>
             </>
           )}

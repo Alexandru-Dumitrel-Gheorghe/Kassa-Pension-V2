@@ -1,8 +1,9 @@
 .priceRooms {
-  padding: 40px 20px;
+  padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  background-color: var(--background-color);
 }
 
 .roomsTitle {
@@ -19,7 +20,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #3498db;
+  background-color: var(--primary-color);
   position: absolute;
   left: 50%;
   bottom: -10px;
@@ -28,7 +29,7 @@
 
 .roomsSubtitle {
   font-size: 1.4rem;
-  color: #7f8c8d;
+  color: var(--text-color);
   margin-bottom: 40px;
 }
 
@@ -53,12 +54,14 @@
   justify-content: space-between;
   width: 100%;
   max-width: 350px;
-  min-height: 450px; /* Înălțime minimă fixată pentru toate cardurile */
+  min-height: 450px;
+  height: 100%; /* Asigură-te că toate cardurile au aceeași înălțime */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   background-color: #fff;
+  text-align: center; /* Asigură-te că textul este centrat */
 }
 
 .roomCard:hover {
@@ -80,9 +83,9 @@
 .roomBody {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center; /* Centrează textul pe verticală */
+  align-items: center; /* Centrează textul pe orizontală */
   padding: 20px;
-  text-align: center;
   flex-grow: 1; /* Asigură-te că body-ul ocupă toată înălțimea disponibilă */
 }
 
@@ -97,20 +100,22 @@
 .roomDescription {
   font-size: 1.1rem;
   margin-bottom: 10px;
-  color: #34495e;
+  color: var(--text-color);
 }
 
 .roomFeatures {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: auto; /* Mută lista de caracteristici în partea de jos a cardului */
 }
 
 .roomFeatures li {
   display: flex;
   align-items: center;
+  justify-content: center; /* Centrează fiecare element pe orizontală */
   font-size: 1rem;
-  color: #2c3e50;
+  color: var(--text-color);
   margin-top: 10px;
 }
 
@@ -119,23 +124,18 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .roomCard {
+    max-width: 100%;
+    min-height: 500px;
+  }
+
   .roomsTitle {
     font-size: 2rem;
   }
 
   .roomsSubtitle {
     font-size: 1.1rem;
-  }
-
-  .roomSlide {
-    justify-content: center;
-    padding: 15px;
-  }
-
-  .roomCard {
-    max-width: 100%;
-    min-height: 500px; /* Ajustează înălțimea minimă pentru ecranele mici */
   }
 
   .roomTitle {
@@ -146,10 +146,24 @@
   .roomDescription {
     font-size: 1rem;
   }
+}
 
-  .viewAllRoomsButton {
-    width: 80%;
-    padding: 12px;
+@media (max-width: 768px) {
+  .roomSlide {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .roomCard {
+    min-height: 450px;
+  }
+
+  .roomTitle {
+    font-size: 1.6rem;
+  }
+
+  .roomBeds,
+  .roomDescription {
     font-size: 1rem;
   }
 }
@@ -169,6 +183,6 @@
   }
 
   .roomCard {
-    min-height: 350px; /* Ajustează înălțimea minimă pentru ecranele foarte mici */
+    min-height: 350px;
   }
 }

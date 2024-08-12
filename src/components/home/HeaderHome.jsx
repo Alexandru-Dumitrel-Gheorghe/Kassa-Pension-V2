@@ -1,38 +1,26 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import styles from "./HeaderHome.module.css"; // Importă stilurile CSS Modules
+import styles from "./HeaderHome.module.css";
 
 const HeaderHome = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const videoRef = useRef(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
 
-    const handleCanPlay = () => {
-      setLoading(false);
-    };
-
     const videoElement = videoRef.current;
 
     if (videoElement) {
-      videoElement.addEventListener("canplay", handleCanPlay);
       videoElement.currentTime = 0;
       videoElement.play().catch((error) => {
         console.error("Video playback failed:", error);
       });
     }
-
-    return () => {
-      if (videoElement) {
-        videoElement.removeEventListener("canplay", handleCanPlay);
-      }
-    };
   }, []);
 
   const scrollToNextSection = () => {
@@ -48,7 +36,6 @@ const HeaderHome = () => {
 
   return (
     <div className={styles.header}>
-      {loading && <div className={styles.headerLoader}>Loading...</div>}
       <div className={styles.headerOverlay}></div>
       <video
         className={styles.headerVideo}
