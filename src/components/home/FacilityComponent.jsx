@@ -1,20 +1,23 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next"; // Importăm useTranslation
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCar,
   faWifi,
   faBed,
-  faAirFreshener,
+  faFire,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./FacilityComponent.module.css"; // Importă stilurile CSS Modules
 
 const FacilityComponent = () => {
+  const { t } = useTranslation(); // Folosim useTranslation pentru traduceri
+
   const facilities = [
-    { icon: faBed, title: "Parcare Gratuită" },
-    { icon: faCar, title: "Camere de Familie" },
-    { icon: faWifi, title: "WiFi Gratuit Inclus" },
-    { icon: faAirFreshener, title: "Grătar" },
+    { icon: faBed, title: "facility_free_parking" },
+    { icon: faCar, title: "facility_family_rooms" },
+    { icon: faWifi, title: "facility_free_wifi" },
+    { icon: faFire, title: "facility_bbq" },
   ];
 
   useEffect(() => {
@@ -41,12 +44,8 @@ const FacilityComponent = () => {
     <Container className={styles.facilityContainer}>
       <Row className="justify-content-center text-center mb-5">
         <Col md={8}>
-          <h4 className={styles.facilitySubtitle}>
-            Facilități oferite de Kassa
-          </h4>
-          <h2 className={styles.facilityTitle}>
-            Cele mai apreciate facilități
-          </h2>
+          <h4 className={styles.facilitySubtitle}>{t("facility_subtitle")}</h4>
+          <h2 className={styles.facilityTitle}>{t("facility_title")}</h2>
         </Col>
       </Row>
       <Row className={styles.facilityItems}>
@@ -58,7 +57,7 @@ const FacilityComponent = () => {
                 className={styles.facilityIcon}
               />
             </div>
-            <h5 className={styles.facilityItemTitle}>{facility.title}</h5>
+            <h5 className={styles.facilityItemTitle}>{t(facility.title)}</h5>
           </Col>
         ))}
       </Row>

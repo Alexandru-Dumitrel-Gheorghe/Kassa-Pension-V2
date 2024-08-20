@@ -1,56 +1,24 @@
-.fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--background-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-.fixed-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--background-color);
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-.container {
-  position: relative;
-  padding: 20px;
-}
-
-.absolute-element {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 100px;
-  height: 100px;
-  background-color: var(--primary-color);
-}
-
 .customTitle {
   padding: 40px 0;
   margin-top: 20px;
   margin-bottom: 40px;
   color: var(--title-color);
   text-align: center;
+  font-family: var(--heading-font);
 }
 
 .customSubtitle {
   color: var(--title-color);
   padding: 20px 0;
   text-align: center;
+  font-family: var(--primary-font);
 }
 
 .formContainer,
 .infoContainer {
   background-color: var(--background-color);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,14 +27,11 @@
   width: 100%;
   max-width: 1200px;
   padding: 20px;
-  height: 63vh;
+  height: 100%;
 }
 
 .infoContainer {
-  background-color: var(--secondary-color);
   color: white;
-  height: 62.9vh;
-  overflow: hidden;
 }
 
 .customInfoItem {
@@ -75,6 +40,7 @@
   gap: 10px;
   color: var(--text-color);
   margin: 10px 0;
+  font-family: var(--primary-font);
 }
 
 .socialIcons {
@@ -90,22 +56,23 @@
 }
 
 .socialIcon:hover {
-  color: var(--text-color);
+  color: var(--accent-color);
 }
 
 .customButton {
-  background-color: var(--text-color) !important;
+  background-color: var(--primary-color) !important;
   color: white !important;
-  padding: 8px 16px !important;
-  font-size: 0.875rem !important;
+  padding: 10px 20px !important;
+  font-size: 1rem !important;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .customButton:hover {
-  background-color: #d4af37 !important;
+  background-color: var(--accent-color) !important;
+  transform: translateY(-5px);
 }
 
 @media (max-width: 600px) {
@@ -120,6 +87,14 @@
   }
 
   .customButton {
-    width: 50%;
+    width: 100%;
+  }
+
+  .customTitle {
+    font-size: 1.8rem;
+  }
+
+  .customSubtitle {
+    font-size: 1.2rem;
   }
 }

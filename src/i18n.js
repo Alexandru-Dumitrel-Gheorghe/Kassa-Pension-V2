@@ -311,6 +311,34 @@ const resources = {
       rooms_subtitle: "Choose the room that suits you best",
       show_more: "Show More",
       show_less: "Show Less",
+      experienceluxury: "Experience Luxury",
+      rooms_suites: "Rooms & Suites",
+      junior_suite: "Junior Suite",
+      deluxeroom: "Deluxe Room",
+      superiorroom: "Superior Room",
+      junior_suite_features:
+        "Spacious suite with a private balcony and panoramic view.",
+      view_all_rooms: "View All Rooms",
+      deluxe_room_features:
+        "Elegant room with modern amenities and a cozy fireplace.",
+      full_house_message: "Book the entire house for an exclusive experience.",
+      superior_roomfeatures: "Luxurious room with a jacuzzi and king-size bed.",
+      testimonial_section_title: "What Kassa Guests Say",
+      testimonial_1_text:
+        "The property is located in an area where you can enjoy peace with a wonderful view. It is equipped with all the amenities you need, including a room with toys for the little ones. The rooms are large with comfortable beds, and cleanliness is carried out responsibly. A big plus is the host, very attentive to details and eager to help with any requests you may have. A property to consider where you will definitely return with pleasure.",
+      testimonial_1_author: "Mihai, Romania",
+      testimonial_2_text:
+        "We really liked the location, it was something special, we had never stayed in such a modern and clean accommodation! It was quiet, with lots of space, and the house design was wow from every point of view! We had a lot of fun, we hope we left everything in order and thank you for having us! 🙏🏻🥰 We will definitely return, with another occasion to celebrate 🥳 There was nothing we didn't like.",
+      testimonial_2_author: "Cristina, Romania",
+      testimonial_3_text:
+        "The guesthouse is located in a spectacular mountain setting, offering unforgettable views of the mountains. The hosts were extremely hospitable and did everything they could to make sure we felt at home. Plus, we fully enjoyed the guesthouse's amenities: the outdoor grill and the terrace where we enjoyed our morning coffee. We warmly recommend Kassa to anyone looking to enjoy a mountain getaway in a quiet and beautiful place. We will definitely be back!",
+      testimonial_3_author: "Diana, Romania",
+      facility_subtitle: "Facilities offered by Kassa",
+      facility_title: "Most appreciated facilities",
+      facility_free_parking: "Free Parking",
+      facility_family_rooms: "Family Rooms",
+      facility_free_wifi: "Free WiFi Included",
+      facility_bbq: "BBQ",
     },
   },
   ro: {
@@ -634,14 +662,44 @@ const resources = {
       rooms_subtitle: "Alegeți camera care vi se potrivește cel mai bine",
       show_more: "Arată mai mult",
       show_less: "Arată mai puțin",
+      experienceluxury: "Experiență de Lux",
+      rooms_suites: "Camere & Suită",
+      junior_suite: "Junior Suite",
+      deluxeroom: "Deluxe Room",
+      superiorroom: "Superior Room",
+
+      view_all_rooms: "Vezi toate Camerele",
+      junior_suite_features:
+        "Suită spațioasă cu balcon privat și vedere panoramică.",
+      deluxe_room_features:
+        "Cameră elegantă cu facilități moderne și șemineu confortabil.",
+      superior_roomfeatures: "Cameră luxoasă cu jacuzzi și pat king-size.",
+      full_house_message:
+        "Rezervați întreaga casă pentru o experiență exclusivă.",
+      testimonial_section_title: "Ce spun oaspeții Kassa",
+      testimonial_1_text:
+        "Proprietatea este situată într-o zonă unde te poți bucura de liniște cu o priveliște deosebită. Aceasta este dotată cu toate facilitățile de care ai nevoie inclusiv cu o cameră cu jucării pentru cei mici. Camerele sunt mari cu paturi confortabile iar curățenia este făcută cu simț de răspundere. Un mare plus este acordat gazdei, foarte atentă la detalii și dornică să ajute cu cerințele pe care le poți avea. O proprietate de luat în considerare unde cu siguranță vei reveni cu drag.",
+      testimonial_1_author: "Mihai, România",
+      testimonial_2_text:
+        "Ne-a plăcut tare mult locația, a fost ceva special, nu am mai stat la o cazare așa modernă și curată! A fost liniște, mult spațiu, iar design ul casei a fost wow din toate punctele de vedere! Ne-am distrat la maxim, sperăm ca am lăsat totul în ordine și vă mulțumim ca ne-ați primit! 🙏🏻🥰 O să revenim cu siguranță, cu altă ocazie de petrecut 🥳 Nu există ceva să nu ne fi plăcut",
+      testimonial_2_author: "Cristina, România",
+      testimonial_3_text:
+        "Pensiunea este situată într-un peisaj montan spectaculos, oferind o priveliște de neuitat asupra munților. Gazdele au fost extrem de ospitaliere și au făcut tot posibilul pentru a ne asigura că ne simțim ca acasă. În plus, am profitat din plin de facilitățile pensiunii: grătarul în aer liber si terasa unde ne-am bucurat de cafeaua de dimineață. Recomandăm cu căldură Kassa pentru oricine dorește să se bucure de o escapadă la munte, într-un loc liniștit și frumos. Cu siguranță vom reveni!",
+      testimonial_3_author: "Diana, România",
+      facility_subtitle: "Facilități oferite de Kassa",
+      facility_title: "Cele mai apreciate facilități",
+      facility_free_parking: "Parcare Gratuită",
+      facility_family_rooms: "Camere de Familie",
+      facility_free_wifi: "WiFi Gratuit Inclus",
+      facility_bbq: "Grătar",
     },
   },
 };
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "ro", // default language
-  fallbackLng: "ro",
+  lng: "en", // default language
+  fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },
