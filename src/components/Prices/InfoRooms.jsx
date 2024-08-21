@@ -31,7 +31,7 @@ const InfoRooms = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Trigger once on mount
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
