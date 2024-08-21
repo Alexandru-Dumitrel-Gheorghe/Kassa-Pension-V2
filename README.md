@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Kassa Pensiune Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Kassa is a luxurious vacation home located in Bran, Romania. This project is a React-based website designed to showcase the beauty and amenities of the Kassa property, allowing potential guests to explore rooms, facilities, and other offerings.
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+### Components
 
-### `npm start`
+The `src/components` directory contains the reusable components of the project, organized by sections such as `home`, `Prices`, and `Facility`. These components form the building blocks of the different pages.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **home**: Contains components specific to the home page, such as the header, room cards, and testimonials.
+- **Prices**: Includes components related to room pricing, such as the `InfoRooms` and `PriceRooms` components.
+- **Facility**: Manages the facility-related information of the property.
+- **gallery**: Handles the image gallery of the property.
+- **MoreInfo**: Provides additional information about the property.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Pages
 
-### `npm test`
+The `src/pages` directory contains the main pages of the website. Each page component represents a route in the application:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Home.js**: The landing page of the website.
+- **Prices.js**: Displays pricing information and details about the rooms.
+- **Gallery.js**: Showcases images of the property.
+- **About.js**: Provides information about the Kassa property.
+- **Contact.js**: A contact form for reservations and inquiries.
+- **MoreInfo.js**: Additional information about the property.
 
-### `npm run build`
+### Utilities
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **ScrollToTop.js**: Ensures smooth scrolling to the top when navigating between pages.
+- **PageTransitionHandler.js**: Handles animations and transitions between pages.
+- **Spinner.js**: A loading spinner for asynchronous operations.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Styles
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The styling is done using CSS Modules for encapsulated and scoped styles. Each component has its own corresponding CSS module.
 
-### `npm run eject`
+### Assets
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+All static assets like images and videos are located in the `public/assets` directory.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation and Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd kassa-pensiune
+   npm install
+   npm start
+   npm run build
+   ```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The project can be deployed on platforms like Netlify. Make sure to handle routing correctly by adding a \_redirects file for Single Page Application (SPA) behavior.
 
-### `npm run build` fails to minify
+### License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+### Contact
+
+For any inquiries, please contact:
+Email: gheorghe.a@outlook.com
+Website: [Kassa Official Website](https://kassa-v1.netlify.app)
