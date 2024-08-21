@@ -23,7 +23,7 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(60%) contrast(120%);
+  filter: brightness(90%) contrast(120%);
 }
 
 .headerContent {
@@ -37,6 +37,7 @@
   text-align: center;
   color: white;
   padding: 0 20px;
+  filter: contrast(120%);
 }
 
 .headerContent h1 {

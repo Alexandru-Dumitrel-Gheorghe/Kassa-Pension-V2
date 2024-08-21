@@ -47,7 +47,17 @@ const Footer = () => {
           </div>
           <div className={styles.footerCopyright}>
             <p>&copy; 2024 Kassa. {t("all_rights_reserved")}</p>
-            <p>{t("developed_by")} Alexandru</p>
+            <p>
+              {t("developed_by")}{" "}
+              <a
+                href="https://alexandru-portofolio.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.footerLink}
+              >
+                Alexandru
+              </a>
+            </p>
           </div>
         </div>
       </div>

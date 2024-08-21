@@ -63,6 +63,15 @@
   color: var(--text-color);
 }
 
+.footerLink {
+  color: inherit; /* Păstrează culoarea textului curent */
+  text-decoration: none; /* Elimină sublinierea implicită */
+}
+
+.footerLink:hover {
+  text-decoration: underline; /* Adaugă subliniere la hover */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .footerContent {
