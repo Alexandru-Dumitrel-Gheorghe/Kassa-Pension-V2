@@ -11,7 +11,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Mai multă opacitate pentru un contrast mai bun */
   z-index: 0;
 }
 
@@ -41,34 +46,34 @@
 }
 
 .headerContent h1 {
-  font-size: 3rem;
+  font-size: 3.5rem; /* Puțin mai mare pentru a ieși în evidență */
   margin-bottom: 1rem;
-  color: var(--title-color);
+  color: #fff; /* Folosește o culoare albă pură */
   font-weight: bold;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); /* Mai multă umbră pentru contrast */
 }
 
 .tagline {
-  font-size: 1.5rem;
+  font-size: 1.6rem; /* Ușor mai mare */
   margin-bottom: 2rem;
-  color: var(--text-color);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  color: #e0e0e0; /* Un gri deschis */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Umbre mai intense */
 }
 
 .bookNowButton {
-  background-color: var(--text-color) !important;
-  color: white;
+  background-color: #ffcc00 !important; /* Un galben strălucitor pentru contrast */
+  color: #000 !important; /* Text negru pentru contrast */
   border: none;
   padding: 12px 24px;
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* Puțin mai mare */
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .bookNowButton:hover {
-  background-color: var(--title-color) !important;
-  transform: scale(1.05);
+  background-color: #e0b700 !important; /* Un galben mai închis la hover */
+  transform: scale(1.1);
 }
 
 .scrollDownButton {
@@ -79,7 +84,8 @@
   background: none;
   border: none;
   font-size: 2rem;
-  color: var(--title-color);
+  color: #fff; /* Schimbat în alb pentru un contrast mai bun */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adăugat text-shadow pentru vizibilitate */
   cursor: pointer;
   transition: transform 0.3s ease;
   animation: bounce 2s infinite;
