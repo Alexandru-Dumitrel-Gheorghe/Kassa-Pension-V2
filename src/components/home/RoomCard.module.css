@@ -39,10 +39,10 @@
   text-align: center;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(127, 89, 19, 0.3) 0%,
+    rgba(170, 82, 1, 0.7) 100%
   );
-  color: var(--text-color);
+  color: var(--title-color);
 }
 
 .roomCardPrice {

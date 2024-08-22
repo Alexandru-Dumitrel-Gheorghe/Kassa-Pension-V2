@@ -322,7 +322,8 @@ const resources = {
       deluxe_room_features:
         "Elegant room with modern amenities and a cozy fireplace.",
       full_house_message: "Book the entire house for an exclusive experience.",
-      superior_roomfeatures: "Luxurious room with a jacuzzi and king-size bed.",
+      superior_roomfeatures:
+        "Luxurious room with a modern jacuzzi and king-size bed.",
       testimonial_section_title: "What Kassa Guests Say",
       testimonial_1_text:
         "The property is located in an area where you can enjoy peace with a wonderful view. It is equipped with all the amenities you need, including a room with toys for the little ones. The rooms are large with comfortable beds, and cleanliness is carried out responsibly. A big plus is the host, very attentive to details and eager to help with any requests you may have. A property to consider where you will definitely return with pleasure.",
@@ -673,7 +674,8 @@ const resources = {
         "Suită spațioasă cu balcon privat și vedere panoramică.",
       deluxe_room_features:
         "Cameră elegantă cu facilități moderne și șemineu confortabil.",
-      superior_roomfeatures: "Cameră luxoasă cu jacuzzi și pat king-size.",
+      superior_roomfeatures:
+        "Cameră luxoasă cu jacuzzi modern și pat king-size elegant.",
       full_house_message:
         "Rezervați întreaga casă pentru o experiență exclusivă.",
       testimonial_section_title: "Ce spun oaspeții Kassa",
