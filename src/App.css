@@ -7,8 +7,8 @@
   --secondary-color: #704214; /* Similar cu text-color */
   --accent-color: #333333; /* Similar cu title-color */
   --shadow-color: rgba(0, 0, 0, 0.1); /* Umbră subtilă */
-  --primary-font: "Lucida Handwriting", serif;
-  --heading-font: "Lucida Handwriting", serif;
+  --primary-font: "sans-serif";
+  --heading-font: "serif";
 }
 
 body {
